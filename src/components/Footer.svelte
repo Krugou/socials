@@ -1,5 +1,11 @@
 <footer class="mt-auto w-full px-6 py-4">
   <div class="mx-auto max-w-xl">
+    <a
+      href="mailto:aleksi.nokelainen@gmail.com"
+      class="mb-2 flex items-center justify-center text-sm text-white/60 hover:text-white/90 transition-colors duration-300"
+    >
+      aleksi.nokelainen@gmail.com
+    </a>
     <div
       class="flex items-center justify-center space-x-2 text-white/60 transition-colors duration-300 hover:text-white/90"
     >

@@ -51,17 +51,21 @@
 <div
   bind:this={container}
   on:mousemove={handleMouseMove}
-  class="perspective relative mb-8 text-center" role="region"
+  class="perspective relative mb-8 text-center"
+  role="region"
 >
   <div
     class="pointer-events-none absolute inset-0 opacity-50"
     style="background: radial-gradient(circle at {$mousePos.x}px {$mousePos.y}px, rgba(139, 92, 246, 0.15), transparent 25%)"
-  />
+  ></div>
 
   <!-- Particle background -->
   <div class="absolute inset-0 overflow-hidden">
     {#each Array(20) as _, i}
-      <div class="particle absolute h-1 w-1 rounded-full bg-purple-500/30" style="--index: {i}"></div>
+      <div
+        class="particle absolute h-1 w-1 rounded-full bg-purple-500/30"
+        style="--index: {i}"
+      ></div>
     {/each}
   </div>
 
@@ -127,10 +131,6 @@
     75% {
       transform: translate(100px, -100px);
     }
-  }
-
-  .in-view {
-    animation: appear 1s forwards;
   }
 
   @keyframes appear {

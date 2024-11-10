@@ -81,15 +81,14 @@
     class="pointer-events-none fixed inset-0 opacity-50"
     style="background: radial-gradient(circle at {$mousePos.x}px {$mousePos.y}px, rgba(139, 92, 246, 0.15), transparent 25%)"
   ></div>
-  />
 
   <!-- Particle background -->
   <div class="absolute inset-0 overflow-visible">
+    {#each Array(20) as _, i}
       <div
         class="particle absolute h-3 w-3 rounded-full bg-purple-800/20"
         style="--index: {i}; --x-range: 300; --y-range: 200;"
       ></div>
-      />
     {/each}
   </div>
 
@@ -115,16 +114,15 @@
             class="h-6 w-6 invert transition-transform duration-300 group-hover:rotate-12"
           />
           <span>{link.title}</span>
+        </div>
         <div
           class="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         ></div>
-        />
       </a>
     {/each}
   {:else}
-      <div class="h-[68px] animate-pulse rounded-lg bg-white/5"></div>
-      <div class="h-[68px] animate-pulse rounded-lg bg-white/5" />
-    {/each}
+    <div class="h-[68px] animate-pulse rounded-lg bg-white/5"></div>
+    <div class="h-[68px] animate-pulse rounded-lg bg-white/5"></div>
   {/if}
 </div>
 
