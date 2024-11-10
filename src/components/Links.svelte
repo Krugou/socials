@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {fade, scale} from 'svelte/transition';
+  import {fade, fly} from 'svelte/transition';
   import {spring} from 'svelte/motion';
   import {onMount} from 'svelte';
 
@@ -69,13 +69,18 @@
   onMount(() => {
     visible = true;
   });
+
+  let scrollY: number;
 </script>
+
+<svelte:window bind:scrollY />
 
 <div
   bind:this={container}
   on:mousemove={handleMouseMove}
   class="perspective relative space-y-4 p-4"
   role="region"
+  style="transform: translateY({scrollY * 0.1}px)"
 >
   <div
     class="pointer-events-none fixed inset-0 opacity-50"
@@ -98,10 +103,10 @@
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        in:scale={{
-          duration: 400,
-          delay: i * 100,
-          start: 0.8
+        in:fly={{
+          y: 20,
+          duration: 1000,
+          delay: i * 100
         }}
         class="group relative block overflow-hidden rounded-lg bg-white/10 p-4 text-center text-white backdrop-blur-sm"
       >
