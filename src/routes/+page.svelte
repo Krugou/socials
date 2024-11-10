@@ -7,16 +7,6 @@
       icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg'
     },
     {
-      title: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/aleksi-nokelainen-3706b7259/',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg'
-    },
-    {
-      title: 'Facebook',
-      url: 'https://www.facebook.com/aleksi.nokelainen.7',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg'
-    },
-    {
       title: 'Instagram',
       url: 'https://www.instagram.com/krugou/',
       icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg'
@@ -42,6 +32,17 @@
       url: 'https://www.youtube.com/channel/krugou',
       icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg'
     },
+    {
+      title: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/aleksi-nokelainen-3706b7259/',
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg'
+    },
+    {
+      title: 'Facebook',
+      url: 'https://www.facebook.com/aleksi.nokelainen.7',
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg'
+    },
+
     {
       title: 'Portfolio',
       url: 'https://krugou.github.io',
@@ -71,7 +72,7 @@
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="block rounded-lg bg-white/10 p-4 text-center text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+          class="block rounded-lg bg-white/10 p-4 text-center text-white backdrop-blur-sm transition-colors duration-1000 hover:scale-105 hover:bg-white/20"
         >
           <img src={link.icon} alt={link.title} class="mr-2 inline-block h-6 w-6 invert" />
           {link.title}
