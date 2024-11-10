@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import {base} from '$app/paths';
   const links = [
     {
       title: 'GitHub',
@@ -50,6 +50,12 @@
   ];
 </script>
 
+<nav>
+  <a href="{base}/">Home</a>
+  <a href="{base}/about">About</a>
+  <a href="{base}/blog">Blog</a>
+  <a href="{base}/contact">Contact</a>
+</nav>
 <div class="min-h-screen bg-gradient-to-br from-purple-500 to-blue-900 px-4 py-8">
   <div class="mx-auto max-w-xl">
     <div class="mb-8 text-center">
