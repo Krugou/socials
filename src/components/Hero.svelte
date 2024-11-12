@@ -2,8 +2,8 @@
   import {fly, fade} from 'svelte/transition';
   import {spring} from 'svelte/motion';
   import {onMount, onDestroy} from 'svelte';
-  import {language} from '$lib/stores';
-  import type {Translations} from '$lib/types';
+  import {language} from '../lib/stores.js';
+  import type {Translations} from '../lib/types.js';
   let visible = false;
   let container: HTMLElement;
   let mousePos = spring(
@@ -58,6 +58,9 @@
   });
 
   onDestroy(() => cleanup?.());
+  function getTranslation(lang: string): (typeof translations)['en'] {
+    return translations[lang as keyof typeof translations] ?? translations.en;
+  }
 </script>
 
 <svelte:window bind:scrollY />
@@ -100,14 +103,14 @@
         in:fly={{y: 20, duration: 1000, delay: 300}}
         class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-4xl font-bold text-transparent"
       >
-        {translations[$language].title}
+        {getTranslation($language).title}
       </h1>
 
       <p
         in:fade={{duration: 1000, delay: 600}}
         class="mx-auto max-w-2xl px-4 py-4 text-lg leading-relaxed text-white/90"
       >
-        {translations[$language].description}
+        {getTranslation($language).description}
       </p>
     </div>
   {:else}

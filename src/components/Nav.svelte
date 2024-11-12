@@ -1,7 +1,7 @@
 <script lang="ts">
   import {base} from '$app/paths';
-  import {language} from '$lib/stores';
-
+  import {language} from '../lib/stores.js';
+  import type {Language} from '../lib/types.js';
   interface NavLink {
     text: string;
     href: string;
@@ -26,7 +26,7 @@
   ];
 
   function toggleLanguage() {
-    language.update((l) => (l === 'en' ? 'fi' : 'en'));
+    language.update((l: Language) => (l === 'en' ? 'fi' : 'en'));
   }
 </script>
 
