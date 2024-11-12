@@ -2,7 +2,8 @@
   import {fly, fade} from 'svelte/transition';
   import {spring} from 'svelte/motion';
   import {onMount, onDestroy} from 'svelte';
-
+  import {language} from '$lib/stores';
+  import type {Translations} from '$lib/types';
   let visible = false;
   let container: HTMLElement;
   let mousePos = spring(
@@ -12,6 +13,19 @@
       damping: 0.4
     }
   );
+
+  const translations: Translations = {
+    en: {
+      title: 'Aleksi Nokelainen',
+      description:
+        'Full Stack Developer passionate about creating intuitive software solutions. Proficient in JavaScript, TypeScript, React, Node.js, Svelte, and Python.'
+    },
+    fi: {
+      title: 'Aleksi Nokelainen',
+      description:
+        'Full Stack -kehittäjä, joka on intohimoinen luomaan intuitiivisia ohjelmistoratkaisuja. Vahva osaaminen JavaScript, TypeScript, React, Node.js, Svelte ja Python -teknologioissa.'
+    }
+  };
 
   function handleMouseMove(event: MouseEvent) {
     const rect = container?.getBoundingClientRect();
@@ -86,15 +100,14 @@
         in:fly={{y: 20, duration: 1000, delay: 300}}
         class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-4xl font-bold text-transparent"
       >
-        Aleksi Nokelainen
+        {translations[$language].title}
       </h1>
 
       <p
         in:fade={{duration: 1000, delay: 600}}
         class="mx-auto max-w-2xl px-4 py-4 text-lg leading-relaxed text-white/90"
       >
-        Full Stack Developer passionate about creating intuitive software solutions. Proficient in
-        JavaScript, TypeScript, React, Node.js, Svelte, and Python.
+        {translations[$language].description}
       </p>
     </div>
   {:else}

@@ -1,16 +1,33 @@
-
 <script lang="ts">
+  import {base} from '$app/paths';
+  import {language} from '$lib/stores';
+
   interface NavLink {
     text: string;
     href: string;
     external?: boolean;
   }
 
+  /**
+   * Constructs URL with base path for internal links
+   * @param href - The target URL
+   * @param external - Whether the link is external
+   * @returns Properly formatted URL
+   */
+  const getUrl = (href: string, external?: boolean): string => {
+    if (!href) throw new Error('URL href cannot be empty');
+    return external ? href : `${base}${href}`;
+  };
+
   const navLinks: NavLink[] = [
-    { text: 'Home', href: '/' },
-    { text: 'Repositories', href: '/repositories' },
-    { text: 'Portfolio', href: 'https://krugou.github.io', external: true }
+    {text: 'Home', href: '/'},
+    {text: 'Repositories', href: '/repositories'},
+    {text: 'Portfolio', href: 'https://krugou.github.io', external: true}
   ];
+
+  function toggleLanguage() {
+    language.update((l) => (l === 'en' ? 'fi' : 'en'));
+  }
 </script>
 
 <nav
@@ -22,9 +39,9 @@
         {#each navLinks as link}
           <li>
             <a
-              href={link.href}
+              href={getUrl(link.href, link.external)}
               class="group text-xl font-bold tracking-wide"
-              {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              {...link.external ? {target: '_blank', rel: 'noopener noreferrer'} : {}}
             >
               <span
                 class="bg-gradient-to-r from-white to-yellow-300 bg-clip-text text-transparent transition-all duration-300 ease-in-out hover:from-yellow-300 hover:to-white"
@@ -38,7 +55,7 @@
           </li>
         {/each}
       </div>
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-center space-x-4">
         <li
           class="flex h-16 w-full items-center justify-center rounded-full bg-white/10 p-3 transition-all duration-300 hover:scale-110 hover:bg-white/20"
         >
@@ -54,6 +71,14 @@
               />
             </svg>
           </a>
+        </li>
+        <li>
+          <button
+            on:click={toggleLanguage}
+            class="rounded-lg bg-white/10 px-4 py-2 font-bold transition-all hover:bg-white/20"
+          >
+            {$language === 'en' ? 'FI' : 'EN'}
+          </button>
         </li>
       </div>
     </ul>
