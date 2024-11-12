@@ -1,16 +1,23 @@
 <script lang="ts">
   import {language} from '../lib/stores.js';
-  import type {Translations} from '$lib/types';
+  import type {Translations} from '../lib/types.js';
 
   const translations: Pick<Translations, 'en' | 'fi'> = {
     en: {
       madeWith: 'Made with',
-      emailAriaLabel: 'Send email to Aleksi Nokelainen'
+      emailAriaLabel: 'Send email to Aleksi Nokelainen',
+      builtOn: 'Built on'
     },
     fi: {
       madeWith: 'Tehty käyttäen',
-      emailAriaLabel: 'Lähetä sähköpostia Aleksi Nokelaiselle'
+      emailAriaLabel: 'Lähetä sähköpostia Aleksi Nokelaiselle',
+      builtOn: 'Rakennettu'
     }
+  };
+  const dateFormatOptions: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
   };
 </script>
 
@@ -40,6 +47,11 @@
         />
       </svg>
       <span class="text-sm font-medium">Svelte</span>
+    </div>
+
+    <div class="mt-4 text-center text-sm text-white/60">
+      {translations[$language].builtOn}
+      {new Date().toLocaleDateString($language, dateFormatOptions)}
     </div>
   </div>
 </footer>

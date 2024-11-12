@@ -1,11 +1,12 @@
 export interface Translation {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 
 export interface FooterTranslation {
-  madeWith: string;
-  emailAriaLabel: string;
+  madeWith?: string;
+  emailAriaLabel?: string;
+  builtOn?: string;
 }
 
 export interface Translations {

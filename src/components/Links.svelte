@@ -31,7 +31,7 @@
     },
     {
       title: 'YouTube',
-      url: 'https://www.youtube.com/channel/krugou',
+      url: 'https://www.youtube.com/@Krugou',
       icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg'
     },
     {
