@@ -101,14 +101,14 @@
     <div class="relative" style="transform: translateY({scrollY * 0.1}px)">
       <h1
         in:fly={{y: 20, duration: 1000, delay: 300}}
-        class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-4xl font-bold text-transparent"
+        class="bg-gradient-to-r from-purple-200 to-blue-400 bg-clip-text text-4xl font-bold text-transparent"
       >
         {getTranslation($language).title}
       </h1>
 
       <p
         in:fade={{duration: 1000, delay: 600}}
-        class="mx-auto max-w-2xl px-4 py-4 text-lg leading-relaxed text-white/90"
+        class="mx-auto max-w-2xl bg-gradient-to-r transition-all ease-in-out  from-purple-400 to-blue-500 bg-clip-text px-4 py-4 text-lg font-bold leading-relaxed text-transparent  duration-1000 hover:from-blue-200 hover:to-purple-200"
       >
         {getTranslation($language).description}
       </p>
