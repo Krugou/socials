@@ -108,10 +108,10 @@
           duration: 1000,
           delay: i * 100
         }}
-        class="group relative block overflow-hidden rounded-lg bg-white/10 p-4 text-center text-white backdrop-blur-sm"
+        class="group relative block overflow-hidden rounded-lg bg-white/10 p-1 md:p-4 text-center text-white backdrop-blur-sm"
       >
         <div
-          class="relative z-10 flex items-center justify-center space-x-3 transition-transform duration-300 group-hover:scale-105"
+          class="relative z-10 flex items-center justify-center space-x-1 md:space-x-3 transition-transform duration-300 group-hover:scale-105"
         >
           <img
             src={link.icon}
