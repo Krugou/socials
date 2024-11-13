@@ -45,7 +45,7 @@
           <li>
             <a
               href={getUrl(link.href, link.external)}
-              class="group text-xl font-bold tracking-wide"
+              class="group text-base md:text-xl font-bold tracking-wide"
               aria-label={getTranslation(link, $language).ariaLabel}
               title={getTranslation(link, $language).ariaLabel}
               {...link.external
