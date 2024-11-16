@@ -50,3 +50,16 @@ export interface SpringOptions {
   stiffness: number;
   damping: number;
 }
+export interface SocialLink {
+  title: string;
+  url: string;
+  icon: string;
+}
+
+export interface Particle {
+  x: number;
+  y: number;
+  dx: number;
+  dy: number;
+  color: string;
+}

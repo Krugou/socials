@@ -51,17 +51,54 @@
   function getTranslation(lang: string): (typeof translations)['en'] {
     return translations[lang as keyof typeof translations] ?? translations.en;
   }
+
+  /** Calculate years since birth date */
+  const getYearsSinceBirth = (): number => {
+    // my birth date
+    const birthDate = new Date('1989-05-19');
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
+
+  /** Number of particles matching age */
+  const PARTICLE_COUNT = getYearsSinceBirth();
+  const randomRange = (min: number, max: number): number => Math.random() * (max - min) + min;
+  /** Configuration for particle system */
+  const particles = Array.from({length: PARTICLE_COUNT}, (_, i) => ({
+    id: i,
+    size: randomRange(0.5, 2),
+    speed: Math.random() * 100 + 20,
+    orbit: Math.random() * 60 + 50,
+    offset: Math.random() * 360
+  }));
 </script>
 
 <svelte:window bind:scrollY />
 
-<div bind:this={container} class="perspective relative mb-8 text-center" role="region">
-  <!-- Particle background -->
-  <div class="absolute inset-0 overflow-hidden">
-    {#each Array(10) as _, i}
+<div bind:this={container} class="perspective relative m-8 text-center" role="region">
+  <!-- Particle system -->
+  <div
+    class="pointer-events-none absolute inset-0 overflow-visible"
+    style="transform: translateY(-50px)"
+  >
+    {#each particles as particle (particle.id)}
       <div
-        class="particle absolute h-1 w-1 rounded-full bg-purple-500/30"
-        style="--index: {i}"
+        class="particle absolute h-1 w-1 rounded-full bg-gradient-to-br from-purple-300/70 to-blue-700/70"
+        style="
+          --size: {particle.size}rem;
+          --speed: {particle.speed}s;
+          --orbit: {particle.orbit}px;
+          --offset: {particle.offset}deg;
+          width: var(--size);
+          height: var(--size);
+          left: calc(50% - var(--size) / 2);
+          top: calc(50% - var(--size) / 2);
+        "
       ></div>
     {/each}
   </div>
@@ -109,8 +146,18 @@
   }
 
   .particle {
-    animation: float 20s infinite;
-    animation-delay: calc(var(--index) * -1s);
+    animation: orbit var(--speed) linear infinite;
+    filter: blur(1px);
+  }
+
+  @keyframes orbit {
+    from {
+      transform: rotate(var(--offset)) translateX(var(--orbit)) rotate(calc(var(--offset) * -1));
+    }
+    to {
+      transform: rotate(calc(360deg + var(--offset))) translateX(var(--orbit))
+        rotate(calc((360deg + var(--offset)) * -1));
+    }
   }
 
   @keyframes float {

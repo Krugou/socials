@@ -1,9 +1,11 @@
 <script lang="ts">
   import {fade, fly} from 'svelte/transition';
   import {spring} from 'svelte/motion';
-  import {onMount} from 'svelte';
+  import {onMount, onDestroy} from 'svelte';
+  import type {SocialLink, Particle} from '../lib/types.js';
 
-  const links = [
+  /** Social media links configuration */
+  const links: SocialLink[] = [
     {
       title: 'GitHub',
       url: 'https://github.com/krugou',
@@ -46,43 +48,79 @@
     }
   ];
 
+  let container: HTMLElement;
   let visible = false;
+  let rafId: number;
+  let scrollY = 0;
+
+  /** Particle configuration */
+  const particles: Particle[] = [
+    {x: 50, y: 50, dx: 2, dy: 2, color: 'rgba(139, 92, 246, 1)'},
+    {x: 150, y: 150, dx: -2, dy: -2, color: 'rgba(59, 130, 246, 0.5)'}
+  ];
+
+  /**
+   * Updates particle positions with bounds checking
+   */
+  const updateParticles = () => {
+    if (!container) return;
+
+    const bounds = container.getBoundingClientRect();
+
+    particles.forEach((p) => {
+      // Increased speed multiplier from 2 to 4
+      p.x += p.dx * 4;
+      p.y += p.dy * 4;
+
+      // Bounce off edges
+      if (p.x <= 0 || p.x >= bounds.width - 100) p.dx *= -1;
+      if (p.y <= 0 || p.y >= bounds.height - 100) p.dy *= -1;
+    });
+
+    rafId = requestAnimationFrame(updateParticles);
+  };
+
   onMount(() => {
     visible = true;
+    rafId = requestAnimationFrame(updateParticles);
   });
 
-  let scrollY: number;
+  onDestroy(() => {
+    if (rafId) cancelAnimationFrame(rafId);
+  });
 </script>
 
-<svelte:window bind:scrollY />
-
 <div
+  bind:this={container}
   class="perspective relative space-y-4 p-4"
   role="region"
   style="transform: translateY({scrollY * 0.1}px)"
 >
-  <!-- Particle background -->
-  <div class="absolute inset-0 overflow-visible">
-    {#each Array(20) as _, i}
-      <div
-        class="particle absolute h-3 w-3 rounded-full bg-purple-800/20"
-        style="--index: {i}; --x-range: 300; --y-range: 200;"
-      ></div>
-    {/each}
-  </div>
+  <!-- Floating particles -->
 
+  <!-- Links with hover effects -->
   {#if visible}
+    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+      {#each particles as particle}
+        <div
+          class="particle absolute h-24 w-24"
+          style="
+          left: {particle.x}px;
+          top: {particle.y}px;
+          background: radial-gradient(circle at center, {particle.color}, transparent 70%);
+          filter: blur(20px);
+          will-change: transform;
+        "
+        ></div>
+      {/each}
+    </div>
     {#each links as link, i}
       <a
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        in:fly={{
-          y: 20,
-          duration: 1000,
-          delay: i * 100
-        }}
-        class="group relative block overflow-hidden rounded-lg bg-white/10 p-2 text-center text-white backdrop-blur-sm md:p-4"
+        in:fly={{y: 20, duration: 1000, delay: i * 100}}
+        class="group relative block overflow-hidden rounded-lg bg-white/10 p-2 text-center text-white backdrop-blur-sm transition-all duration-300 md:p-4"
       >
         <div
           class="relative z-10 flex items-center justify-center space-x-2 transition-transform duration-300 group-hover:scale-105"
@@ -91,6 +129,7 @@
             src={link.icon}
             alt={link.title}
             class="h-6 w-6 invert transition-transform duration-300 group-hover:rotate-12"
+            loading="lazy"
           />
           <span class="text-sm md:text-base">{link.title}</span>
         </div>
@@ -112,25 +151,8 @@
   }
 
   .particle {
-    animation: float 40s infinite;
-    animation-delay: calc(var(--index) * -2s);
-    filter: blur(1px);
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(0.5);
-    }
-    25% {
-      transform: translate(calc(var(--x-range) * 1px), calc(var(--y-range) * 1px)) scale(1);
-    }
-    50% {
-      transform: translate(calc(var(--x-range) * -1px), calc(var(--y-range) * -0.5px)) scale(0.75);
-    }
-    75% {
-      transform: translate(calc(var(--x-range) * -0.5px), calc(var(--y-range) * -1px)) scale(1);
-    }
+    will-change: transform;
+    transition: transform 0.008s linear; /* Reduced from 0.016s for smoother animation */
   }
 
   /* Apply hover effect on devices that support hover */
