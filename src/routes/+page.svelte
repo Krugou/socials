@@ -6,11 +6,14 @@
   import Footer from '../components/Footer.svelte';
   import Hero from '../components/Hero.svelte';
   import type {MousePosition, SpringOptions} from '../lib/types.js';
+  import {VisitorTracker} from '../lib/visitorTracking.js';
+  import {browser} from '$app/environment';
 
   let container: HTMLElement;
   let visible = false;
   let scrollY: number;
   let hasPointerEvents = true;
+  let visitorTracker: VisitorTracker | null = null;
 
   // Spring configuration for smooth mouse movement
   const springConfig: SpringOptions = {
@@ -39,14 +42,22 @@
     }
   }, 16); // ~60fps
 
-  onMount(() => {
+  onMount(async () => {
     visible = true;
     // Check if device supports pointer events
     hasPointerEvents = window.matchMedia('(pointer: fine)').matches;
+    visitorTracker = new VisitorTracker();
+    await visitorTracker.logVisit();
+    // Log visitor in production
+    if (browser && import.meta.env.PROD) {
+      visitorTracker = new VisitorTracker();
+      await visitorTracker.logVisit();
+    }
   });
 
   onDestroy(() => {
     handleMouseMove.cancel();
+    visitorTracker = null;
   });
 </script>
 
