@@ -55,29 +55,50 @@
 
   /** Particle configuration */
   const particles: Particle[] = [
-    {x: 50, y: 50, dx: 2, dy: 2, color: 'rgba(139, 92, 246, 1)'},
-    {x: 150, y: 150, dx: -2, dy: -2, color: 'rgba(59, 130, 246, 0.5)'}
+    {x: 30, y: 50, dx: 2, dy: 2, color: 'rgba(139, 92, 246, 0.5)'},
+    {x: 299, y: 299, dx: 5, dy: 5, color: 'rgba(59, 130, 246, 0.5)'}
   ];
+
+  /**
+   * Custom error type for particle errors
+   */
+  class ParticleError extends Error {
+    constructor(message: string) {
+      super(message);
+      this.name = 'ParticleError';
+    }
+  }
 
   /**
    * Updates particle positions with bounds checking
    */
   const updateParticles = () => {
-    if (!container) return;
+    try {
+      if (!container) throw new ParticleError('Container element is not available.');
 
-    const bounds = container.getBoundingClientRect();
+      const bounds = container.getBoundingClientRect();
 
-    particles.forEach((p) => {
-      // Increased speed multiplier from 2 to 4
-      p.x += p.dx * 4;
-      p.y += p.dy * 4;
+      particles.forEach((p) => {
+        if (typeof p.x !== 'number' || typeof p.y !== 'number') {
+          throw new ParticleError('Invalid particle coordinates.');
+        }
+        if (typeof p.dx !== 'number' || typeof p.dy !== 'number') {
+          throw new ParticleError('Invalid particle velocity.');
+        }
 
-      // Bounce off edges
-      if (p.x <= 0 || p.x >= bounds.width - 100) p.dx *= -1;
-      if (p.y <= 0 || p.y >= bounds.height - 100) p.dy *= -1;
-    });
+        p.x += p.dx * 2;
+        p.y += p.dy * 2;
 
-    rafId = requestAnimationFrame(updateParticles);
+        // Bounce off edges
+        if (p.x <= 0 || p.x >= bounds.width - 100) p.dx *= -1;
+        if (p.y <= 0 || p.y >= bounds.height - 100) p.dy *= -1;
+      });
+
+      rafId = requestAnimationFrame(updateParticles);
+    } catch (error) {
+      console.error('Error updating particles:', error);
+      cancelAnimationFrame(rafId);
+    }
   };
 
   onMount(() => {
@@ -105,8 +126,7 @@
         <div
           class="particle absolute h-24 w-24"
           style="
-          left: {particle.x}px;
-          top: {particle.y}px;
+          transform: translate({particle.x}px, {particle.y}px);
           background: radial-gradient(circle at center, {particle.color}, transparent 70%);
           filter: blur(20px);
           will-change: transform;
@@ -152,13 +172,13 @@
 
   .particle {
     will-change: transform;
-    transition: transform 0.008s linear; /* Reduced from 0.016s for smoother animation */
+    transition: transform 0.008s linear;
   }
 
   /* Apply hover effect on devices that support hover */
   @media (hover: hover) {
     a {
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     a:hover {
