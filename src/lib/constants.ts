@@ -25,5 +25,13 @@ export const NAV_LINKS: NavLink[] = [
     },
     href: 'https://krugou.github.io',
     external: true
+  },
+  {
+    translations: {
+      en: {text: 'Contact', ariaLabel: 'Contact me'},
+      fi: {text: 'Yhteystiedot', ariaLabel: 'Ota yhteyttä'}
+    },
+    href: 'mailto:aleksi.nokelainen@gmail.com',
+    external: true
   }
 ];
