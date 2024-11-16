@@ -38,7 +38,7 @@
       return age;
     } catch (error) {
       console.error('Error calculating age:', error);
-      return 20; // Fallback value
+      return 30; // Fallback value
     }
   };
   /**
@@ -46,7 +46,7 @@
    */
   const MAX_ORBIT = getYearsSinceBirth();
 
-  const MIN_SPEED = 1;
+  const MIN_SPEED = 25;
   const MAX_SPEED = Math.max(50, 200 - MAX_ORBIT);
 
   const PARTICLE_CONFIG: ParticleConfig = {
@@ -63,11 +63,12 @@
    * Using CSS custom properties for better performance
    */
   const PLANET_COLORS = Object.freeze([
-    '#f9d71c', // Sunshine yellow
-    '#2d2926', // Dark granite
-    '#00a9e0', // Lake blue
-    '#f58220', // Autumn orange
-    '#006a44' // Forest green
+    '#FFFFFF',
+    '#002F6C',
+    '#00a9e0',
+    '#f0f0f0',
+    '#ffcc00',
+    '#006a44'
   ] as const);
 
   /**
@@ -144,7 +145,7 @@
         height: var(--size);
         left: calc(50% - var(--size) / 2);
         top: calc(50% - var(--size) / 2);
-        background: radial-gradient(circle at 30% 30%, {particle.color}, #000);
+        background: radial-gradient(circle at 30% 30%, {particle.color}, #002F6C);
         will-change: transform;
       "
       aria-hidden="true"
