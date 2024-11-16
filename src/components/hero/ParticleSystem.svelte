@@ -1,6 +1,6 @@
 <script lang="ts">
   import {onMount, onDestroy} from 'svelte';
-  import type {Particle, ParticleConfig} from '$lib/types';
+  import type {Particle, ParticleConfig} from '../../lib/types/particles.js';
 
   /**
    * Custom error for date-related operations
@@ -94,7 +94,7 @@
   };
 
   let particles: Particle[] = [];
-  let cleanup: () => void;
+  let cleanup: (() => void) | undefined;
 
   onMount(() => {
     const PARTICLE_COUNT = getYearsSinceBirth();
@@ -142,7 +142,7 @@
         --orbit: {particle.orbit}px;
         --offset: {particle.offset}deg;
         width: var(--size);
-        height: var(--size);
+        height: calc(1.2 * var(--size));
         left: calc(50% - var(--size) / 2);
         top: calc(50% - var(--size) / 2);
         background: radial-gradient(circle at 30% 30%, {particle.color}, #002F6C);

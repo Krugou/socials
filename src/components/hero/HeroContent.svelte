@@ -10,12 +10,14 @@
     en: {
       title: 'Aleksi Nokelainen',
       description:
-        'Full Stack Developer passionate about creating intuitive software solutions. Proficient in JavaScript, TypeScript, React, Node.js, Svelte, and Python.'
+        'Full Stack Developer passionate about creating intuitive software solutions. Proficient in JavaScript, TypeScript, React, Node.js, Svelte, and Python.',
+      buildDateError: 'Error calculating build date'
     },
     fi: {
       title: 'Aleksi Nokelainen',
       description:
-        'Full Stack -kehittäjä, joka on intohimoinen luomaan intuitiivisia ohjelmistoratkaisuja. Vahva osaaminen JavaScript, TypeScript, React, Node.js, Svelte ja Python -teknologioissa.'
+        'Full Stack -kehittäjä, joka on intohimoinen luomaan intuitiivisia ohjelmistoratkaisuja. Vahva osaaminen JavaScript, TypeScript, React, Node.js, Svelte ja Python -teknologioissa.',
+      buildDateError: 'Virhe rakennuspäivämäärän laskemisessa'
     }
   };
 

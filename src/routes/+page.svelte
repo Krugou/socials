@@ -5,7 +5,7 @@
   import Links from '../components/Links.svelte';
   import Footer from '../components/Footer.svelte';
   import Hero from '../components/Hero.svelte';
-  import type {MousePosition, SpringOptions} from '$lib/types';
+  import type {MousePosition, SpringOptions} from '../lib/types.js';
 
   let container: HTMLElement;
   let visible = false;

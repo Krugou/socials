@@ -12,6 +12,7 @@
 - Use async/await over Promises
 - Include proper error handling for async operations
 - Use functional programming patterns where appropriate
+- Relative import paths need explicit file extensions in ECMAScript imports when --moduleResolution is node16 or nodenext
 
 2. Architecture & Design
 

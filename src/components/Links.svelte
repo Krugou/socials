@@ -1,8 +1,8 @@
 <script lang="ts">
   import {fade, fly} from 'svelte/transition';
-  import {spring} from 'svelte/motion';
-  import {onMount, onDestroy} from 'svelte';
-  import type {SocialLink, Particle} from '../lib/types.js';
+  import {onMount} from 'svelte';
+  import ParticleOverlay from './ParticleOverlay.svelte';
+  import type {SocialLink} from '../lib/types.js';
 
   /** Social media links configuration */
   const links: SocialLink[] = [
@@ -50,64 +50,10 @@
 
   let container: HTMLElement;
   let visible = false;
-  let rafId: number;
   let scrollY = 0;
-
-  /** Particle configuration */
-  const particles: Particle[] = [
-    {x: 30, y: 50, dx: 2, dy: 2, color: 'rgba(139, 92, 246, 0.5)'},
-    {x: 299, y: 299, dx: 5, dy: 5, color: 'rgba(59, 130, 246, 0.5)'}
-  ];
-
-  /**
-   * Custom error type for particle errors
-   */
-  class ParticleError extends Error {
-    constructor(message: string) {
-      super(message);
-      this.name = 'ParticleError';
-    }
-  }
-
-  /**
-   * Updates particle positions with bounds checking
-   */
-  const updateParticles = () => {
-    try {
-      if (!container) throw new ParticleError('Container element is not available.');
-
-      const bounds = container.getBoundingClientRect();
-
-      particles.forEach((p) => {
-        if (typeof p.x !== 'number' || typeof p.y !== 'number') {
-          throw new ParticleError('Invalid particle coordinates.');
-        }
-        if (typeof p.dx !== 'number' || typeof p.dy !== 'number') {
-          throw new ParticleError('Invalid particle velocity.');
-        }
-
-        p.x += p.dx * 2;
-        p.y += p.dy * 2;
-
-        // Bounce off edges
-        if (p.x <= 0 || p.x >= bounds.width - 100) p.dx *= -1;
-        if (p.y <= 0 || p.y >= bounds.height - 100) p.dy *= -1;
-      });
-
-      rafId = requestAnimationFrame(updateParticles);
-    } catch (error) {
-      console.error('Error updating particles:', error);
-      cancelAnimationFrame(rafId);
-    }
-  };
 
   onMount(() => {
     visible = true;
-    rafId = requestAnimationFrame(updateParticles);
-  });
-
-  onDestroy(() => {
-    if (rafId) cancelAnimationFrame(rafId);
   });
 </script>
 
@@ -117,23 +63,8 @@
   role="region"
   style="transform: translateY({scrollY * 0.1}px)"
 >
-  <!-- Floating particles -->
-
-  <!-- Links with hover effects -->
   {#if visible}
-    <div class="pointer-events-none absolute inset-0 overflow-hidden">
-      {#each particles as particle}
-        <div
-          class="particle absolute h-24 w-24"
-          style="
-          transform: translate({particle.x}px, {particle.y}px);
-          background: radial-gradient(circle at center, {particle.color}, transparent 70%);
-          filter: blur(20px);
-          will-change: transform;
-        "
-        ></div>
-      {/each}
-    </div>
+    <ParticleOverlay {container} />
     {#each links as link, i}
       <a
         href={link.url}
