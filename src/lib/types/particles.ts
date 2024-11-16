@@ -7,7 +7,7 @@ export interface ParticleConfig {
   maxOrbit: number;
 }
 
-export interface Particle {
+export interface Particle extends Vector {
   id: number;
   size: number;
   speed: number;
