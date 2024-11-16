@@ -46,25 +46,6 @@
     }
   ];
 
-  let container: HTMLElement;
-  let mousePos = spring(
-    {x: 0, y: 0},
-    {
-      stiffness: 0.1,
-      damping: 0.4
-    }
-  );
-
-  function handleMouseMove(event: MouseEvent) {
-    const rect = container?.getBoundingClientRect();
-    if (rect) {
-      mousePos.set({
-        x: event.clientX - rect.left,
-        y: event.clientY - rect.top
-      });
-    }
-  }
-
   let visible = false;
   onMount(() => {
     visible = true;
@@ -76,17 +57,10 @@
 <svelte:window bind:scrollY />
 
 <div
-  bind:this={container}
-  on:mousemove={handleMouseMove}
   class="perspective relative space-y-4 p-4"
   role="region"
   style="transform: translateY({scrollY * 0.1}px)"
 >
-  <div
-    class="pointer-events-none fixed inset-0 opacity-50"
-    style="background: radial-gradient(circle at {$mousePos.x}px {$mousePos.y}px, rgba(139, 92, 246, 0.15), transparent 25%)"
-  ></div>
-
   <!-- Particle background -->
   <div class="absolute inset-0 overflow-visible">
     {#each Array(20) as _, i}
@@ -108,17 +82,17 @@
           duration: 1000,
           delay: i * 100
         }}
-        class="group relative block overflow-hidden rounded-lg bg-white/10 p-1 md:p-4 text-center text-white backdrop-blur-sm"
+        class="group relative block overflow-hidden rounded-lg bg-white/10 p-2 text-center text-white backdrop-blur-sm md:p-4"
       >
         <div
-          class="relative z-10 flex items-center justify-center space-x-1 md:space-x-3 transition-transform duration-300 group-hover:scale-105"
+          class="relative z-10 flex items-center justify-center space-x-2 transition-transform duration-300 group-hover:scale-105"
         >
           <img
             src={link.icon}
             alt={link.title}
             class="h-6 w-6 invert transition-transform duration-300 group-hover:rotate-12"
           />
-          <span>{link.title}</span>
+          <span class="text-sm md:text-base">{link.title}</span>
         </div>
         <div
           class="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"

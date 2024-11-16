@@ -27,16 +27,6 @@
     }
   };
 
-  function handleMouseMove(event: MouseEvent) {
-    const rect = container?.getBoundingClientRect();
-    if (rect) {
-      mousePos.set({
-        x: event.clientX - rect.left,
-        y: event.clientY - rect.top
-      });
-    }
-  }
-
   let scrollY: number;
   let cleanup: () => void;
 
@@ -65,20 +55,10 @@
 
 <svelte:window bind:scrollY />
 
-<div
-  bind:this={container}
-  on:mousemove={handleMouseMove}
-  class="perspective relative mb-8 text-center"
-  role="region"
->
-  <div
-    class="pointer-events-none absolute inset-0 opacity-50"
-    style="background: radial-gradient(circle at {$mousePos.x}px {$mousePos.y}px, rgba(139, 92, 246, 0.15), transparent 25%)"
-  ></div>
-
+<div bind:this={container} class="perspective relative mb-8 text-center" role="region">
   <!-- Particle background -->
   <div class="absolute inset-0 overflow-hidden">
-    {#each Array(20) as _, i}
+    {#each Array(10) as _, i}
       <div
         class="particle absolute h-1 w-1 rounded-full bg-purple-500/30"
         style="--index: {i}"
@@ -108,7 +88,7 @@
 
       <p
         in:fade={{duration: 1000, delay: 600}}
-        class="mx-auto max-w-2xl bg-gradient-to-r transition-all ease-in-out  from-purple-400 to-blue-500 bg-clip-text px-4 py-4 text-lg font-bold leading-relaxed text-transparent  duration-1000 hover:from-blue-200 hover:to-purple-200"
+        class="mx-auto max-w-2xl bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text px-4 py-4 text-sm font-bold leading-relaxed text-transparent transition-all duration-1000 ease-in-out hover:from-blue-200 hover:to-purple-200 md:text-lg"
       >
         {getTranslation($language).description}
       </p>

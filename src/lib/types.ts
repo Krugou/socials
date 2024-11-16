@@ -10,8 +10,22 @@ export interface FooterTranslation {
 }
 
 export interface Translations {
-  en: Translation & FooterTranslation;
-  fi: Translation & FooterTranslation;
+  en: {
+    title?: string;
+    description?: string;
+    madeWith?: string;
+    emailAriaLabel?: string;
+    builtOn?: string;
+    buildDateError: string;
+  };
+  fi: {
+    title?: string;
+    description?: string;
+    madeWith?: string;
+    emailAriaLabel?: string;
+    builtOn?: string;
+    buildDateError: string;
+  };
 }
 
 export type Language = keyof Translations;
@@ -25,4 +39,14 @@ export interface NavLink {
   translations: Record<Language, NavLinkTranslation>;
   href: string;
   external?: boolean;
+}
+
+export interface MousePosition {
+  x: number;
+  y: number;
+}
+
+export interface SpringOptions {
+  stiffness: number;
+  damping: number;
 }

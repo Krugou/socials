@@ -45,7 +45,7 @@
           <li>
             <a
               href={getUrl(link.href, link.external)}
-              class="group text-base md:text-xl font-bold tracking-wide"
+              class="group text-base font-bold tracking-wide md:text-xl"
               aria-label={getTranslation(link, $language).ariaLabel}
               title={getTranslation(link, $language).ariaLabel}
               {...link.external
@@ -56,7 +56,7 @@
                 : {}}
             >
               <span
-                class="bg-gradient-to-r from-white to-yellow-300 bg-clip-text text-transparent transition-all duration-300 ease-in-out hover:from-yellow-300 hover:to-white"
+                class="break-all bg-gradient-to-r from-white to-yellow-300 bg-clip-text text-[0.6rem] text-transparent transition-all duration-300 ease-in-out hover:from-yellow-300 hover:to-white md:text-base"
               >
                 {getTranslation(link, $language).text}
               </span>
@@ -68,13 +68,13 @@
           </li>
         {/each}
       </div>
-      <div class="flex items-center justify-center space-x-4">
+      <div class="flex items-center justify-center space-x-2">
         <li>
           <a
             href="https://github.com/krugou"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex h-16 w-full items-center justify-center rounded-full bg-white/10 p-3 transition-all duration-300 hover:scale-110 hover:bg-white/20"
+            class="flex h-10 w-full items-center justify-center rounded-full bg-white/10 p-1 transition-all duration-300 hover:scale-110 hover:bg-white/20 md:h-16 md:p-3"
             aria-label={$language === 'en' ? 'Visit GitHub Profile' : 'Siirry GitHub profiiliin'}
             title={$language === 'en' ? 'Visit GitHub Profile' : 'Siirry GitHub profiiliin'}
           >
@@ -88,7 +88,7 @@
         <li>
           <button
             on:click={toggleLanguage}
-            class="rounded-lg bg-white/10 px-4 py-2 font-bold transition-all hover:bg-white/20"
+            class="rounded-lg bg-white/10 p-1 font-bold transition-all hover:bg-white/20 md:px-4 md:py-2"
             aria-label={$language === 'en' ? 'Switch to Finnish' : 'Vaihda Englantiin'}
             title={$language === 'en' ? 'Switch to Finnish' : 'Vaihda Englantiin'}
           >
