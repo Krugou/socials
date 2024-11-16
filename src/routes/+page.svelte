@@ -46,10 +46,9 @@
     visible = true;
     // Check if device supports pointer events
     hasPointerEvents = window.matchMedia('(pointer: fine)').matches;
-    visitorTracker = new VisitorTracker();
-    await visitorTracker.logVisit();
+
     // Log visitor in production
-    if (browser && import.meta.env.PROD) {
+    if (browser) {
       visitorTracker = new VisitorTracker();
       await visitorTracker.logVisit();
     }
