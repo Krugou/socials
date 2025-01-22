@@ -1,3 +1,74 @@
+# Project Overview
+
+This project is a Svelte library created using [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte). It provides a set of reusable components and utilities for building Svelte applications.
+
+## Installation Instructions
+
+To install the project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage Examples
+
+Here are some examples of how to use the components and utilities provided by this library:
+
+```svelte
+<script>
+  import { MyComponent } from 'your-library';
+</script>
+
+<MyComponent />
+```
+
+## Contribution Guidelines
+
+We welcome contributions from the community! To contribute, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with a descriptive message.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
+
+## Project Dependencies
+
+The project relies on the following dependencies:
+
+- Svelte: ^5.0.0
+- Firebase: ^11.0.2
+- Lodash-es: ^4.17.21
+
+## Troubleshooting and FAQs
+
+### Common Issues
+
+1. **Issue:** Development server not starting.
+   **Solution:** Ensure you have installed all dependencies by running `npm install`.
+
+2. **Issue:** Build process failing.
+   **Solution:** Check the error message for details and ensure your code follows the project's guidelines.
+
+### FAQs
+
+1. **How do I start the development server?**
+   Run `npm run dev` to start the development server.
+
+2. **How do I build the library?**
+   Run `npm run package` to build the library.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
+
 # create-svelte
 
 Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
