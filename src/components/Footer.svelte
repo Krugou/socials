@@ -55,10 +55,10 @@
 </script>
 
 <footer class="mt-auto w-full px-6 py-4 border-t"
-  class:bg-background/80={$isDarkMode}
-  class:bg-white/10={!$isDarkMode}
+  class:bg-background-80={$isDarkMode}
+  class:bg-white-10={!$isDarkMode}
   class:border-border={$isDarkMode}
-  class:border-white/10={!$isDarkMode}
+  class:border-white-10={!$isDarkMode}
 >
   <div class="mx-auto flex max-w-xl flex-col gap-4">
     <a

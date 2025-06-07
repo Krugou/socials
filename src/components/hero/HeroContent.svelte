@@ -33,8 +33,8 @@
       class="bg-gradient-to-r text-4xl font-bold text-transparent"
       class:from-purple-200={!$isDarkMode}
       class:to-blue-400={!$isDarkMode}
-      class:from-primary/80={$isDarkMode}
-      class:to-secondary/80={$isDarkMode}
+      class:from-primary-80={$isDarkMode}
+      class:to-secondary-80={$isDarkMode}
       bg-clip-text
     >
       {getTranslation($language).title}
@@ -43,12 +43,12 @@
       class="mx-auto max-w-2xl bg-gradient-to-r bg-clip-text px-4 py-4 text-sm font-bold leading-relaxed text-transparent transition-all duration-1000 ease-in-out md:text-lg"
       class:from-purple-400={!$isDarkMode}
       class:to-blue-500={!$isDarkMode}
-      class:from-primary/60={$isDarkMode}
-      class:to-secondary/60={$isDarkMode}
+      class:from-primary-60={$isDarkMode}
+      class:to-secondary-60={$isDarkMode}
       class:hover:from-blue-200={!$isDarkMode}
       class:hover:to-purple-200={!$isDarkMode}
-      class:hover:from-secondary/80={$isDarkMode}
-      class:hover:to-primary/80={$isDarkMode}
+      class:hover:from-secondary-80={$isDarkMode}
+      class:hover:to-primary-80={$isDarkMode}
     >
       {getTranslation($language).description}
     </p>

@@ -33,8 +33,8 @@
 <svelte:window bind:scrollY />
 
 <div bind:this={container} class="perspective relative m-8 text-center"
-  class:bg-background/80={$isDarkMode}
-  class:bg-white/10={!$isDarkMode}
+  class:bg-background-80={$isDarkMode}
+  class:bg-white-10={!$isDarkMode}
   class:rounded-2xl={true}
   class:shadow-xl={true}
   role="region">

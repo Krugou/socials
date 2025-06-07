@@ -61,8 +61,8 @@
 <div
   bind:this={container}
   class="perspective relative space-y-4 p-4 rounded-2xl shadow-xl"
-  class:bg-background/80={$isDarkMode}
-  class:bg-white/10={!$isDarkMode}
+  class:bg-background-80={$isDarkMode}
+  class:bg-white-10={!$isDarkMode}
   role="region"
   style="transform: translateY({scrollY * 0.1}px)"
 >
