@@ -3,6 +3,8 @@
   import {language} from '../lib/stores.js';
   import {NAV_LINKS, DEFAULT_LANGUAGE} from '../lib/constants.js';
   import type {Language, NavLink} from '../lib/types.js';
+  import { logNavigationEvent } from '../lib/visitorTracking.js';
+  import { get } from 'svelte/store';
 
   /**
    * Safely gets translation for the current language with fallback
@@ -31,6 +33,26 @@
   function toggleLanguage(): void {
     language.update((l: Language) => (l === 'en' ? 'fi' : 'en'));
   }
+
+  /**
+   * Handles navigation link click and logs event to Firestore
+   */
+  const handleNavClick = async (link: NavLink) => {
+    try {
+      await logNavigationEvent({
+        navHref: link.href,
+        navText: getTranslation(link, get(language)).text,
+        language: get(language),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer || 'direct',
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        platform: navigator.platform
+      });
+    } catch (error) {
+      // Defensive: log error but do not block navigation
+      console.error('Navigation event logging failed:', error);
+    }
+  };
 </script>
 
 <nav
@@ -48,6 +70,7 @@
               class="group text-base font-bold tracking-wide md:text-xl"
               aria-label={getTranslation(link, $language).ariaLabel}
               title={getTranslation(link, $language).ariaLabel}
+              on:click={() => handleNavClick(link)}
               {...link.external
                 ? {
                     target: '_blank',

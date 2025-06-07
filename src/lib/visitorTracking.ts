@@ -1,5 +1,7 @@
 import {collection, addDoc, type DocumentReference} from 'firebase/firestore';
 import {db} from './firebase.js';
+import { NavigationEventLogError } from './types/navigation.js';
+import type { NavigationEventLog } from './types/navigation.js';
 
 interface VisitorLog {
   visitorId: string;
@@ -138,3 +140,56 @@ export class VisitorTracker {
     }
   }
 }
+
+/**
+ * Logs a navigation event to Firestore with validation and error handling
+ * @param navData - Navigation event data
+ * @returns DocumentReference or null on error
+ */
+export const logNavigationEvent = async (
+  navData: Omit<NavigationEventLog, 'timestamp' | 'visitorId'> & { navHref: string; navText: string },
+  visitorId?: string
+): Promise<DocumentReference<NavigationEventLog> | null> => {
+  try {
+    // Defensive: Validate input
+    if (!navData.navHref || typeof navData.navHref !== 'string') {
+      throw new NavigationEventLogError('Invalid navigation href');
+    }
+    if (!navData.navText || typeof navData.navText !== 'string') {
+      throw new NavigationEventLogError('Invalid navigation text');
+    }
+    if (!navData.language || typeof navData.language !== 'string') {
+      throw new NavigationEventLogError('Invalid language');
+    }
+    // Defensive: Use current visitorId if not provided
+    const id = visitorId || localStorage.getItem('visitor_id') || crypto.randomUUID();
+    const event: NavigationEventLog = {
+      visitorId: id,
+      timestamp: new Date(),
+      navHref: navData.navHref,
+      navText: navData.navText,
+      language: navData.language,
+      userAgent: navData.userAgent || navigator.userAgent,
+      referrer: navData.referrer || document.referrer || 'direct',
+      screenResolution: navData.screenResolution || `${window.screen.width}x${window.screen.height}`,
+      platform: navData.platform || navigator.platform,
+      deviceMemory: (navigator as any).deviceMemory || null,
+      hardwareConcurrency: navigator.hardwareConcurrency,
+      connection: ((): NavigationEventLog['connection'] => {
+        const connection = (navigator as any).connection;
+        return {
+          type: connection?.type || null,
+          effectiveType: connection?.effectiveType || null,
+          downlink: connection?.downlink || null,
+          rtt: connection?.rtt || null
+        };
+      })()
+    };
+    // Save to Firestore
+    const docRef = await addDoc(collection(db, 'navigation_events'), event);
+    return docRef;
+  } catch (error) {
+    console.error('Error logging navigation event:', error);
+    return null;
+  }
+};
