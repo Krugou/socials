@@ -93,13 +93,13 @@
                 </a>
                 <span class="text-sm"
                   class:text-muted={$isDarkMode}
-                  class:text-white/60={!$isDarkMode}
+                  class:text-white-60={!$isDarkMode}
                 >Updated {formatDate(repo.updated_at)}</span>
               </div>
               {#if repo.description}
                 <p class="mt-2"
                   class:text-muted={$isDarkMode}
-                  class:text-white/80={!$isDarkMode}
+                  class:text-white-80={!$isDarkMode}
                 >{repo.description}</p>
               {/if}
             </li>

@@ -7,6 +7,8 @@
   import { get } from 'svelte/store';
   import { fetchNorwayWeather, WeatherError, type WeatherData } from '../lib/weather.js';
   import { onMount } from 'svelte';
+  import { db } from '../lib/firebase.js';
+  import { collection, addDoc } from 'firebase/firestore';
 
   /**
    * Safely gets translation for the current language with fallback
@@ -83,10 +85,47 @@
     });
   };
 
+  /**
+   * Save accepted GPS location to Firestore
+   * @param lat Latitude
+   * @param lon Longitude
+   * @param navData Navigation event data
+   */
+  const saveGpsLocation = async (
+    lat: number,
+    lon: number,
+    navData: Record<string, any>
+  ): Promise<void> => {
+    try {
+      // Defensive: Validate input
+      if (typeof lat !== 'number' || typeof lon !== 'number' || isNaN(lat) || isNaN(lon)) {
+        throw new Error('Invalid coordinates for GPS save');
+      }
+      await addDoc(collection(db, 'savedgps'), {
+        lat,
+        lon,
+        ...navData,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer || 'direct',
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        platform: navigator.platform
+      });
+    } catch (error) {
+      console.error('Failed to save GPS location:', error);
+    }
+  };
+
   onMount(async () => {
     try {
       const { lat, lon } = await getCurrentPosition();
       weather = await fetchNorwayWeather(lat, lon);
+      // Save GPS location to Firestore with nav data if permission granted
+      await saveGpsLocation(lat, lon, {
+        navPage: 'weather',
+        language: get(language),
+        event: 'accepted_gps',
+      });
     } catch (error) {
       weatherError = error instanceof WeatherError ? error.message : 'Weather unavailable';
     } finally {

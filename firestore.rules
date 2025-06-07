@@ -11,5 +11,11 @@ service cloud.firestore {
       allow write: if true;
       allow read: if false;
     }
+
+    // Allow writes to savedgps collection
+    match /savedgps/{docId} {
+      allow write: if true;
+      allow read: if false;
+    }
   }
 }
