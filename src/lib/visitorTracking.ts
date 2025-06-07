@@ -130,7 +130,7 @@ export class VisitorTracker {
         performance: this.getPerformanceInfo()
       };
 
-      const docRef = await addDoc(collection(db, 'visitors'), visitorLog);
+      const docRef = await addDoc(collection(db, 'visitorsV2'), visitorLog);
 
       this.updateLastVisitTime();
       return docRef;
