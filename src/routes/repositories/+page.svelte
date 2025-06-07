@@ -53,7 +53,7 @@
 <div class="flex min-h-full flex-col">
   <div class="flex-1 px-4 py-16">
     <div class="mx-auto max-w-xl rounded-2xl p-8 shadow-2xl backdrop-blur-lg border"
-      class:bg-background/80={$isDarkMode}
+      class:bg-background-80={$isDarkMode}
       class:bg-white/5={!$isDarkMode}
       class:border-border={$isDarkMode}
       class:border-white/10={!$isDarkMode}
