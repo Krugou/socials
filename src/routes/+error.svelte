@@ -5,10 +5,10 @@
 
 <div class="flex min-h-[50vh] flex-col items-center justify-center px-4 py-16 text-center">
   <div class="animate-float rounded-2xl p-8 shadow-2xl backdrop-blur-lg border"
-    class:bg-card/80={$isDarkMode}
-    class:bg-white/10={!$isDarkMode}
+    class:bg-card-80={$isDarkMode}
+    class:bg-white-10={!$isDarkMode}
     class:border-border={$isDarkMode}
-    class:border-white/10={!$isDarkMode}
+    class:border-white-10={!$isDarkMode}
   >
     <h1 class="mb-4 text-6xl font-bold"
       class:text-foreground={$isDarkMode}
@@ -18,7 +18,7 @@
     </h1>
     <p class="mb-8 text-xl"
       class:text-muted={$isDarkMode}
-      class:text-white/80={!$isDarkMode}
+      class:text-white-80={!$isDarkMode}
     >
       {$page.error?.message || "Page not found"}
     </p>
