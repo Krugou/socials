@@ -204,12 +204,7 @@
             <span class="ml-2 text-xs text-red-300" title={weatherError}>🌧️</span>
           {:else if weather}
             <span class="ml-2 flex items-center text-xs" title={weather.description}>
-              <span class="mr-1">
-                <a href="https://www.yr.no/nb" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-300" aria-label="Weather from Yr.no" title="Weather from Yr.no">
-                  Yr.no
-                </a>:
-              </span>
-              <span class="font-semibold">{weather.location}</span>
+             
               <span class="mx-1">|</span>
               <span>{weather.temperature.toFixed(1)}°C</span>
               <span class="mx-1">|</span>
