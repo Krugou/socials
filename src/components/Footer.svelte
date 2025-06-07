@@ -65,9 +65,9 @@
       href="mailto:aleksi.nokelainen@gmail.com"
       class="flex items-center justify-center text-sm transition-colors duration-300"
       class:text-muted={$isDarkMode}
-      class:text-white/60={!$isDarkMode}
+      class:text-white-60={!$isDarkMode}
       class:hover:text-foreground={$isDarkMode}
-      class:hover:text-white/90={!$isDarkMode}
+      class:hover:text-white-90={!$isDarkMode}
       aria-label={translations[$language].emailAriaLabel}
       title={translations[$language].emailAriaLabel}
     >
@@ -76,9 +76,9 @@
     <div
       class="flex items-center justify-center transition-colors duration-300"
       class:text-muted={$isDarkMode}
-      class:text-white/60={!$isDarkMode}
+      class:text-white-60={!$isDarkMode}
       class:hover:text-foreground={$isDarkMode}
-      class:hover:text-white/90={!$isDarkMode}
+      class:hover:text-white-90={!$isDarkMode}
     >
       <span class="px-2 text-sm">{translations[$language].madeWith}</span>
       <svg
@@ -97,9 +97,9 @@
     <div
       class="text-center text-sm transition-colors duration-300"
       class:text-muted={$isDarkMode}
-      class:text-white/60={!$isDarkMode}
+      class:text-white-60={!$isDarkMode}
       class:hover:text-foreground={$isDarkMode}
-      class:hover:text-white/90={!$isDarkMode}
+      class:hover:text-white-90={!$isDarkMode}
     >
       {translations[$language].builtOn}
       {#if formattedDate && !hasError}

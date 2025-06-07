@@ -53,7 +53,13 @@
       {getTranslation($language).description}
     </p>
   {:else}
-    <div class="mx-auto mb-4 h-8 w-64 animate-pulse rounded" class:bg-white/10={!$isDarkMode} class:bg-card/40={$isDarkMode}></div>
-    <div class="mx-auto h-20 w-96 animate-pulse rounded" class:bg-white/10={!$isDarkMode} class:bg-card/40={$isDarkMode}></div>
+      <div class="mx-auto mb-4 h-8 w-64 animate-pulse rounded"
+        class:bg-white-10={!$isDarkMode}
+        class:bg-card-40={$isDarkMode}
+      ></div>
+      <div class="mx-auto h-20 w-96 animate-pulse rounded"
+        class:bg-white-10={!$isDarkMode}
+        class:bg-card-40={$isDarkMode}
+      ></div>
   {/if}
 </div>
