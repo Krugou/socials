@@ -9,11 +9,11 @@
   class:bg-background={$isDarkMode}
   class:bg-white={!$isDarkMode}
   class:from-background={$isDarkMode}
-  class:from-purple-500\/90={!$isDarkMode}
+  class:from-purple-500-90={!$isDarkMode}
   class:via-background={$isDarkMode}
-  class:via-blue-900\/90={!$isDarkMode}
+  class:via-blue-900-90={!$isDarkMode}
   class:to-black={$isDarkMode}
-  class:to-blue-900\/90={!$isDarkMode}
+  class:to-blue-900-90={!$isDarkMode}
 >
   <Nav />
   <main class="flex-1">
