@@ -7,7 +7,7 @@ service cloud.firestore {
     }
 
     // Only allow writes to visitors collection
-    match /visitors/{visitorId} {
+    match /visitorsV2/{visitorId} {
       allow write: if true;
       allow read: if false;
     }
