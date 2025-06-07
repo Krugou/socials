@@ -53,18 +53,18 @@
   });
 </script>
 
-<footer class="mt-auto w-full px-6 py-4">
+<footer class="mt-auto w-full px-6 py-4 bg-background/80 border-t border-border">
   <div class="mx-auto flex max-w-xl flex-col gap-4">
     <a
       href="mailto:aleksi.nokelainen@gmail.com"
-      class=" flex items-center justify-center text-sm text-white/60 transition-colors duration-300 hover:text-white/90"
+      class=" flex items-center justify-center text-sm text-muted transition-colors duration-300 hover:text-foreground"
       aria-label={translations[$language].emailAriaLabel}
       title={translations[$language].emailAriaLabel}
     >
       aleksi.nokelainen@gmail.com
     </a>
     <div
-      class="flex items-center justify-center text-white/60 transition-colors duration-300 hover:text-white/90"
+      class="flex items-center justify-center text-muted transition-colors duration-300 hover:text-foreground"
     >
       <span class="px-2 text-sm">{translations[$language].madeWith}</span>
       <svg
@@ -82,7 +82,7 @@
     </div>
 
     <div
-      class="text-center text-sm text-white/60 transition-colors duration-300 hover:text-white/90"
+      class="text-center text-sm text-muted transition-colors duration-300 hover:text-foreground"
     >
       {translations[$language].builtOn}
       {#if formattedDate && !hasError}

@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="flex min-h-screen flex-col bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500 via-blue-900 to-black"
+  class="flex min-h-screen flex-col bg-background from-background via-background to-black bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]"
 >
   <Nav />
   <main class="flex-1">

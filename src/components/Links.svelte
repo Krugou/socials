@@ -59,7 +59,7 @@
 
 <div
   bind:this={container}
-  class="perspective relative space-y-4 p-4"
+  class="perspective relative space-y-4 p-4 bg-background/80 rounded-2xl shadow-xl"
   role="region"
   style="transform: translateY({scrollY * 0.1}px)"
 >
@@ -71,7 +71,7 @@
         target="_blank"
         rel="noopener noreferrer"
         in:fly={{y: 20, duration: 1000, delay: i * 100}}
-        class="group relative block overflow-hidden rounded-lg bg-white/10 p-2 text-center text-white backdrop-blur-sm transition-all duration-300 md:p-4"
+        class="group relative block overflow-hidden rounded-lg bg-card/80 p-2 text-center text-foreground backdrop-blur-sm transition-all duration-300 md:p-4 border border-border"
       >
         <div
           class="relative z-10 flex items-center justify-center space-x-2 transition-transform duration-300 group-hover:scale-105"
@@ -85,13 +85,13 @@
           <span class="text-sm md:text-base">{link.title}</span>
         </div>
         <div
-          class="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          class="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         ></div>
       </a>
     {/each}
   {:else}
-    <div class="h-[68px] animate-pulse rounded-lg bg-white/5"></div>
-    <div class="h-[68px] animate-pulse rounded-lg bg-white/5"></div>
+    <div class="h-[68px] animate-pulse rounded-lg bg-card/40"></div>
+    <div class="h-[68px] animate-pulse rounded-lg bg-card/40"></div>
   {/if}
 </div>
 

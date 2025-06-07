@@ -51,31 +51,31 @@
 
 <div class="flex min-h-full flex-col">
   <div class="flex-1 px-4 py-16">
-    <div class="mx-auto max-w-xl rounded-2xl bg-white/5 p-8 shadow-2xl backdrop-blur-lg border border-white/10">
-      <h1 class="text-2xl font-bold text-white mb-4">GitHub Repositories</h1>
+    <div class="mx-auto max-w-xl rounded-2xl bg-background/80 p-8 shadow-2xl backdrop-blur-lg border border-border">
+      <h1 class="text-2xl font-bold text-foreground mb-4">GitHub Repositories</h1>
       {#if isLoading}
         <div class="flex justify-center py-8">
-          <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-white"></div>
+          <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
         </div>
       {:else if error}
         <p class="text-red-400 p-4 rounded-lg bg-red-900/20">{error}</p>
       {:else}
         <ul class="space-y-4">
           {#each repositories as repo}
-            <li class="bg-white/10 p-4 rounded-lg text-white hover:bg-white/20 transition-colors duration-300">
+            <li class="bg-card p-4 rounded-lg text-foreground hover:bg-accent transition-colors duration-300">
               <div class="flex justify-between items-start">
                 <a
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="font-bold hover:text-yellow-300 transition-colors"
+                  class="font-bold hover:text-primary transition-colors"
                 >
                   {repo.name}
                 </a>
-                <span class="text-sm text-white/60">Updated {formatDate(repo.updated_at)}</span>
+                <span class="text-sm text-muted">Updated {formatDate(repo.updated_at)}</span>
               </div>
               {#if repo.description}
-                <p class="mt-2 text-white/80">{repo.description}</p>
+                <p class="mt-2 text-muted">{repo.description}</p>
               {/if}
             </li>
           {/each}
