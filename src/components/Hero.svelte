@@ -3,6 +3,7 @@
   import ParticleSystem from './hero/ParticleSystem.svelte';
   import ProfileImage from './hero/ProfileImage.svelte';
   import HeroContent from './hero/HeroContent.svelte';
+  import { isDarkMode } from '../stores/theme.js';
 
   let visible = false;
   let container: HTMLElement;
@@ -31,7 +32,12 @@
 
 <svelte:window bind:scrollY />
 
-<div bind:this={container} class="perspective relative m-8 text-center" role="region">
+<div bind:this={container} class="perspective relative m-8 text-center"
+  class:bg-background/80={$isDarkMode}
+  class:bg-white/10={!$isDarkMode}
+  class:rounded-2xl={true}
+  class:shadow-xl={true}
+  role="region">
   <ParticleSystem />
   <ProfileImage {visible} />
   <HeroContent {visible} {scrollY} />

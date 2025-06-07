@@ -2,6 +2,7 @@
   import {language} from '../lib/stores.js';
   import type {Translations} from '../lib/types.js';
   import {onMount} from 'svelte';
+  import { isDarkMode } from '../stores/theme.js';
 
   const translations: Pick<Translations, 'en' | 'fi'> = {
     en: {
@@ -53,18 +54,31 @@
   });
 </script>
 
-<footer class="mt-auto w-full px-6 py-4 bg-background/80 border-t border-border">
+<footer class="mt-auto w-full px-6 py-4 border-t"
+  class:bg-background/80={$isDarkMode}
+  class:bg-white/10={!$isDarkMode}
+  class:border-border={$isDarkMode}
+  class:border-white/10={!$isDarkMode}
+>
   <div class="mx-auto flex max-w-xl flex-col gap-4">
     <a
       href="mailto:aleksi.nokelainen@gmail.com"
-      class=" flex items-center justify-center text-sm text-muted transition-colors duration-300 hover:text-foreground"
+      class="flex items-center justify-center text-sm transition-colors duration-300"
+      class:text-muted={$isDarkMode}
+      class:text-white/60={!$isDarkMode}
+      class:hover:text-foreground={$isDarkMode}
+      class:hover:text-white/90={!$isDarkMode}
       aria-label={translations[$language].emailAriaLabel}
       title={translations[$language].emailAriaLabel}
     >
       aleksi.nokelainen@gmail.com
     </a>
     <div
-      class="flex items-center justify-center text-muted transition-colors duration-300 hover:text-foreground"
+      class="flex items-center justify-center transition-colors duration-300"
+      class:text-muted={$isDarkMode}
+      class:text-white/60={!$isDarkMode}
+      class:hover:text-foreground={$isDarkMode}
+      class:hover:text-white/90={!$isDarkMode}
     >
       <span class="px-2 text-sm">{translations[$language].madeWith}</span>
       <svg
@@ -80,9 +94,12 @@
       </svg>
       <span class="px-2 text-sm font-medium">Svelte</span>
     </div>
-
     <div
-      class="text-center text-sm text-muted transition-colors duration-300 hover:text-foreground"
+      class="text-center text-sm transition-colors duration-300"
+      class:text-muted={$isDarkMode}
+      class:text-white/60={!$isDarkMode}
+      class:hover:text-foreground={$isDarkMode}
+      class:hover:text-white/90={!$isDarkMode}
     >
       {translations[$language].builtOn}
       {#if formattedDate && !hasError}

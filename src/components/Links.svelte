@@ -3,6 +3,7 @@
   import {onMount} from 'svelte';
   import ParticleOverlay from './ParticleOverlay.svelte';
   import type {SocialLink} from '../lib/types.js';
+  import { isDarkMode } from '../../stores/theme.js';
 
   /** Social media links configuration */
   const links: SocialLink[] = [
@@ -59,7 +60,9 @@
 
 <div
   bind:this={container}
-  class="perspective relative space-y-4 p-4 bg-background/80 rounded-2xl shadow-xl"
+  class="perspective relative space-y-4 p-4 rounded-2xl shadow-xl"
+  class:bg-background/80={$isDarkMode}
+  class:bg-white/10={!$isDarkMode}
   role="region"
   style="transform: translateY({scrollY * 0.1}px)"
 >
@@ -71,7 +74,13 @@
         target="_blank"
         rel="noopener noreferrer"
         in:fly={{y: 20, duration: 1000, delay: i * 100}}
-        class="group relative block overflow-hidden rounded-lg bg-card/80 p-2 text-center text-foreground backdrop-blur-sm transition-all duration-300 md:p-4 border border-border"
+        class="group relative block overflow-hidden rounded-lg p-2 text-center backdrop-blur-sm transition-all duration-300 md:p-4 border"
+        class:bg-card/80={$isDarkMode}
+        class:bg-white/10={!$isDarkMode}
+        class:text-foreground={$isDarkMode}
+        class:text-white={!$isDarkMode}
+        class:border-border={$isDarkMode}
+        class:border-white/10={!$isDarkMode}
       >
         <div
           class="relative z-10 flex items-center justify-center space-x-2 transition-transform duration-300 group-hover:scale-105"
@@ -85,13 +94,20 @@
           <span class="text-sm md:text-base">{link.title}</span>
         </div>
         <div
-          class="absolute inset-0 -z-10 bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          class="absolute inset-0 -z-10 transition-opacity duration-300 group-hover:opacity-100"
+          class:bg-gradient-to-r={$isDarkMode}
+          class:from-primary/10={$isDarkMode}
+          class:to-secondary/10={$isDarkMode}
+          class:bg-gradient-to-r={!$isDarkMode}
+          class:from-purple-500/10={!$isDarkMode}
+          class:to-blue-500/10={!$isDarkMode}
+          class:opacity-0={true}
         ></div>
       </a>
     {/each}
   {:else}
-    <div class="h-[68px] animate-pulse rounded-lg bg-card/40"></div>
-    <div class="h-[68px] animate-pulse rounded-lg bg-card/40"></div>
+    <div class="h-[68px] animate-pulse rounded-lg" class:bg-card/40={$isDarkMode} class:bg-white/5={!$isDarkMode}></div>
+    <div class="h-[68px] animate-pulse rounded-lg" class:bg-card/40={$isDarkMode} class:bg-white/5={!$isDarkMode}></div>
   {/if}
 </div>
 
