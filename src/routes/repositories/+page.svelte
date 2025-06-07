@@ -54,9 +54,9 @@
   <div class="flex-1 px-4 py-16">
     <div class="mx-auto max-w-xl rounded-2xl p-8 shadow-2xl backdrop-blur-lg border"
       class:bg-background-80={$isDarkMode}
-      class:bg-white/5={!$isDarkMode}
+      class:bg-white-5={!$isDarkMode}
       class:border-border={$isDarkMode}
-      class:border-white/10={!$isDarkMode}
+      class:border-white-10={!$isDarkMode}
     >
       <h1 class="text-2xl font-bold mb-4"
         class:text-foreground={$isDarkMode}
@@ -74,9 +74,9 @@
       {:else}
         <ul class="space-y-4">
           {#each repositories as repo}
-            <li class="p-4 rounded-lg hover:bg-white/20 transition-colors duration-300"
-              class:bg-card/80={$isDarkMode}
-              class:bg-white/10={!$isDarkMode}
+            <li class="p-4 rounded-lg hover:bg-white-20 transition-colors duration-300"
+              class:bg-card-80={$isDarkMode}
+              class:bg-white-10={!$isDarkMode}
               class:text-foreground={$isDarkMode}
               class:text-white={!$isDarkMode}
             >
