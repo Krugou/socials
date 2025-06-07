@@ -2,7 +2,6 @@
   import '../app.css';
   import Nav from '../components/Nav.svelte';
   import { isDarkMode } from '../stores/theme.js';
-  let {children} = $props();
 </script>
 
 <div
@@ -19,6 +18,6 @@
 >
   <Nav />
   <main class="flex-1">
-    {@render children()}
+    <slot />
   </main>
 </div>
