@@ -20,3 +20,9 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# React and Vue build directories
+/react/dist
+/react/node_modules
+/vue/dist
+/vue/node_modules
