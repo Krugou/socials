@@ -31,11 +31,39 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: build
+      - name: Build Svelte app
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm run build
+
+      - name: Install React dependencies
+        run: |
+          cd react
+          npm install
+
+      - name: Build React app
+        run: |
+          cd react
+          npm run build
+
+      - name: Install Vue dependencies
+        run: |
+          cd vue
+          npm install
+
+      - name: Build Vue app
+        run: |
+          cd vue
+          npm run build
+
+      - name: Combine build outputs
+        run: |
+          # React and Vue builds go into subdirectories of the Svelte build
+          mkdir -p build/react
+          mkdir -p build/vue
+          cp -r react/dist/* build/react/
+          cp -r vue/dist/* build/vue/
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
