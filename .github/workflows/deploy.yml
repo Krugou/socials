@@ -33,7 +33,7 @@ jobs:
 
       - name: Build Svelte app
         env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
+          NODE_ENV: production
         run: |
           npm run build
 
@@ -43,6 +43,8 @@ jobs:
           npm install
 
       - name: Build React app
+        env:
+          NODE_ENV: production
         run: |
           cd react
           npm run build
@@ -53,6 +55,8 @@ jobs:
           npm install
 
       - name: Build Vue app
+        env:
+          NODE_ENV: production
         run: |
           cd vue
           npm run build
