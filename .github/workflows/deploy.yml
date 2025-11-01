@@ -31,11 +31,65 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: build
+      - name: Build Svelte app
         env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
+          NODE_ENV: production
         run: |
           npm run build
+
+      - name: Install React dependencies
+        run: |
+          cd react
+          npm install
+
+      - name: Build React app
+        env:
+          NODE_ENV: production
+        run: |
+          cd react
+          npm run build
+
+      - name: Install Vue dependencies
+        run: |
+          cd vue
+          npm install
+
+      - name: Build Vue app
+        env:
+          NODE_ENV: production
+        run: |
+          cd vue
+          npm run build
+
+      - name: Combine build outputs
+        run: |
+          # Verify build directories exist
+          if [ ! -d "react/dist" ]; then
+            echo "Error: react/dist directory not found"
+            exit 1
+          fi
+          if [ ! -d "vue/dist" ]; then
+            echo "Error: vue/dist directory not found"
+            exit 1
+          fi
+          
+          # React and Vue builds go into subdirectories of the Svelte build
+          mkdir -p build/react
+          mkdir -p build/vue
+          cp -r react/dist/. build/react/
+          cp -r vue/dist/. build/vue/
+          
+          # Verify the copy operations succeeded
+          if [ ! -f "build/react/index.html" ]; then
+            echo "Error: React build copy failed"
+            exit 1
+          fi
+          if [ ! -f "build/vue/index.html" ]; then
+            echo "Error: Vue build copy failed"
+            exit 1
+          fi
+          
+          echo "Successfully combined all builds"
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
