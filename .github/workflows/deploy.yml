@@ -62,8 +62,8 @@ jobs:
           # React and Vue builds go into subdirectories of the Svelte build
           mkdir -p build/react
           mkdir -p build/vue
-          cp -r react/dist/* build/react/
-          cp -r vue/dist/* build/vue/
+          cp -r react/dist/. build/react/
+          cp -r vue/dist/. build/vue/
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
