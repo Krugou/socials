@@ -101,7 +101,7 @@ function getUrl(href: string, external?: boolean): string {
   if (!href?.trim()) {
     throw new Error('URL href cannot be empty');
   }
-  const basePath = import.meta.env.PROD ? '/socials/vue' : '/vue';
+  const basePath = import.meta.env.PROD ? '/socials/vue' : '';
   return external ? href : `${basePath}${href}`;
 }
 

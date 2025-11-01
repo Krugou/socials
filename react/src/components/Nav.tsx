@@ -17,7 +17,7 @@ function getUrl(href: string, external?: boolean): string {
   if (!href?.trim()) {
     throw new Error('URL href cannot be empty');
   }
-  const basePath = import.meta.env.PROD ? '/socials' : '';
+  const basePath = import.meta.env.PROD ? '/socials/react' : '';
   return external ? href : `${basePath}${href}`;
 }
 
