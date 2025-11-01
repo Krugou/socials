@@ -63,11 +63,33 @@ jobs:
 
       - name: Combine build outputs
         run: |
+          # Verify build directories exist
+          if [ ! -d "react/dist" ]; then
+            echo "Error: react/dist directory not found"
+            exit 1
+          fi
+          if [ ! -d "vue/dist" ]; then
+            echo "Error: vue/dist directory not found"
+            exit 1
+          fi
+          
           # React and Vue builds go into subdirectories of the Svelte build
           mkdir -p build/react
           mkdir -p build/vue
           cp -r react/dist/. build/react/
           cp -r vue/dist/. build/vue/
+          
+          # Verify the copy operations succeeded
+          if [ ! -f "build/react/index.html" ]; then
+            echo "Error: React build copy failed"
+            exit 1
+          fi
+          if [ ! -f "build/vue/index.html" ]; then
+            echo "Error: Vue build copy failed"
+            exit 1
+          fi
+          
+          echo "Successfully combined all builds"
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
