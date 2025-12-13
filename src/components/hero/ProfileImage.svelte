@@ -1,4 +1,3 @@
-
 <script lang="ts">
   import {fly} from 'svelte/transition';
   export let visible = false;
@@ -7,7 +6,11 @@
 {#if visible}
   <div
     in:fly={{y: 50, duration: 1000}}
-    class="relative mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full ring-4 ring-purple-500/50 transition-transform hover:scale-105"
+    class="relative mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full ring-4 transition-transform hover:scale-105"
+    class:ring-purple-500-50={globalThis.$isDarkMode}
+    class:ring-purple-500-30={!globalThis.$isDarkMode}
+    class:bg-background-80={globalThis.$isDarkMode}
+    class:bg-white-10={!globalThis.$isDarkMode}
   >
     <img
       src="https://avatars.githubusercontent.com/u/59641229?v=4"
@@ -16,5 +19,8 @@
     />
   </div>
 {:else}
-  <div class="mx-auto mb-6 h-32 w-32 rounded-full bg-white/10 animate-pulse"></div>
+  <div class="mx-auto mb-6 h-32 w-32 rounded-full animate-pulse"
+    class:bg-white-10={!globalThis.$isDarkMode}
+    class:bg-card-40={globalThis.$isDarkMode}
+  ></div>
 {/if}

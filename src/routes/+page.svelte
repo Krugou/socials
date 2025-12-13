@@ -63,7 +63,7 @@
 <div class="flex min-h-full flex-col">
   <div class="flex-1 px-4 py-16">
     <div
-      class="relative mx-auto max-w-xl overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-lg"
+      class="relative mx-auto max-w-xl overflow-hidden rounded-2xl border border-border bg-card/80 p-8 shadow-2xl backdrop-blur-lg"
       role="presentation"
       bind:this={container}
       on:mousemove|passive={handleMouseMove}
@@ -71,7 +71,7 @@
       {#if hasPointerEvents}
         <div
           class="pointer-events-none absolute inset-0 opacity-80 transition-opacity duration-300"
-          style="transform: translate3d(0,0,0); background: radial-gradient(circle at {$mousePos.x}px {$mousePos.y}px, rgba(139, 92, 246, 0.15), transparent 25%)"
+          style="transform: translate3d(0,0,0); background: radial-gradient(circle at {$mousePos.x}px {$mousePos.y}px, rgba(139, 92, 246, 0.10), transparent 25%)"
         ></div>
       {/if}
 

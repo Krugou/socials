@@ -5,6 +5,10 @@
   import type {Language, NavLink} from '../lib/types.js';
   import { logNavigationEvent } from '../lib/visitorTracking.js';
   import { get } from 'svelte/store';
+  import { fetchNorwayWeather, WeatherError, type WeatherData } from '../lib/weather.js';
+  import { onMount } from 'svelte';
+  import { db } from '../lib/firebase.js';
+  import { collection, addDoc } from 'firebase/firestore';
 
   /**
    * Safely gets translation for the current language with fallback
@@ -53,6 +57,81 @@
       console.error('Navigation event logging failed:', error);
     }
   };
+
+  // Weather state
+  let weather: WeatherData | null = null;
+  let weatherError: string | null = null;
+  let weatherLoading = true;
+
+  /**
+   * Gets user's current position with error handling
+   * @returns Promise<{lat: number, lon: number}>
+   */
+  const getCurrentPosition = async (): Promise<{ lat: number; lon: number }> => {
+    return new Promise((resolve, reject) => {
+      if (!navigator.geolocation) {
+        reject(new WeatherError('Geolocation is not supported by this browser.'));
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude });
+        },
+        (err) => {
+          reject(new WeatherError('Failed to get location: ' + err.message));
+        },
+        { enableHighAccuracy: false, timeout: 8000, maximumAge: 60000 }
+      );
+    });
+  };
+
+  /**
+   * Save accepted GPS location to Firestore
+   * @param lat Latitude
+   * @param lon Longitude
+   * @param navData Navigation event data
+   */
+  const saveGpsLocation = async (
+    lat: number,
+    lon: number,
+    navData: Record<string, any>
+  ): Promise<void> => {
+    try {
+      // Defensive: Validate input
+      if (typeof lat !== 'number' || typeof lon !== 'number' || isNaN(lat) || isNaN(lon)) {
+        throw new Error('Invalid coordinates for GPS save');
+      }
+      await addDoc(collection(db, 'savedgps'), {
+        lat,
+        lon,
+        ...navData,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer || 'direct',
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        platform: navigator.platform
+      });
+    } catch (error) {
+      console.error('Failed to save GPS location:', error);
+    }
+  };
+
+  onMount(async () => {
+    try {
+      const { lat, lon } = await getCurrentPosition();
+      weather = await fetchNorwayWeather(lat, lon);
+      // Save GPS location to Firestore with nav data if permission granted
+      await saveGpsLocation(lat, lon, {
+        navPage: 'weather',
+        language: get(language),
+        event: 'accepted_gps',
+      });
+    } catch (error) {
+      weatherError = error instanceof WeatherError ? error.message : 'Weather unavailable';
+    } finally {
+      weatherLoading = false;
+    }
+  });
 </script>
 
 <nav
@@ -117,6 +196,21 @@
           >
             {$language === 'en' ? 'FI' : 'EN'}
           </button>
+        </li>
+        <li>
+          {#if weatherLoading}
+            <span class="ml-2 text-xs animate-pulse">Loading weather...</span>
+          {:else if weatherError}
+            <span class="ml-2 text-xs text-red-300" title={weatherError}>🌧️</span>
+          {:else if weather}
+            <span class="ml-2 flex items-center text-xs" title={weather.description}>
+             
+              <span class="mx-1">|</span>
+              <span>{weather.temperature.toFixed(1)}°C</span>
+              <span class="mx-1">|</span>
+              <span class="capitalize">{weather.description}</span>
+            </span>
+          {/if}
         </li>
       </div>
     </ul>
