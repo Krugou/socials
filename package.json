@@ -12,7 +12,8 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "export:local": "npm run export --prefix admin && npm run format && git add visitors.json visitors.html DATA_REPORT.md && git commit -m \"chore: update local data export\" && git push"
   },
   "files": [
     "dist",
