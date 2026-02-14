@@ -155,8 +155,24 @@ async function exportData() {
     reportLines.push('');
   }
 
-  // 3. GPS Locations
-  reportLines.push('## Saved GPS Locations (savedgps)');
+  // Helper to calculate Haversine distance in meters
+  function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    const R = 6371e3; // Earth radius in meters
+    const phi1 = (lat1 * Math.PI) / 180;
+    const phi2 = (lat2 * Math.PI) / 180;
+    const deltaPhi = ((lat2 - lat1) * Math.PI) / 180;
+    const deltaLambda = ((lon2 - lon1) * Math.PI) / 180;
+
+    const a =
+      Math.sin(deltaPhi / 2) * Math.sin(deltaPhi / 2) +
+      Math.cos(phi1) * Math.cos(phi2) * Math.sin(deltaLambda / 2) * Math.sin(deltaLambda / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    return R * c;
+  }
+
+  // 3. GPS Locations (Clustered)
+  reportLines.push('## Saved GPS Locations (Clustered)');
   const gpsSnapshot = await db.collection('savedgps').orderBy('timestamp', 'desc').get();
 
   const gpsData: Record<string, unknown>[] = [];
@@ -164,14 +180,81 @@ async function exportData() {
   if (gpsSnapshot.empty) {
     reportLines.push('No GPS data found.\n');
   } else {
-    reportLines.push('| Timestamp | Lat | Lon | Event |');
-    reportLines.push('| --- | --- | --- | --- |');
+    reportLines.push('| Timestamp | Lat | Lon | Event | Count |');
+    reportLines.push('| --- | --- | --- | --- | --- |');
+
+    interface GPSPoint {
+      lat: number;
+      lon: number;
+      timestamp: string;
+      event: string;
+      [key: string]: unknown;
+    }
+
+    const rawPoints: GPSPoint[] = [];
     gpsSnapshot.forEach((doc) => {
       const data = doc.data();
-      // timestamp in savedgps is ISO string in Nav.svelte but might be Timestamp if added elsewhere
-      const ts = data.timestamp;
-      reportLines.push(`| ${ts} | ${data.lat} | ${data.lon} | ${data.event || 'N/A'} |`);
-      gpsData.push({...data, timestamp: ts});
+      rawPoints.push({
+        ...data,
+        lat: data.lat,
+        lon: data.lon,
+        event: data.event,
+        timestamp: data.timestamp?.toDate ? data.timestamp.toDate().toISOString() : data.timestamp,
+      });
+    });
+
+    // Simple clustering: Group points within 20 meters
+    interface Cluster {
+      center: GPSPoint;
+      points: GPSPoint[];
+      count: number;
+      latestTimestamp: string;
+    }
+
+    const clusters: Cluster[] = [];
+    const CLUSTER_THRESHOLD_METERS = 20;
+
+    for (const point of rawPoints) {
+      let addedToCluster = false;
+      for (const cluster of clusters) {
+        // Use the first point in the cluster as the center reference
+        const dist = calculateDistance(
+          point.lat,
+          point.lon,
+          cluster.center.lat,
+          cluster.center.lon,
+        );
+        if (dist <= CLUSTER_THRESHOLD_METERS) {
+          cluster.points.push(point);
+          // Keep the correct timestamp (latest) if the cluster is new, usually we sort by desc so first is latest
+          cluster.count++;
+          addedToCluster = true;
+          break;
+        }
+      }
+      if (!addedToCluster) {
+        clusters.push({
+          center: point,
+          points: [point],
+          count: 1,
+          latestTimestamp: point.timestamp,
+        });
+      }
+    }
+
+    clusters.forEach((cluster) => {
+      const p = cluster.center;
+      reportLines.push(
+        `| ${cluster.latestTimestamp} | ${p.lat} | ${p.lon} | ${p.event} | ${cluster.count} |`,
+      );
+      // For JSON/HTML, we might want to expose the cluster info or just the center
+      // Let's expose the center but with the count
+      gpsData.push({
+        ...p,
+        timestamp: cluster.latestTimestamp,
+        count: cluster.count,
+        debug_cluster_size: cluster.points.length,
+      });
     });
     reportLines.push('');
   }
@@ -296,7 +379,7 @@ async function exportData() {
                 if (point.lat && point.lon) {
                     const marker = L.marker([point.lat, point.lon])
                         .addTo(map)
-                        .bindPopup(\`<b>\${point.event}</b><br>\${point.timestamp}\`);
+                        .bindPopup(\`<b>\${point.event}</b><br>Count: \${point.count}<br>\${point.timestamp}\`);
                     bounds.extend(marker.getLatLng());
                 }
             });
