@@ -50,15 +50,51 @@ async function exportData() {
   if (visitorsSnapshot.empty) {
     reportLines.push('No visitor data found.\n');
   } else {
-    reportLines.push('| Timestamp | Visitor ID | Platform | Language | Screen |');
-    reportLines.push('| --- | --- | --- | --- | --- |');
+    const seenVisitorIds = new Set<string>();
+    const visitorRows: string[] = [];
+    const platformStats: Record<string, number> = {};
+    const languageStats: Record<string, number> = {};
+
     visitorsSnapshot.forEach((doc) => {
       const data = doc.data();
       const ts = data.timestamp?.toDate ? data.timestamp.toDate().toISOString() : data.timestamp;
-      reportLines.push(
-        `| ${ts} | ${data.visitorId} | ${data.platform} | ${data.language} | ${data.screenResolution} |`,
+      const isUnique = !seenVisitorIds.has(data.visitorId);
+      seenVisitorIds.add(data.visitorId);
+
+      // Accumulate stats
+      const p = data.platform || 'Unknown';
+      const l = data.language || 'Unknown';
+      platformStats[p] = (platformStats[p] || 0) + 1;
+      languageStats[l] = (languageStats[l] || 0) + 1;
+
+      visitorRows.push(
+        `| ${ts} | ${data.visitorId} | ${p} | ${l} | ${data.screenResolution} | ${isUnique ? '✅' : '—'} |`,
       );
     });
+
+    reportLines.push(`**Total Unique Visitors (in this sample): ${seenVisitorIds.size}**\n`);
+
+    // Added Visualizations
+    reportLines.push('### Visualizations');
+    reportLines.push('#### Platform Distribution');
+    reportLines.push('```mermaid');
+    reportLines.push('pie title Platforms');
+    Object.entries(platformStats).forEach(([name, count]) => {
+      reportLines.push(`    "${name}" : ${count}`);
+    });
+    reportLines.push('```\n');
+
+    reportLines.push('#### Language Distribution');
+    reportLines.push('```mermaid');
+    reportLines.push('pie title Languages');
+    Object.entries(languageStats).forEach(([name, count]) => {
+      reportLines.push(`    "${name}" : ${count}`);
+    });
+    reportLines.push('```\n');
+
+    reportLines.push('| Timestamp | Visitor ID | Platform | Language | Screen | Unique? |');
+    reportLines.push('| --- | --- | --- | --- | --- | --- |');
+    reportLines.push(...visitorRows);
     reportLines.push('');
   }
 
