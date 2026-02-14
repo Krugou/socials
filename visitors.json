@@ -1,0 +1,1899 @@
+{
+  "generatedAt": "2026-02-14T17:39:27.001Z",
+  "visitors": [
+    {
+      "visitorId": "9e5ea7c8-483b-4a79-b31b-61ad82fcb4b6",
+      "timestamp": "2026-02-14T17:18:48.670Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 2,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771089528106,
+        "loadTime": 565,
+        "memoryUsage": 21339445
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "dee070e8-0736-4205-b677-75883a2a7f84",
+      "timestamp": "2026-02-14T16:34:08.701Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 5,
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771086848431,
+        "loadTime": 271,
+        "memoryUsage": 25610121
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "dee070e8-0736-4205-b677-75883a2a7f84",
+      "timestamp": "2026-02-14T16:34:08.145Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 4,
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771086847908,
+        "loadTime": 238,
+        "memoryUsage": 41059414
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "9e5ea7c8-483b-4a79-b31b-61ad82fcb4b6",
+      "timestamp": "2026-02-14T16:07:49.409Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771085268816,
+        "loadTime": 594,
+        "memoryUsage": 21030796
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "dee070e8-0736-4205-b677-75883a2a7f84",
+      "timestamp": "2026-02-14T16:02:47.849Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 3,
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771084967432,
+        "loadTime": 417,
+        "memoryUsage": 72911127
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "62426390-161e-417f-8813-8c306d0839c3",
+      "timestamp": "2026-02-14T07:52:28.721Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 1.75,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771055547755,
+        "loadTime": 968,
+        "memoryUsage": 2843592
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "09d906b2-30c4-4749-8a2a-7dd0c2aabe7a",
+      "timestamp": "2026-02-14T07:52:09.338Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771055526682,
+        "loadTime": 2658,
+        "memoryUsage": 2941476
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "d6022104-7aad-4a2f-af54-4e1886f9099f",
+      "timestamp": "2026-02-07T15:06:53.346Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1770476811859,
+        "loadTime": 1488,
+        "memoryUsage": 2976137
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "76667d90-62a8-42c6-b80a-872b1c468016",
+      "timestamp": "2026-02-04T12:43:00.693Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 7,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 22,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1770208979218,
+        "loadTime": 1476,
+        "memoryUsage": 24488081
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "7866378b-3818-4441-848b-20a35fa4f272",
+      "timestamp": "2026-02-02T18:29:05.135Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1770056943325,
+        "loadTime": 1813,
+        "memoryUsage": 3028960
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "7abe12dc-4ee1-4e91-a840-82f874f99d8b",
+      "timestamp": "2026-01-28T09:19:29.166Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "1536x864",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1769591967752,
+        "loadTime": 1416,
+        "memoryUsage": 4640852
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "76667d90-62a8-42c6-b80a-872b1c468016",
+      "timestamp": "2026-01-28T06:34:11.114Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 6,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 22,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 2.3,
+        "rtt": 100
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1769582050131,
+        "loadTime": 984,
+        "memoryUsage": 27947754
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "9980b3d3-1071-4ae1-8910-1f21a5fe25d1",
+      "timestamp": "2026-01-27T06:51:25.815Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://research.keabase.com",
+      "screenResolution": "800x600",
+      "language": "en-US",
+      "platform": "Linux x86_64",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 12,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Paris",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1769496685160,
+        "loadTime": 656,
+        "memoryUsage": 2836044
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "e84737f6-4cfe-4cb2-90d0-cc497d7c33c9",
+      "timestamp": "2026-01-23T18:06:25.976Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1769191584252,
+        "loadTime": 1726,
+        "memoryUsage": 3016180
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "e84011bd-0d6a-48da-ad5d-e45e38d0410d",
+      "timestamp": "2026-01-21T12:18:15.838Z",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://github.com/",
+      "screenResolution": "3440x1440",
+      "language": "en-US",
+      "platform": "MacIntel",
+      "deviceMemory": null,
+      "hardwareConcurrency": 14,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1768997895193,
+        "loadTime": 645,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "0ae475f2-1b3e-4db3-9ddd-b1ce7eaffe98",
+      "timestamp": "2026-01-19T17:41:19.462Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/59.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 9.2,
+        "rtt": 100
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1768844476915,
+        "loadTime": 2549,
+        "memoryUsage": 2975819
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "2b11a841-da59-4f2f-905b-38b6bd4ec967",
+      "timestamp": "2026-01-16T12:10:56.697Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 OPR/126.0.0.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "3440x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1768565455079,
+        "loadTime": 1618,
+        "memoryUsage": 8330171
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "5b6e8c8a-d42f-465e-8aef-b9bf577fb082",
+      "timestamp": "2026-01-14T21:10:14.140Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/59.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1768425012901,
+        "loadTime": 1241,
+        "memoryUsage": 2848429
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "76667d90-62a8-42c6-b80a-872b1c468016",
+      "timestamp": "2026-01-14T08:24:56.693Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 5,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "2560x1440",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 22,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1768379091954,
+        "loadTime": 4739,
+        "memoryUsage": 52528109
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "775e2923-b5c1-4f53-a36f-1fa96bc47879",
+      "timestamp": "2026-01-10T12:36:42.497Z",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 26_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/23C55 [FBAN/FBIOS;FBAV/543.0.0.47.72;FBBV/845843444;FBDV/iPhone17,2;FBMD/iPhone;FBSN/iOS;FBSV/26.2;FBSS/3;FBID/phone;FBLC/en_US;FBOP/5;FBRV/857971405]",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "iPhone",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1768048601054,
+        "loadTime": 1445,
+        "memoryUsage": 2843437
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "18a6beec-2d95-42e4-8355-3630c422ad9f",
+      "timestamp": "2026-01-06T16:09:08.377Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 2,
+      "referrer": "direct",
+      "screenResolution": "1536x864",
+      "language": "en-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": true
+      },
+      "performance": {
+        "navigationStart": 1767715747719,
+        "loadTime": 659,
+        "memoryUsage": 29851467
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "2f5ccda7-b3bc-4983-874b-f6ec8d9b4d73",
+      "timestamp": "2026-01-05T18:34:34.074Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1767638072128,
+        "loadTime": 1948,
+        "memoryUsage": 2852139
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "401d69f6-180c-44c1-938c-0cfd8f0d08be",
+      "timestamp": "2026-01-01T07:13:40.068Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1767251618852,
+        "loadTime": 1218,
+        "memoryUsage": 2905594
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "7724b785-0c73-4c7a-af91-a3a0d70797f2",
+      "timestamp": "2026-01-01T07:13:33.554Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1767251612671,
+        "loadTime": 884,
+        "memoryUsage": 2820139
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "2b18b4a2-2527-492e-b45c-ef55c4024cb6",
+      "timestamp": "2025-12-28T03:07:38.343Z",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/23B85 Instagram 409.1.0.27.161 (iPhone18,2; iOS 26_1; fi_FI; fi; scale=3.00; 1320x2868; IABMV/1; 841016381) Safari/604.1",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "440x956",
+      "language": "fi-FI",
+      "platform": "iPhone",
+      "deviceMemory": null,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1766891257260,
+        "loadTime": 1083,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "d2ddbfb8-ebc3-4993-bc91-3f6b3dd99d66",
+      "timestamp": "2025-12-25T19:59:10.166Z",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/22G100 [FBAN/FBIOS;FBAV/543.0.0.47.72;FBBV/845843444;FBDV/iPhone12,1;FBMD/iPhone;FBSN/iOS;FBSV/18.6.2;FBSS/2;FBID/phone;FBLC/es_LA;FBOP/5;FBRV/0]",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "iPhone",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 1.5,
+        "rtt": 100
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1766692748704,
+        "loadTime": 1463,
+        "memoryUsage": 2843993
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "18a6beec-2d95-42e4-8355-3630c422ad9f",
+      "timestamp": "2025-12-19T10:00:19.717Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "1536x864",
+      "language": "en-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 9,
+        "rtt": 150
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": true
+      },
+      "performance": {
+        "navigationStart": 1766138418669,
+        "loadTime": 1049,
+        "memoryUsage": 29830300
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "e0e04295-220d-4037-a8e6-fa1da6901980",
+      "timestamp": "2025-12-19T01:12:56.544Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/59.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1766106775714,
+        "loadTime": 832,
+        "memoryUsage": 2831363
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "f823be4e-0947-4a22-96d9-02a2bc2a53c7",
+      "timestamp": "2025-12-18T20:25:18.294Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 8,
+      "referrer": "direct",
+      "screenResolution": "2195x1235",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1766089517551,
+        "loadTime": 743,
+        "memoryUsage": 16644978
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "e4b4de44-983e-4464-bd41-f5067d3a9dc1",
+      "timestamp": "2025-12-12T14:38:24.908Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 3,
+      "referrer": "direct",
+      "screenResolution": "1920x1080",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 12,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "Europe/London",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1765550302662,
+        "loadTime": 2247,
+        "memoryUsage": 55051421
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "a8458e7a-abbc-43a1-b90f-2e2b5900b8fc",
+      "timestamp": "2025-11-19T08:39:00.547Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 OPR/123.0.0.0",
+      "returningVisitor": true,
+      "visitCount": 5,
+      "referrer": "direct",
+      "screenResolution": "3440x1440",
+      "language": "fi",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 12,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1763541538741,
+        "loadTime": 1807,
+        "memoryUsage": 13725216
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "76667d90-62a8-42c6-b80a-872b1c468016",
+      "timestamp": "2025-11-19T07:22:58.338Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 4,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 22,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1763536977434,
+        "loadTime": null,
+        "memoryUsage": 21409229
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "010e2f5a-77bc-4855-860f-1ad8d8b5647b",
+      "timestamp": "2025-11-16T10:58:27.105Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1763290705963,
+        "loadTime": 1145,
+        "memoryUsage": 2805076
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "99c118bc-9c59-4782-97e8-3be71440b30a",
+      "timestamp": "2025-11-01T23:55:16.661Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "385x854",
+      "language": "fi-FI",
+      "platform": "Linux armv81",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1762041316105,
+        "loadTime": 557,
+        "memoryUsage": 2151337
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "9eac2697-5f1b-4bd0-a505-dda9fd01340a",
+      "timestamp": "2025-11-01T23:54:58.486Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 15; SM-G998B Build/AP3A.240905.015.A2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/141.0.7390.122 Mobile Safari/537.36 Instagram 405.0.0.0.43 Android (35/15; 300dpi; 720x1600; samsung; SM-G998B; p3s; exynos2100; fi_FI; 813411313; IABMV/1)",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "385x854",
+      "language": "fi-FI",
+      "platform": "Linux aarch64",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 9.5,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1762041297391,
+        "loadTime": 1097,
+        "memoryUsage": 10000000
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "f823be4e-0947-4a22-96d9-02a2bc2a53c7",
+      "timestamp": "2025-11-01T09:19:00.130Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 7,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1761988739494,
+        "loadTime": 637,
+        "memoryUsage": 19094991
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "49eb3a56-4fee-4350-857e-6b65955b6946",
+      "timestamp": "2025-10-31T17:03:25.523Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "1920x1080",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "3g",
+        "downlink": 1.5,
+        "rtt": 550
+      },
+      "timeZone": "America/New_York",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1761930202798,
+        "loadTime": 2726,
+        "memoryUsage": 11840737
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "a8458e7a-abbc-43a1-b90f-2e2b5900b8fc",
+      "timestamp": "2025-10-29T10:34:10.395Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 OPR/122.0.0.0",
+      "returningVisitor": true,
+      "visitCount": 4,
+      "referrer": "direct",
+      "screenResolution": "3440x1440",
+      "language": "fi",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 12,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1761734048611,
+        "loadTime": 1785,
+        "memoryUsage": 11665290
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "8dd766c2-504a-4c4c-8745-593c30f6d0c2",
+      "timestamp": "2025-10-28T15:12:03.932Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; 6102H Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.7339.208 Mobile Safari/537.36 [FBAN/EMA;FBLC/pt_BR;FBAV/475.0.0.14.104;FB_FW/1;FBDM/DisplayMetrics{density=2.0, width=720, height=1456, scaledDensity=2.0, xdpi=268.941, ydpi=269.139};]",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1761664323065,
+        "loadTime": 868,
+        "memoryUsage": 2828830
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "f823be4e-0947-4a22-96d9-02a2bc2a53c7",
+      "timestamp": "2025-10-19T20:05:50.506Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 6,
+      "referrer": "https://l.threads.com/",
+      "screenResolution": "1920x1080",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1760904349896,
+        "loadTime": 610,
+        "memoryUsage": 19061742
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "931844a5-46ce-4e66-970e-9045223afb8c",
+      "timestamp": "2025-10-18T20:06:03.329Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1760817961843,
+        "loadTime": 1488,
+        "memoryUsage": 2994772
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "c0b8c497-7f84-4e16-8eef-630155308fa8",
+      "timestamp": "2025-10-15T20:03:48.965Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1760558626672,
+        "loadTime": 2294,
+        "memoryUsage": 2855300
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "6c82f826-0e68-4b63-b448-93f121d94876",
+      "timestamp": "2025-10-15T20:03:18.449Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1760558597437,
+        "loadTime": 1013,
+        "memoryUsage": 2818858
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "84fcf58e-bda5-4c18-945c-283030768bb8",
+      "timestamp": "2025-10-15T20:03:00.420Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1760558579234,
+        "loadTime": 1188,
+        "memoryUsage": 2994708
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "b54f59c9-447a-4b6e-a978-0b7ac6e48858",
+      "timestamp": "2025-10-15T20:02:19.077Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1760558537060,
+        "loadTime": 2020,
+        "memoryUsage": 3025702
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "25cd414d-f598-473f-8f0b-67b020ae7bd2",
+      "timestamp": "2025-10-12T17:21:02.940Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; itel A662L Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.7339.208 Mobile Safari/537.36 [FBAN/AudienceNetworkForWindows;FBDV/itel A662L;FBSV/12;FBAV/402.0.0.10.113;FBLC/en_US]",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1760289661184,
+        "loadTime": 1757,
+        "memoryUsage": 2820558
+      },
+      "isUnique": true
+    },
+    {
+      "screenResolution": "2000x2000",
+      "hardwareConcurrency": 2,
+      "platform": "MacIntel",
+      "visitCount": 1,
+      "timestamp": "2025-09-29T18:34:35.766Z",
+      "language": "en-US",
+      "timeZone": "America/Los_Angeles",
+      "returningVisitor": false,
+      "referrer": "https://www.facebook.com/",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+      "connection": {
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50,
+        "type": null
+      },
+      "deviceMemory": 8,
+      "performance": {
+        "loadTime": 1755,
+        "navigationStart": 1759170874013,
+        "memoryUsage": 2822863
+      },
+      "preferences": {
+        "reducedMotion": false,
+        "colorScheme": "light"
+      },
+      "visitorId": "6a16620a-784f-49f5-94d6-cfef7bbd454f",
+      "isUnique": true
+    },
+    {
+      "hardwareConcurrency": 2,
+      "platform": "Linux armv8l",
+      "language": "en-US",
+      "deviceMemory": 8,
+      "visitCount": 1,
+      "returningVisitor": false,
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "visitorId": "ab4f37ba-9609-447c-b5bd-f1643fb7face",
+      "performance": {
+        "memoryUsage": 2834752,
+        "navigationStart": 1759170823009,
+        "loadTime": 1288
+      },
+      "referrer": "http://m.facebook.com",
+      "connection": {
+        "downlink": 10,
+        "effectiveType": "4g",
+        "rtt": 50,
+        "type": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "screenResolution": "412x915",
+      "timestamp": "2025-09-29T18:33:44.295Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36",
+      "isUnique": true
+    },
+    {
+      "deviceMemory": 8,
+      "screenResolution": "2000x2000",
+      "returningVisitor": false,
+      "hardwareConcurrency": 8,
+      "visitorId": "2539977c-8f3c-410e-85fc-045bae637eb1",
+      "performance": {
+        "navigationStart": 1758479618010,
+        "loadTime": 1890,
+        "memoryUsage": 2800826
+      },
+      "timeZone": "America/Los_Angeles",
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "rtt": null,
+        "downlink": 10
+      },
+      "timestamp": "2025-09-21T18:33:39.899Z",
+      "platform": "Windows",
+      "visitCount": 1,
+      "language": "en-US",
+      "referrer": "https://www.facebook.com/",
+      "preferences": {
+        "reducedMotion": false,
+        "colorScheme": "light"
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+      "isUnique": true
+    },
+    {
+      "screenResolution": "2000x2000",
+      "returningVisitor": false,
+      "preferences": {
+        "reducedMotion": false,
+        "colorScheme": "light"
+      },
+      "timestamp": "2025-09-18T05:54:42.699Z",
+      "hardwareConcurrency": 8,
+      "timeZone": "America/Los_Angeles",
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; SM-A515F Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/140.0.7339.51 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/524.0.0.44.109;]",
+      "referrer": "https://www.facebook.com/",
+      "language": "en-US",
+      "visitorId": "a4b235eb-1c00-4637-b848-9d1ee9d020c5",
+      "deviceMemory": 8,
+      "connection": {
+        "effectiveType": "4g",
+        "type": null,
+        "downlink": 10,
+        "rtt": 100
+      },
+      "platform": "Linux armv8l",
+      "visitCount": 1,
+      "performance": {
+        "navigationStart": 1758174880927,
+        "loadTime": 1773,
+        "memoryUsage": 2861175
+      },
+      "isUnique": true
+    }
+  ],
+  "navigation": [],
+  "gps": [
+    {
+      "lat": 60.208321625929926,
+      "lon": 24.6659570199057,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T17:18:48.854Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:35:14.922Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:35:14.914Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:35:12.914Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:35:12.913Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:35:02.167Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:35:02.166Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:34:56.905Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:34:56.905Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:34:08.738Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:34:08.211Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:31:37.774Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/repositories",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2083801645378,
+      "lon": 24.665946312809545,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:30:24.173Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.20831121902516,
+      "lon": 24.665962556956114,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:29:54.573Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.20831121902516,
+      "lon": 24.665962556956114,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:29:52.541Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.20831121902516,
+      "lon": 24.665962556956114,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:29:44.507Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.20831121902516,
+      "lon": 24.665962556956114,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:07:49.597Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.20831121902516,
+      "lon": 24.665962556956114,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T16:02:48.060Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2084005,
+      "lon": 24.6659705,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2025-12-18T20:25:18.549Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "referrer": "direct",
+      "screenResolution": "2195x1235",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2084826,
+      "lon": 24.6659791,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2025-11-01T23:55:18.515Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "385x854",
+      "platform": "Linux armv81"
+    },
+    {
+      "lat": 60.2084489,
+      "lon": 24.6659533,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2025-11-01T23:55:05.774Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 15; SM-G998B Build/AP3A.240905.015.A2; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/141.0.7390.122 Mobile Safari/537.36 Instagram 405.0.0.0.43 Android (35/15; 300dpi; 720x1600; samsung; SM-G998B; p3s; exynos2100; fi_FI; 813411313; IABMV/1)",
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "385x854",
+      "platform": "Linux aarch64"
+    },
+    {
+      "lat": 60.2084718,
+      "lon": 24.6659865,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2025-11-01T09:19:00.355Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "platform": "Win32"
+    },
+    {
+      "lat": 60.2084859,
+      "lon": 24.6659851,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2025-10-19T20:05:50.868Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "referrer": "https://l.threads.com/",
+      "screenResolution": "1920x1080",
+      "platform": "Win32"
+    },
+    {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "referrer": "https://www.linkedin.com/",
+      "timestamp": "2025-06-15T06:43:17.838Z",
+      "navPage": "weather",
+      "event": "accepted_gps",
+      "platform": "Win32",
+      "lon": 24.6660601,
+      "language": "en",
+      "screenResolution": "2195x1235",
+      "lat": 60.2085097
+    },
+    {
+      "lat": 60.2084979,
+      "lon": 24.6660419,
+      "language": "en",
+      "platform": "Win32",
+      "event": "accepted_gps",
+      "referrer": "https://l.instagram.com/",
+      "timestamp": "2025-06-15T06:40:36.275Z",
+      "screenResolution": "2195x1235",
+      "navPage": "weather",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    },
+    {
+      "referrer": "direct",
+      "navPage": "weather",
+      "lon": 24.6660274,
+      "event": "accepted_gps",
+      "timestamp": "2025-06-13T15:27:48.306Z",
+      "lat": 60.208503,
+      "language": "en",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "platform": "Win32",
+      "screenResolution": "2195x1235"
+    },
+    {
+      "platform": "Win32",
+      "lon": 24.6660428,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "navPage": "weather",
+      "referrer": "direct",
+      "lat": 60.2085467,
+      "screenResolution": "2195x1235",
+      "timestamp": "2025-06-08T06:17:41.185Z",
+      "event": "accepted_gps",
+      "language": "en"
+    },
+    {
+      "timestamp": "2025-06-07T21:24:46.532Z",
+      "navPage": "weather",
+      "referrer": "direct",
+      "screenResolution": "2195x1235",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "platform": "Win32",
+      "language": "en",
+      "event": "accepted_gps",
+      "lat": 60.2084929,
+      "lon": 24.6660271
+    },
+    {
+      "screenResolution": "2195x1235",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+      "timestamp": "2025-06-07T21:24:17.301Z",
+      "lon": 24.6660271,
+      "event": "accepted_gps",
+      "platform": "Win32",
+      "language": "en",
+      "lat": 60.2084929,
+      "referrer": "direct",
+      "navPage": "weather"
+    },
+    {
+      "event": "accepted_gps",
+      "language": "en",
+      "lon": 24.6660255,
+      "referrer": "direct",
+      "navPage": "weather",
+      "lat": 60.208484,
+      "timestamp": "2025-06-07T21:22:07.698Z",
+      "platform": "Win32",
+      "screenResolution": "2195x1235",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    },
+    {
+      "timestamp": "2025-06-07T21:17:53.203Z",
+      "navPage": "weather",
+      "screenResolution": "2195x1235",
+      "language": "en",
+      "lon": 24.6660145,
+      "platform": "Win32",
+      "event": "accepted_gps",
+      "lat": 60.2084756,
+      "referrer": "direct",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+    }
+  ],
+  "stats": {
+    "platform": {
+      "Win32": 20,
+      "Windows": 11,
+      "Linux armv8l": 11,
+      "Linux x86_64": 1,
+      "MacIntel": 2,
+      "iPhone": 3,
+      "Linux armv81": 1,
+      "Linux aarch64": 1
+    },
+    "language": {
+      "fi-FI": 13,
+      "en-US": 33,
+      "en-FI": 2,
+      "fi": 2
+    },
+    "uniqueVisitors": 40
+  }
+}
