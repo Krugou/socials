@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "export:local",
+      "problemMatcher": [],
+      "label": "Export Data & Commit",
+      "detail": "Runs local data export, formats output, and commits changes",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}
