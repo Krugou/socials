@@ -23,10 +23,6 @@ updates:
         update-types:
           - 'major'
 
-    ignore:
-      - dependency-name: '*'
-        versions: ['*-alpha*', '*-beta*', '*-rc*']
-
   # ------------------------
   # GitHub Actions
   # ------------------------
