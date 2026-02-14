@@ -9,6 +9,31 @@ dotenv.config();
 // Determine base path for the report
 const REPORT_PATH = join(process.cwd(), '..', 'DATA_REPORT.md');
 
+// Helper to recursively serialize data (convert Timestamps to ISO strings)
+function serializeData(data: unknown): unknown {
+  if (data === null || data === undefined) return data;
+
+  if (
+    typeof data === 'object' &&
+    'toDate' in data &&
+    typeof (data as {toDate: unknown}).toDate === 'function'
+  ) {
+    return (data as {toDate: () => Date}).toDate().toISOString();
+  }
+
+  if (Array.isArray(data)) return data.map(serializeData);
+
+  if (typeof data === 'object') {
+    return Object.fromEntries(
+      Object.entries(data as Record<string, unknown>).map(([key, value]) => [
+        key,
+        serializeData(value),
+      ]),
+    );
+  }
+  return data;
+}
+
 async function exportData() {
   console.log('Starting data export...');
 
@@ -158,9 +183,9 @@ async function exportData() {
   // Write JSON Data
   const jsonData = {
     generatedAt: new Date().toISOString(),
-    visitors: visitorsData,
-    navigation: navData,
-    gps: gpsData,
+    visitors: visitorsData.map(serializeData),
+    navigation: navData.map(serializeData),
+    gps: gpsData.map(serializeData),
     stats: {
       platform: platformStats,
       language: languageStats,
@@ -193,8 +218,12 @@ async function exportData() {
         .stat-card { text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px; }
         .stat-number { font-size: 2em; font-weight: bold; color: #007bff; }
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; }
+        th, td { text-align: left; padding: 8px; border-bottom: 1px solid #ddd; vertical-align: top; }
         th { background-color: #f8f9fa; }
+        .details-btn { background: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+        .details-btn:hover { background: #0056b3; }
+        .details-row { display: none; background: #f8f9fa; }
+        .json-pre { white-space: pre-wrap; word-wrap: break-word; font-family: monospace; font-size: 0.9em; max-height: 300px; overflow-y: auto; }
     </style>
 </head>
 <body>
@@ -242,8 +271,8 @@ async function exportData() {
                             <th>Time</th>
                             <th>Visitor ID</th>
                             <th>Platform</th>
-                            <th>Language</th>
                             <th>Screen</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody id="visitorTableBody"></tbody>
@@ -271,7 +300,9 @@ async function exportData() {
                     bounds.extend(marker.getLatLng());
                 }
             });
-            map.fitBounds(bounds);
+            if (bounds.isValid()) {
+                map.fitBounds(bounds);
+            }
         }
 
         // Charts
@@ -301,14 +332,33 @@ async function exportData() {
 
         // Visitor Table
         const tbody = document.getElementById('visitorTableBody');
-        data.visitors.slice(0, 20).forEach(v => {
+
+        function toggleDetails(index) {
+            const row = document.getElementById('details-' + index);
+            if (row.style.display === 'table-row') {
+                row.style.display = 'none';
+            } else {
+                row.style.display = 'table-row';
+            }
+        }
+
+        data.visitors.slice(0, 50).forEach((v, index) => {
             const row = tbody.insertRow();
             row.innerHTML = \`
                 <td>\${new Date(v.timestamp).toLocaleString()}</td>
                 <td>\${v.visitorId}</td>
                 <td>\${v.platform}</td>
-                <td>\${v.language}</td>
                 <td>\${v.screenResolution}</td>
+                <td><button class="details-btn" onclick="toggleDetails(\${index})">Details</button></td>
+            \`;
+
+            const detailsRow = tbody.insertRow();
+            detailsRow.id = 'details-' + index;
+            detailsRow.className = 'details-row';
+            detailsRow.innerHTML = \`
+                <td colspan="5">
+                    <div class="json-pre">\${JSON.stringify(v, null, 2)}</div>
+                </td>
             \`;
         });
     </script>
