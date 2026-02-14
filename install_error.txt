@@ -1,0 +1,7 @@
+npm error code EBADENGINE
+npm error engine Unsupported engine
+npm error engine Not compatible with your version of node/npm: @sveltejs/vite-plugin-svelte@6.2.4
+npm error notsup Not compatible with your version of node/npm: @sveltejs/vite-plugin-svelte@6.2.4
+npm error notsup Required: {"node":"^20.19 || ^22.12 || >=24"}
+npm error notsup Actual:   {"npm":"10.9.2","node":"v23.7.0"}
+npm error A complete log of this run can be found in: C:\Users\moxch\AppData\Local\npm-cache\_logs\2026-02-14T17_14_27_917Z-debug-0.log

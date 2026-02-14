@@ -5,11 +5,12 @@
   "main": "export-data.ts",
   "type": "module",
   "scripts": {
-    "export": "node --loader ts-node/esm export-data.ts"
+    "export": "tsx export-data.ts"
   },
   "dependencies": {
     "firebase-admin": "^13.0.0",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "tsx": "^4.19.2"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
