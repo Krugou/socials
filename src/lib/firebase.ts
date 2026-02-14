@@ -1,6 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
-import { getFirestore } from 'firebase/firestore';
+import {initializeApp} from 'firebase/app';
+import {getAnalytics} from 'firebase/analytics';
+import {getFirestore} from 'firebase/firestore';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: 'socials-e3fb5.firebasestorage.app',
   messagingSenderId: '224409763176',
   appId: '1:224409763176:web:19c40de005b58210e7aadd',
-  measurementId: 'G-GVCH0JN75M'
+  measurementId: 'G-GVCH0JN75M',
 };
 
 // Initialize Firebase

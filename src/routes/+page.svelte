@@ -10,15 +10,14 @@
   import {browser} from '$app/environment';
 
   let container: HTMLElement;
-  let visible = false;
-  let scrollY: number;
+
   let hasPointerEvents = true;
   let visitorTracker: VisitorTracker | null = null;
 
   // Spring configuration for smooth mouse movement
   const springConfig: SpringOptions = {
     stiffness: 0.1,
-    damping: 0.4
+    damping: 0.4,
   };
 
   const mousePos = spring<MousePosition>({x: 0, y: 0}, springConfig);
@@ -43,7 +42,6 @@
   }, 16); // ~60fps
 
   onMount(async () => {
-    visible = true;
     // Check if device supports pointer events
     hasPointerEvents = window.matchMedia('(pointer: fine)').matches;
 
@@ -63,7 +61,7 @@
 <div class="flex min-h-full flex-col">
   <div class="flex-1 px-4 py-16">
     <div
-      class="relative mx-auto max-w-xl overflow-hidden rounded-2xl border border-border bg-card/80 p-8 shadow-2xl backdrop-blur-lg"
+      class="bg-card/80 relative mx-auto max-w-xl overflow-hidden rounded-2xl border border-border p-8 shadow-2xl backdrop-blur-lg"
       role="presentation"
       bind:this={container}
       on:mousemove|passive={handleMouseMove}

@@ -1,0 +1,92 @@
+
+> social@0.0.1 lint
+> prettier --check . && eslint .
+
+Checking formatting...
+[warn] jsxBracketSameLine is deprecated.
+(node:40460) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+All matched files use Prettier code style!
+
+C:\Users\moxch\Documents\GitHub\socials\src\lib\visitorTracking.ts
+   76:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   96:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  125:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  177:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  180:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\moxch\Documents\GitHub\socials\src\routes\+page.svelte
+  13:7  error  'visible' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  14:7  error  'scrollY' is defined but never used           @typescript-eslint/no-unused-vars
+
+C:\Users\moxch\Documents\GitHub\socials\src\routes\repositories\+page.svelte
+  43:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Ô£û 9 problems (9 errors, 0 warnings)
+
+
+> social@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+You have specified a baseUrl and/or paths in your tsconfig.json which interferes with SvelteKit's auto-generated tsconfig.json. Remove it to avoid problems with intellisense. For path aliases, use `kit.alias` instead: https://svelte.dev/docs/kit/configuration#alias
+
+====================================
+Loading svelte-check in workspace: c:\Users\moxch\Documents\GitHub\socials
+Getting Svelte diagnostics...
+
+You have specified a baseUrl and/or paths in your tsconfig.json which interferes with SvelteKit's auto-generated tsconfig.json. Remove it to avoid problems with intellisense. For path aliases, use `kit.alias` instead: https://svelte.dev/docs/kit/configuration#alias
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\lib\visitorTracking.ts[39m:136:7
+[31mError[39m: Type 'DocumentReference<DocumentData, DocumentData>' is not assignable to type 'DocumentReference<VisitorLog, DocumentData>'.
+  Types of property 'converter' are incompatible.
+    Type 'FirestoreDataConverter<DocumentData, DocumentData> | null' is not assignable to type 'FirestoreDataConverter<VisitorLog, DocumentData> | null'.
+      Type 'FirestoreDataConverter<DocumentData, DocumentData>' is not assignable to type 'FirestoreDataConverter<VisitorLog, DocumentData>'.
+        The types returned by 'fromFirestore(...)' are incompatible between these types.
+          Type 'DocumentData' is missing the following properties from type 'VisitorLog': visitorId, timestamp, userAgent, returningVisitor, and 11 more. 
+[36m      this.updateLastVisitTime();
+      [35mreturn[36m docRef;
+    } catch (error) {
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ParticleSystem.svelte[39m:112:29
+[31mError[39m: Argument of type '{ id: number; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is not assignable to parameter of type 'Particle'.
+  Type '{ id: number; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is missing the following properties from type 'Particle': dx, dy, x, y (ts)
+[36m
+      if (!validateParticle([35mparticle[36m)) {
+        console.warn(`Invalid particle generated: ${JSON.stringify(particle)}`);
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ParticleSystem.svelte[39m:116:7
+[31mError[39m: Type '{ id: number; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is missing the following properties from type 'Particle': dx, dy, x, y (ts)
+[36m
+      [35mreturn[36m particle;
+    });
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\Links.svelte[39m:128:3
+[33mWarn[39m: Unused CSS selector ".particle"
+https://svelte.dev/e/css_unused_selector (svelte)
+[36m
+  [35m.particle[36m {
+    will-change: transform;
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\Nav.svelte[39m:46:32
+[31mError[39m: Argument of type '{ navHref: string; navText: string; language: keyof Translations; userAgent: string; referrer: string; screenResolution: string; platform: string; }' is not assignable to parameter of type 'Omit<NavigationEventLog, "visitorId" | "timestamp"> & { navHref: string; navText: string; }'.
+  Type '{ navHref: string; navText: string; language: keyof Translations; userAgent: string; referrer: string; screenResolution: string; platform: string; }' is missing the following properties from type 'Omit<NavigationEventLog, "visitorId" | "timestamp">': deviceMemory, hardwareConcurrency, connection (ts)
+[36m    try {
+      await logNavigationEvent([35m{
+        navHref: link.href,
+        navText: getTranslation(link, get(language)).text,
+        language: get(language),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer || 'direct',
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        platform: navigator.platform,
+      }[36m);
+    } catch (error) {
+[39m
+
+====================================
+[31msvelte-check found 4 errors and 1 warning in 4 files
+[39m

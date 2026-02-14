@@ -8,7 +8,7 @@ export interface ParticleConfig {
 }
 
 export interface Particle extends Vector {
-  id: number;
+  id: string;
   size: number;
   speed: number;
   orbit: number;

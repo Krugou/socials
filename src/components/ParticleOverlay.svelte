@@ -1,13 +1,13 @@
-
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
-  import { particleStore } from '../lib/stores/particleStore.js';
+  import {onMount, onDestroy} from 'svelte';
+  import {particleStore} from '../lib/stores/particleStore.js';
+  import type {Particle} from '../lib/types/particles.js';
 
   export let container: HTMLElement;
   let rafId: number;
-  let particles: any[] = [];
+  let particles: Particle[] = [];
 
-  particleStore.subscribe(value => {
+  particleStore.subscribe((value) => {
     particles = value;
   });
 

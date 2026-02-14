@@ -1,7 +1,7 @@
 import {collection, addDoc, type DocumentReference} from 'firebase/firestore';
 import {db} from './firebase.js';
-import { NavigationEventLogError } from './types/navigation.js';
-import type { NavigationEventLog } from './types/navigation.js';
+import {NavigationEventLogError} from './types/navigation.js';
+import type {NavigationEventLog} from './types/navigation.js';
 
 interface VisitorLog {
   visitorId: string;
@@ -38,6 +38,24 @@ const VISIT_COUNT_KEY = 'visit_count';
 const LAST_VISIT_KEY = 'last_visit';
 const MIN_LOG_INTERVAL = 1000 * 60 * 30; // 30 minutes
 
+interface NetworkInformation {
+  type?: string;
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
+}
+
+interface ExtendedNavigator extends Navigator {
+  connection?: NetworkInformation;
+  deviceMemory?: number;
+}
+
+interface ExtendedPerformance extends Performance {
+  memory?: {
+    usedJSHeapSize?: number;
+  };
+}
+
 export class VisitorTracker {
   private visitorId: string;
   private visitCount: number;
@@ -73,12 +91,12 @@ export class VisitorTracker {
   }
 
   private getConnectionInfo() {
-    const connection = (navigator as any).connection;
+    const connection = (navigator as ExtendedNavigator).connection;
     return {
       type: connection?.type || null,
       effectiveType: connection?.effectiveType || null,
       downlink: connection?.downlink || null,
-      rtt: connection?.rtt || null
+      rtt: connection?.rtt || null,
     };
   }
 
@@ -87,18 +105,18 @@ export class VisitorTracker {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     return {
       colorScheme: isDarkMode ? 'dark' : 'light',
-      reducedMotion: prefersReducedMotion
+      reducedMotion: prefersReducedMotion,
     };
   }
 
   private getPerformanceInfo() {
     const perf = window.performance;
-    const memory = (performance as any).memory;
+    const memory = (performance as ExtendedPerformance).memory;
     const navStart = perf.timing?.navigationStart || perf.timeOrigin;
     return {
       navigationStart: navStart,
       loadTime: document.readyState === 'complete' ? Date.now() - navStart : null,
-      memoryUsage: memory?.usedJSHeapSize || null
+      memoryUsage: memory?.usedJSHeapSize || null,
     };
   }
 
@@ -122,15 +140,18 @@ export class VisitorTracker {
         screenResolution: `${window.screen.width}x${window.screen.height}`,
         language: navigator.language,
         platform: navigator.platform,
-        deviceMemory: (navigator as any).deviceMemory || null,
+        deviceMemory: (navigator as ExtendedNavigator).deviceMemory || null,
         hardwareConcurrency: navigator.hardwareConcurrency,
         connection: this.getConnectionInfo(),
         timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         preferences: this.getPreferences(),
-        performance: this.getPerformanceInfo()
+        performance: this.getPerformanceInfo(),
       };
 
-      const docRef = await addDoc(collection(db, 'visitorsV2'), visitorLog);
+      const docRef = (await addDoc(
+        collection(db, 'visitorsV2'),
+        visitorLog,
+      )) as unknown as DocumentReference<VisitorLog>;
 
       this.updateLastVisitTime();
       return docRef;
@@ -147,8 +168,11 @@ export class VisitorTracker {
  * @returns DocumentReference or null on error
  */
 export const logNavigationEvent = async (
-  navData: Omit<NavigationEventLog, 'timestamp' | 'visitorId'> & { navHref: string; navText: string },
-  visitorId?: string
+  navData: Omit<
+    NavigationEventLog,
+    'timestamp' | 'visitorId' | 'deviceMemory' | 'hardwareConcurrency' | 'connection'
+  > & {navHref: string; navText: string},
+  visitorId?: string,
 ): Promise<DocumentReference<NavigationEventLog> | null> => {
   try {
     // Defensive: Validate input
@@ -171,22 +195,26 @@ export const logNavigationEvent = async (
       language: navData.language,
       userAgent: navData.userAgent || navigator.userAgent,
       referrer: navData.referrer || document.referrer || 'direct',
-      screenResolution: navData.screenResolution || `${window.screen.width}x${window.screen.height}`,
+      screenResolution:
+        navData.screenResolution || `${window.screen.width}x${window.screen.height}`,
       platform: navData.platform || navigator.platform,
-      deviceMemory: (navigator as any).deviceMemory || null,
+      deviceMemory: (navigator as ExtendedNavigator).deviceMemory || null,
       hardwareConcurrency: navigator.hardwareConcurrency,
       connection: ((): NavigationEventLog['connection'] => {
-        const connection = (navigator as any).connection;
+        const connection = (navigator as ExtendedNavigator).connection;
         return {
           type: connection?.type || null,
           effectiveType: connection?.effectiveType || null,
           downlink: connection?.downlink || null,
-          rtt: connection?.rtt || null
+          rtt: connection?.rtt || null,
         };
-      })()
+      })(),
     };
     // Save to Firestore
-    const docRef = await addDoc(collection(db, 'navigation_events'), event);
+    const docRef = (await addDoc(
+      collection(db, 'navigation_events'),
+      event,
+    )) as unknown as DocumentReference<NavigationEventLog>;
     return docRef;
   } catch (error) {
     console.error('Error logging navigation event:', error);

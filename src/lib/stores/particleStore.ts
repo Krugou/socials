@@ -31,7 +31,11 @@ const createParticle = (bounds: ParticleBounds, color: string): Particle => {
     y: Math.random() * bounds.height,
     dx: (Math.random() - 0.5) * 4,
     dy: (Math.random() - 0.5) * 4,
-    color
+    color,
+    size: Math.random() * 2 + 1,
+    speed: Math.random() * 0.5 + 0.5,
+    orbit: Math.random() * 50,
+    offset: Math.random() * Math.PI * 2,
   };
 
   if (!isValidParticle(particle)) {
@@ -62,7 +66,7 @@ const createParticleStore = () => {
     } catch (error) {
       console.error(
         'Error initializing particles:',
-        error instanceof Error ? error.message : 'Unknown error'
+        error instanceof Error ? error.message : 'Unknown error',
       );
       store.set([]);
     }
@@ -90,7 +94,7 @@ const createParticleStore = () => {
             x: Math.max(0, Math.min(newX, bounds.width - 100)),
             y: Math.max(0, Math.min(newY, bounds.height - 100)),
             dx,
-            dy
+            dy,
           };
 
           if (!isValidParticle(updatedParticle)) {
@@ -102,7 +106,7 @@ const createParticleStore = () => {
       } catch (error) {
         console.error(
           'Error updating particles:',
-          error instanceof Error ? error.message : 'Unknown error'
+          error instanceof Error ? error.message : 'Unknown error',
         );
         return particles; // Return unchanged particles on error
       }
@@ -135,7 +139,7 @@ const createParticleStore = () => {
     initializeParticles,
     updateParticles,
     startAnimation,
-    stopAnimation
+    stopAnimation,
   };
 };
 

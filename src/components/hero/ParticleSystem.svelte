@@ -1,6 +1,15 @@
 <script lang="ts">
   import {onMount, onDestroy} from 'svelte';
-  import type {Particle, ParticleConfig} from '../../lib/types/particles.js';
+  import type {ParticleConfig} from '../../lib/types/particles.js';
+
+  interface OrbitParticle {
+    id: string;
+    size: number;
+    speed: number;
+    orbit: number;
+    offset: number;
+    color: string;
+  }
 
   /**
    * Custom error for date-related operations
@@ -55,7 +64,7 @@
     minSpeed: MIN_SPEED,
     maxSpeed: MAX_SPEED,
     minOrbit: 49,
-    maxOrbit: MAX_ORBIT * 7
+    maxOrbit: MAX_ORBIT * 7,
   };
 
   /**
@@ -68,7 +77,7 @@
     '#00a9e0',
     '#f0f0f0',
     '#ffcc00',
-    '#006a44'
+    '#006a44',
   ] as const);
 
   /**
@@ -82,7 +91,7 @@
   /**
    * Validates particle properties
    */
-  const validateParticle = (particle: Particle): boolean => {
+  const validateParticle = (particle: OrbitParticle): boolean => {
     return (
       particle.size >= PARTICLE_CONFIG.minSize &&
       particle.size <= PARTICLE_CONFIG.maxSize &&
@@ -93,20 +102,20 @@
     );
   };
 
-  let particles: Particle[] = [];
+  let particles: OrbitParticle[] = [];
   let cleanup: (() => void) | undefined;
 
   onMount(() => {
     const PARTICLE_COUNT = getYearsSinceBirth();
 
-    particles = Array.from({length: PARTICLE_COUNT}, (_, i): Particle => {
-      const particle = {
-        id: i,
+    particles = Array.from({length: PARTICLE_COUNT}, (_, i) => {
+      const particle: OrbitParticle = {
+        id: i.toString(),
         size: randomRange(PARTICLE_CONFIG.minSize, PARTICLE_CONFIG.maxSize),
         speed: randomRange(PARTICLE_CONFIG.minSpeed, PARTICLE_CONFIG.maxSpeed),
         orbit: randomRange(PARTICLE_CONFIG.minOrbit, PARTICLE_CONFIG.maxOrbit),
         offset: randomRange(0, 360),
-        color: PLANET_COLORS[i % PLANET_COLORS.length]
+        color: PLANET_COLORS[i % PLANET_COLORS.length],
       };
 
       if (!validateParticle(particle)) {

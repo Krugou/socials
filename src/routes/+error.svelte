@@ -1,26 +1,25 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import { isDarkMode } from '../stores/theme.js';
+  import {page} from '$app/stores';
+  import {isDarkMode} from '../stores/theme.js';
 </script>
 
 <div class="flex min-h-[50vh] flex-col items-center justify-center px-4 py-16 text-center">
-  <div class="animate-float rounded-2xl p-8 shadow-2xl backdrop-blur-lg border"
+  <div
+    class="animate-float rounded-2xl border p-8 shadow-2xl backdrop-blur-lg"
     class:bg-card-80={$isDarkMode}
     class:bg-white-10={!$isDarkMode}
     class:border-border={$isDarkMode}
     class:border-white-10={!$isDarkMode}
   >
-    <h1 class="mb-4 text-6xl font-bold"
+    <h1
+      class="mb-4 text-6xl font-bold"
       class:text-foreground={$isDarkMode}
       class:text-white={!$isDarkMode}
     >
       {$page.status}
     </h1>
-    <p class="mb-8 text-xl"
-      class:text-muted={$isDarkMode}
-      class:text-white-80={!$isDarkMode}
-    >
-      {$page.error?.message || "Page not found"}
+    <p class="mb-8 text-xl" class:text-muted={$isDarkMode} class:text-white-80={!$isDarkMode}>
+      {$page.error?.message || 'Page not found'}
     </p>
     <a
       href="/"
@@ -39,9 +38,15 @@
 
 <style>
   @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
 
   .animate-float {

@@ -1,52 +1,52 @@
 <script lang="ts">
-  import {fade, fly} from 'svelte/transition';
+  import {fly} from 'svelte/transition';
   import {onMount} from 'svelte';
   import ParticleOverlay from './ParticleOverlay.svelte';
   import type {SocialLink} from '../lib/types.js';
-  import { isDarkMode } from '../stores/theme.js';
+  import {isDarkMode} from '../stores/theme.js';
 
   /** Social media links configuration */
   const links: SocialLink[] = [
     {
       title: 'GitHub',
       url: 'https://github.com/krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg'
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg',
     },
     {
       title: 'Instagram',
       url: 'https://www.instagram.com/krugou/',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg'
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg',
     },
     {
-      title: 'Threads',
-      url: 'https://threads.net/krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.16.0/icons/threads.svg'
-    },
-    {
-      title: 'Twitter',
-      url: 'https://twitter.com/krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg'
-    },
-    {
-      title: 'Bluesky',
-      url: 'https://bsky.app/profile/krugou.bsky.social',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.16.0/icons/bluesky.svg'
-    },
-    {
-      title: 'YouTube',
-      url: 'https://www.youtube.com/@Krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg'
+      title: 'AuroraWatcher',
+      url: 'https://krugou.github.io/aurorawatcher/',
+      icon: 'https://krugou.github.io/aurorawatcher/pwa-192x192.png',
     },
     {
       title: 'LinkedIn',
       url: 'https://www.linkedin.com/in/aleksi-nokelainen-3706b7259/',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg'
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg',
     },
     {
-      title: 'Facebook',
-      url: 'https://www.facebook.com/aleksi.nokelainen.7',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg'
-    }
+      title: 'Threads',
+      url: 'https://threads.net/krugou',
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.16.0/icons/threads.svg',
+    },
+    {
+      title: 'Twitter',
+      url: 'https://x.com/krugou',
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg',
+    },
+    {
+      title: 'Bluesky',
+      url: 'https://bsky.app/profile/krugou.bsky.social',
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.16.0/icons/bluesky.svg',
+    },
+    {
+      title: 'YouTube',
+      url: 'https://www.youtube.com/@Krugou',
+      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg',
+    },
   ];
 
   let container: HTMLElement;
@@ -60,7 +60,7 @@
 
 <div
   bind:this={container}
-  class="perspective relative space-y-4 p-4 rounded-2xl shadow-xl"
+  class="perspective relative space-y-4 rounded-2xl p-4 shadow-xl"
   class:bg-background-80={$isDarkMode}
   class:bg-white-10={!$isDarkMode}
   role="region"
@@ -74,7 +74,7 @@
         target="_blank"
         rel="noopener noreferrer"
         in:fly={{y: 20, duration: 1000, delay: i * 100}}
-        class="group relative block overflow-hidden rounded-lg p-2 text-center backdrop-blur-sm transition-all duration-300 md:p-4 border"
+        class="group relative block overflow-hidden rounded-lg border p-2 text-center backdrop-blur-sm transition-all duration-300 md:p-4"
         class:bg-card-80={$isDarkMode}
         class:bg-white-10={!$isDarkMode}
         class:text-foreground={$isDarkMode}
@@ -106,14 +106,16 @@
       </a>
     {/each}
   {:else}
-      <div class="h-[68px] animate-pulse rounded-lg"
-        class:bg-card-40={$isDarkMode}
-        class:bg-white-5={!$isDarkMode}
-      ></div>
-      <div class="h-[68px] animate-pulse rounded-lg"
-        class:bg-card-40={$isDarkMode}
-        class:bg-white-5={!$isDarkMode}
-      ></div>
+    <div
+      class="h-[68px] animate-pulse rounded-lg"
+      class:bg-card-40={$isDarkMode}
+      class:bg-white-5={!$isDarkMode}
+    ></div>
+    <div
+      class="h-[68px] animate-pulse rounded-lg"
+      class:bg-card-40={$isDarkMode}
+      class:bg-white-5={!$isDarkMode}
+    ></div>
   {/if}
 </div>
 
@@ -121,11 +123,6 @@
   .perspective {
     perspective: 1000px;
     transform-style: preserve-3d;
-  }
-
-  .particle {
-    will-change: transform;
-    transition: transform 0.008s linear;
   }
 
   /* Apply hover effect on devices that support hover */

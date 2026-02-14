@@ -7,6 +7,7 @@ This project is a Svelte library created using [`create-svelte`](https://github.
 To install the project, follow these steps:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
@@ -23,7 +24,7 @@ Here are some examples of how to use the components and utilities provided by th
 
 ```svelte
 <script>
-  import { MyComponent } from 'your-library';
+  import {MyComponent} from 'your-library';
 </script>
 
 <MyComponent />

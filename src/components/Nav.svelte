@@ -3,12 +3,12 @@
   import {language} from '../lib/stores.js';
   import {NAV_LINKS, DEFAULT_LANGUAGE} from '../lib/constants.js';
   import type {Language, NavLink} from '../lib/types.js';
-  import { logNavigationEvent } from '../lib/visitorTracking.js';
-  import { get } from 'svelte/store';
-  import { fetchNorwayWeather, WeatherError, type WeatherData } from '../lib/weather.js';
-  import { onMount } from 'svelte';
-  import { db } from '../lib/firebase.js';
-  import { collection, addDoc } from 'firebase/firestore';
+  import {logNavigationEvent} from '../lib/visitorTracking.js';
+  import {get} from 'svelte/store';
+  import {fetchNorwayWeather, WeatherError, type WeatherData} from '../lib/weather.js';
+  import {onMount} from 'svelte';
+  import {db} from '../lib/firebase.js';
+  import {collection, addDoc} from 'firebase/firestore';
 
   /**
    * Safely gets translation for the current language with fallback
@@ -50,7 +50,7 @@
         userAgent: navigator.userAgent,
         referrer: document.referrer || 'direct',
         screenResolution: `${window.screen.width}x${window.screen.height}`,
-        platform: navigator.platform
+        platform: navigator.platform,
       });
     } catch (error) {
       // Defensive: log error but do not block navigation
@@ -67,7 +67,7 @@
    * Gets user's current position with error handling
    * @returns Promise<{lat: number, lon: number}>
    */
-  const getCurrentPosition = async (): Promise<{ lat: number; lon: number }> => {
+  const getCurrentPosition = async (): Promise<{lat: number; lon: number}> => {
     return new Promise((resolve, reject) => {
       if (!navigator.geolocation) {
         reject(new WeatherError('Geolocation is not supported by this browser.'));
@@ -75,12 +75,12 @@
       }
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude });
+          resolve({lat: pos.coords.latitude, lon: pos.coords.longitude});
         },
         (err) => {
           reject(new WeatherError('Failed to get location: ' + err.message));
         },
-        { enableHighAccuracy: false, timeout: 8000, maximumAge: 60000 }
+        {enableHighAccuracy: false, timeout: 8000, maximumAge: 60000},
       );
     });
   };
@@ -94,7 +94,7 @@
   const saveGpsLocation = async (
     lat: number,
     lon: number,
-    navData: Record<string, any>
+    navData: Record<string, unknown>,
   ): Promise<void> => {
     try {
       // Defensive: Validate input
@@ -109,7 +109,7 @@
         userAgent: navigator.userAgent,
         referrer: document.referrer || 'direct',
         screenResolution: `${window.screen.width}x${window.screen.height}`,
-        platform: navigator.platform
+        platform: navigator.platform,
       });
     } catch (error) {
       console.error('Failed to save GPS location:', error);
@@ -118,7 +118,7 @@
 
   onMount(async () => {
     try {
-      const { lat, lon } = await getCurrentPosition();
+      const {lat, lon} = await getCurrentPosition();
       weather = await fetchNorwayWeather(lat, lon);
       // Save GPS location to Firestore with nav data if permission granted
       await saveGpsLocation(lat, lon, {
@@ -136,7 +136,6 @@
 
 <nav
   class="sticky top-0 z-50 border-b border-white/10 bg-gradient-to-br from-purple-500/90 to-blue-900/90 p-6 text-white shadow-xl backdrop-blur-md"
-  role="navigation"
   aria-label="Main navigation"
 >
   <div class="container mx-auto max-w-7xl">
@@ -153,7 +152,7 @@
               {...link.external
                 ? {
                     target: '_blank',
-                    rel: 'noopener noreferrer'
+                    rel: 'noopener noreferrer',
                   }
                 : {}}
             >
@@ -165,7 +164,7 @@
               <span
                 class="block h-0.5 max-w-0 bg-yellow-300 transition-all duration-300 group-hover:max-w-full"
                 aria-hidden="true"
-              />
+              ></span>
             </a>
           </li>
         {/each}
@@ -199,12 +198,11 @@
         </li>
         <li>
           {#if weatherLoading}
-            <span class="ml-2 text-xs animate-pulse">Loading weather...</span>
+            <span class="ml-2 animate-pulse text-xs">Loading weather...</span>
           {:else if weatherError}
             <span class="ml-2 text-xs text-red-300" title={weatherError}>🌧️</span>
           {:else if weather}
             <span class="ml-2 flex items-center text-xs" title={weather.description}>
-             
               <span class="mx-1">|</span>
               <span>{weather.temperature.toFixed(1)}°C</span>
               <span class="mx-1">|</span>

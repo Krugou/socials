@@ -1,10 +1,9 @@
-
-import { writable } from 'svelte/store';
+import {writable} from 'svelte/store';
 
 export const isDarkMode = writable(
-  typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : true
+  typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)').matches : true,
 );
 
 export function toggleTheme() {
-  isDarkMode.update(dark => !dark);
+  isDarkMode.update((dark) => !dark);
 }

@@ -1,0 +1,47 @@
+
+> social@0.0.1 lint
+> prettier --check . && eslint .
+
+Checking formatting...
+[warn] jsxBracketSameLine is deprecated.
+(node:28324) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+All matched files use Prettier code style!
+
+C:\Users\moxch\Documents\GitHub\socials\src\components\Footer.svelte
+  29:25  error  '__BUILD_TIME__' is not defined  no-undef
+
+C:\Users\moxch\Documents\GitHub\socials\src\components\Links.svelte
+  2:11  error  'fade' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\moxch\Documents\GitHub\socials\src\components\Nav.svelte
+   97:29  error  Unexpected any. Specify a different type                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  139:3   error  Redundant role 'navigation'
+https://svelte.dev/e/a11y_no_redundant_roles(a11y_no_redundant_roles)                                                                                                        svelte/valid-compile
+  165:15  error  Self-closing HTML tags for non-void elements are ambiguous ÔÇö use `<span ...></span>` rather than `<span ... />`
+https://svelte.dev/e/element_invalid_self_closing_tag(element_invalid_self_closing_tag)  svelte/valid-compile
+
+C:\Users\moxch\Documents\GitHub\socials\src\components\ParticleOverlay.svelte
+  7:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\moxch\Documents\GitHub\socials\src\components\hero\HeroContent.svelte
+  2:11  error  'fly' is defined but never used   @typescript-eslint/no-unused-vars
+  2:16  error  'fade' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\moxch\Documents\GitHub\socials\src\lib\visitorTracking.ts
+   76:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   96:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  125:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  177:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  180:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\moxch\Documents\GitHub\socials\src\routes\+page.svelte
+  13:7  error  'visible' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  14:7  error  'scrollY' is defined but never used           @typescript-eslint/no-unused-vars
+
+C:\Users\moxch\Documents\GitHub\socials\src\routes\repositories\+page.svelte
+  43:13  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Ô£û 17 problems (17 errors, 0 warnings)
+

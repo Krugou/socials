@@ -1,0 +1,154 @@
+
+> social@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+You have specified a baseUrl and/or paths in your tsconfig.json which interferes with SvelteKit's auto-generated tsconfig.json. Remove it to avoid problems with intellisense. For path aliases, use `kit.alias` instead: https://svelte.dev/docs/kit/configuration#alias
+
+====================================
+Loading svelte-check in workspace: c:\Users\moxch\Documents\GitHub\socials
+Getting Svelte diagnostics...
+
+You have specified a baseUrl and/or paths in your tsconfig.json which interferes with SvelteKit's auto-generated tsconfig.json. Remove it to avoid problems with intellisense. For path aliases, use `kit.alias` instead: https://svelte.dev/docs/kit/configuration#alias
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\lib\visitorTracking.ts[39m:136:7
+[31mError[39m: Type 'DocumentReference<DocumentData, DocumentData>' is not assignable to type 'DocumentReference<VisitorLog, DocumentData>'.
+  Types of property 'converter' are incompatible.
+    Type 'FirestoreDataConverter<DocumentData, DocumentData> | null' is not assignable to type 'FirestoreDataConverter<VisitorLog, DocumentData> | null'.
+      Type 'FirestoreDataConverter<DocumentData, DocumentData>' is not assignable to type 'FirestoreDataConverter<VisitorLog, DocumentData>'.
+        The types returned by 'fromFirestore(...)' are incompatible between these types.
+          Type 'DocumentData' is missing the following properties from type 'VisitorLog': visitorId, timestamp, userAgent, returningVisitor, and 11 more. 
+[36m      this.updateLastVisitTime();
+      [35mreturn[36m docRef;
+    } catch (error) {
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\lib\visitorTracking.ts[39m:191:5
+[31mError[39m: Type 'DocumentReference<DocumentData, DocumentData>' is not assignable to type 'DocumentReference<NavigationEventLog, DocumentData>'.
+  Types of property 'converter' are incompatible.
+    Type 'FirestoreDataConverter<DocumentData, DocumentData> | null' is not assignable to type 'FirestoreDataConverter<NavigationEventLog, DocumentData> | null'.
+      Type 'FirestoreDataConverter<DocumentData, DocumentData>' is not assignable to type 'FirestoreDataConverter<NavigationEventLog, DocumentData>'.
+        The types returned by 'fromFirestore(...)' are incompatible between these types.
+          Type 'DocumentData' is missing the following properties from type 'NavigationEventLog': visitorId, timestamp, navHref, navText, and 8 more. 
+[36m    const docRef = await addDoc(collection(db, 'navigation_events'), event);
+    [35mreturn[36m docRef;
+  } catch (error) {
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\lib\stores\particleStore.ts[39m:37:24
+[31mError[39m: Argument of type '{ id: `${string}-${string}-${string}-${string}-${string}`; x: number; y: number; dx: number; dy: number; color: string; }' is not assignable to parameter of type 'Partial<Particle>'.
+  Types of property 'id' are incompatible.
+    Type '`${string}-${string}-${string}-${string}-${string}`' is not assignable to type 'number'. 
+[36m
+  if (!isValidParticle([35mparticle[36m)) {
+    throw new ParticleError('Invalid particle created');
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\lib\stores\particleStore.ts[39m:41:3
+[31mError[39m: Type '{ id: `${string}-${string}-${string}-${string}-${string}`; x: number; y: number; dx: number; dy: number; color: string; }' is missing the following properties from type 'Particle': size, speed, orbit, offset 
+[36m
+  [35mreturn[36m particle;
+};
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ParticleSystem.svelte[39m:112:29
+[31mError[39m: Argument of type '{ id: number; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is not assignable to parameter of type 'Particle'.
+  Type '{ id: number; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is missing the following properties from type 'Particle': dx, dy, x, y (ts)
+[36m
+      if (!validateParticle([35mparticle[36m)) {
+        console.warn(`Invalid particle generated: ${JSON.stringify(particle)}`);
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ParticleSystem.svelte[39m:116:7
+[31mError[39m: Type '{ id: number; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is missing the following properties from type 'Particle': dx, dy, x, y (ts)
+[36m
+      [35mreturn[36m particle;
+    });
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ProfileImage.svelte[39m:10:42
+[31mError[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature. (ts)
+[36m    class="relative mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full ring-4 transition-transform hover:scale-105"
+    class:ring-purple-500-50={globalThis.[35m$isDarkMode[36m}
+    class:ring-purple-500-30={!globalThis.$isDarkMode}
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ProfileImage.svelte[39m:11:43
+[31mError[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature. (ts)
+[36m    class:ring-purple-500-50={globalThis.$isDarkMode}
+    class:ring-purple-500-30={!globalThis.[35m$isDarkMode[36m}
+    class:bg-background-80={globalThis.$isDarkMode}
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ProfileImage.svelte[39m:12:40
+[31mError[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature. (ts)
+[36m    class:ring-purple-500-30={!globalThis.$isDarkMode}
+    class:bg-background-80={globalThis.[35m$isDarkMode[36m}
+    class:bg-white-10={!globalThis.$isDarkMode}
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ProfileImage.svelte[39m:13:36
+[31mError[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature. (ts)
+[36m    class:bg-background-80={globalThis.$isDarkMode}
+    class:bg-white-10={!globalThis.[35m$isDarkMode[36m}
+  >
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ProfileImage.svelte[39m:24:36
+[31mError[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature. (ts)
+[36m    class="mx-auto mb-6 h-32 w-32 animate-pulse rounded-full"
+    class:bg-white-10={!globalThis.[35m$isDarkMode[36m}
+    class:bg-card-40={globalThis.$isDarkMode}
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ProfileImage.svelte[39m:25:34
+[31mError[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature. (ts)
+[36m    class:bg-white-10={!globalThis.$isDarkMode}
+    class:bg-card-40={globalThis.[35m$isDarkMode[36m}
+  ></div>
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\Links.svelte[39m:128:3
+[33mWarn[39m: Unused CSS selector ".particle"
+https://svelte.dev/e/css_unused_selector (svelte)
+[36m
+  [35m.particle[36m {
+    will-change: transform;
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\Nav.svelte[39m:139:3
+[33mWarn[39m: Redundant role 'navigation'
+https://svelte.dev/e/a11y_no_redundant_roles (svelte)
+[36m  class="sticky top-0 z-50 border-b border-white/10 bg-gradient-to-br from-purple-500/90 to-blue-900/90 p-6 text-white shadow-xl backdrop-blur-md"
+  [35mrole="navigation"[36m
+  aria-label="Main navigation"
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\Nav.svelte[39m:165:15
+[33mWarn[39m: Self-closing HTML tags for non-void elements are ambiguous ÔÇö use `<span ...></span>` rather than `<span ... />`
+https://svelte.dev/e/element_invalid_self_closing_tag (svelte)
+[36m              </span>
+              [35m<span
+                class="block h-0.5 max-w-0 bg-yellow-300 transition-all duration-300 group-hover:max-w-full"
+                aria-hidden="true"
+              />[36m
+            </a>
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\Nav.svelte[39m:46:32
+[31mError[39m: Argument of type '{ navHref: string; navText: string; language: keyof Translations; userAgent: string; referrer: string; screenResolution: string; platform: string; }' is not assignable to parameter of type 'Omit<NavigationEventLog, "visitorId" | "timestamp"> & { navHref: string; navText: string; }'.
+  Type '{ navHref: string; navText: string; language: keyof Translations; userAgent: string; referrer: string; screenResolution: string; platform: string; }' is missing the following properties from type 'Omit<NavigationEventLog, "visitorId" | "timestamp">': deviceMemory, hardwareConcurrency, connection (ts)
+[36m    try {
+      await logNavigationEvent([35m{
+        navHref: link.href,
+        navText: getTranslation(link, get(language)).text,
+        language: get(language),
+        userAgent: navigator.userAgent,
+        referrer: document.referrer || 'direct',
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        platform: navigator.platform,
+      }[36m);
+    } catch (error) {
+[39m
+
+====================================
+[31msvelte-check found 13 errors and 3 warnings in 6 files
+[39m

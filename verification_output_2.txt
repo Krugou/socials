@@ -1,0 +1,52 @@
+
+> social@0.0.1 lint
+> prettier --check . && eslint .
+
+Checking formatting...
+[warn] jsxBracketSameLine is deprecated.
+(node:32504) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[warn] src/components/Links.svelte
+[warn] src/routes/+page.svelte
+[warn] Code style issues found in 2 files. Run Prettier with --write to fix.
+
+> social@0.0.1 check
+> svelte-kit sync && svelte-check --tsconfig ./tsconfig.json
+
+You have specified a baseUrl and/or paths in your tsconfig.json which interferes with SvelteKit's auto-generated tsconfig.json. Remove it to avoid problems with intellisense. For path aliases, use `kit.alias` instead: https://svelte.dev/docs/kit/configuration#alias
+
+====================================
+Loading svelte-check in workspace: c:\Users\moxch\Documents\GitHub\socials
+Getting Svelte diagnostics...
+
+You have specified a baseUrl and/or paths in your tsconfig.json which interferes with SvelteKit's auto-generated tsconfig.json. Remove it to avoid problems with intellisense. For path aliases, use `kit.alias` instead: https://svelte.dev/docs/kit/configuration#alias
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\lib\visitorTracking.ts[39m:136:7
+[31mError[39m: Type 'DocumentReference<DocumentData, DocumentData>' is not assignable to type 'DocumentReference<VisitorLog, DocumentData>'.
+  Types of property 'converter' are incompatible.
+    Type 'FirestoreDataConverter<DocumentData, DocumentData> | null' is not assignable to type 'FirestoreDataConverter<VisitorLog, DocumentData> | null'.
+      Type 'FirestoreDataConverter<DocumentData, DocumentData>' is not assignable to type 'FirestoreDataConverter<VisitorLog, DocumentData>'.
+        The types returned by 'fromFirestore(...)' are incompatible between these types.
+          Type 'DocumentData' is missing the following properties from type 'VisitorLog': visitorId, timestamp, userAgent, returningVisitor, and 11 more. 
+[36m      this.updateLastVisitTime();
+      [35mreturn[36m docRef;
+    } catch (error) {
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ParticleSystem.svelte[39m:112:29
+[31mError[39m: Argument of type '{ id: string; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is not assignable to parameter of type 'Particle'.
+  Type '{ id: string; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is missing the following properties from type 'Particle': dx, dy, x, y (ts)
+[36m
+      if (!validateParticle([35mparticle[36m)) {
+        console.warn(`Invalid particle generated: ${JSON.stringify(particle)}`);
+[39m
+
+c:\Users\moxch\Documents\GitHub\socials\[32msrc\components\hero\ParticleSystem.svelte[39m:116:7
+[31mError[39m: Type '{ id: string; size: number; speed: number; orbit: number; offset: number; color: "#FFFFFF" | "#002F6C" | "#00a9e0" | "#f0f0f0" | "#ffcc00" | "#006a44"; }' is missing the following properties from type 'Particle': dx, dy, x, y (ts)
+[36m
+      [35mreturn[36m particle;
+    });
+[39m
+
+====================================
+[31msvelte-check found 3 errors and 0 warnings in 2 files
+[39m

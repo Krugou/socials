@@ -2,26 +2,26 @@
   import {language} from '../lib/stores.js';
   import type {Translations} from '../lib/types.js';
   import {onMount} from 'svelte';
-  import { isDarkMode } from '../stores/theme.js';
+  import {isDarkMode} from '../stores/theme.js';
 
   const translations: Pick<Translations, 'en' | 'fi'> = {
     en: {
       madeWith: 'Made with',
       emailAriaLabel: 'Send email to Aleksi Nokelainen',
       builtOn: 'Built on',
-      buildDateError: 'Build date unavailable'
+      buildDateError: 'Build date unavailable',
     },
     fi: {
       madeWith: 'Tehty käyttäen',
       emailAriaLabel: 'Lähetä sähköpostia Aleksi Nokelaiselle',
       builtOn: 'Rakennettu',
-      buildDateError: 'Rakennuspäivämäärä ei saatavilla'
-    }
+      buildDateError: 'Rakennuspäivämäärä ei saatavilla',
+    },
   };
   const dateFormatOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'short',
-    day: 'numeric'
+    day: 'numeric',
   };
   const getBuildDate = (): Date => {
     try {
@@ -54,7 +54,8 @@
   });
 </script>
 
-<footer class="mt-auto w-full px-6 py-4 border-t"
+<footer
+  class="mt-auto w-full border-t px-6 py-4"
   class:bg-background-80={$isDarkMode}
   class:bg-white-10={!$isDarkMode}
   class:border-border={$isDarkMode}

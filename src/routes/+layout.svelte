@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import Nav from '../components/Nav.svelte';
-  import { isDarkMode } from '../stores/theme.js';
+  import {isDarkMode} from '../stores/theme.js';
 </script>
 
 <div
