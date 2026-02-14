@@ -39,9 +39,17 @@ async function exportData() {
 
   // Initialize Admin SDK
   // In GitHub Actions, we'll use an environment variable for the service account key
-  const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT
+  let serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT
     ? JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
     : null;
+
+  if (!serviceAccount) {
+    const localTokenPath = join(process.cwd(), 'socialsadmintoken.json');
+    if (fs.existsSync(localTokenPath)) {
+      console.log('Loading local service account from socialsadmintoken.json');
+      serviceAccount = JSON.parse(fs.readFileSync(localTokenPath, 'utf-8'));
+    }
+  }
 
   if (!serviceAccount && process.env.NODE_ENV === 'production') {
     throw new Error('FIREBASE_SERVICE_ACCOUNT environment variable is required in production');
@@ -67,11 +75,7 @@ async function exportData() {
 
   // 1. Visitors
   reportLines.push('## Recent Visitors (visitorsV2)');
-  const visitorsSnapshot = await db
-    .collection('visitorsV2')
-    .orderBy('timestamp', 'desc')
-    .limit(50)
-    .get();
+  const visitorsSnapshot = await db.collection('visitorsV2').orderBy('timestamp', 'desc').get();
 
   const seenVisitorIds = new Set<string>();
   const visitorRows: string[] = [];
@@ -133,11 +137,7 @@ async function exportData() {
 
   // 2. Navigation Events
   reportLines.push('## Recent Navigation Events (navigation_events)');
-  const navSnapshot = await db
-    .collection('navigation_events')
-    .orderBy('timestamp', 'desc')
-    .limit(50)
-    .get();
+  const navSnapshot = await db.collection('navigation_events').orderBy('timestamp', 'desc').get();
 
   const navData: Record<string, unknown>[] = [];
 
@@ -157,7 +157,7 @@ async function exportData() {
 
   // 3. GPS Locations
   reportLines.push('## Saved GPS Locations (savedgps)');
-  const gpsSnapshot = await db.collection('savedgps').orderBy('timestamp', 'desc').limit(50).get();
+  const gpsSnapshot = await db.collection('savedgps').orderBy('timestamp', 'desc').get();
 
   const gpsData: Record<string, unknown>[] = [];
 
@@ -342,7 +342,7 @@ async function exportData() {
             }
         }
 
-        data.visitors.slice(0, 50).forEach((v, index) => {
+        data.visitors.forEach((v, index) => {
             const row = tbody.insertRow();
             row.innerHTML = \`
                 <td>\${new Date(v.timestamp).toLocaleString()}</td>

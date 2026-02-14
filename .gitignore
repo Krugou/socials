@@ -26,3 +26,4 @@ vite.config.ts.timestamp-*
 /react/node_modules
 /vue/dist
 /vue/node_modules
+admin/socialsadmintoken.json
