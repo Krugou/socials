@@ -1,0 +1,4 @@
+
+> social@0.0.1 build
+> vite build && npm run package
+

@@ -34,6 +34,7 @@ export default ts.config(
   {
     rules: {
       'svelte/no-inner-declarations': 'off',
+      'svelte/no-navigation-without-resolve': 'off',
     },
   },
 );

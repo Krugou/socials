@@ -61,7 +61,7 @@
 <div class="flex min-h-full flex-col">
   <div class="flex-1 px-4 py-16">
     <div
-      class="bg-card/80 relative mx-auto max-w-xl overflow-hidden rounded-2xl border border-border p-8 shadow-2xl backdrop-blur-lg"
+      class="bg-card/80 border-border relative mx-auto max-w-xl overflow-hidden rounded-2xl border p-8 shadow-2xl backdrop-blur-lg"
       role="presentation"
       bind:this={container}
       on:mousemove|passive={handleMouseMove}

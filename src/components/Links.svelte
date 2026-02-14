@@ -68,12 +68,12 @@
 >
   {#if visible}
     <ParticleOverlay {container} />
-    {#each links as link, i}
+    {#each links as link (link.title)}
       <a
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        in:fly={{y: 20, duration: 1000, delay: i * 100}}
+        in:fly={{y: 20, duration: 1000, delay: links.indexOf(link) * 100}}
         class="group relative block overflow-hidden rounded-lg border p-2 text-center backdrop-blur-sm transition-all duration-300 md:p-4"
         class:bg-card-80={$isDarkMode}
         class:bg-white-10={!$isDarkMode}

@@ -157,7 +157,7 @@
                 : {}}
             >
               <span
-                class="break-all bg-gradient-to-r from-white to-yellow-300 bg-clip-text text-[0.6rem] text-transparent transition-all duration-300 ease-in-out hover:from-yellow-300 hover:to-white md:text-base"
+                class="bg-gradient-to-r from-white to-yellow-300 bg-clip-text text-[0.6rem] break-all text-transparent transition-all duration-300 ease-in-out hover:from-yellow-300 hover:to-white md:text-base"
               >
                 {getTranslation(link, $language).text}
               </span>

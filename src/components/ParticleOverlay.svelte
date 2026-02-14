@@ -27,7 +27,7 @@
 </script>
 
 <div class="pointer-events-none absolute inset-0 overflow-hidden">
-  {#each particles as particle}
+  {#each particles as particle (particle.id)}
     <div
       class="particle absolute h-24 w-24"
       style="

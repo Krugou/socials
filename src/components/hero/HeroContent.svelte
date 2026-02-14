@@ -34,7 +34,7 @@
       {getTranslation($language).title}
     </h1>
     <p
-      class="from-primary-60 to-secondary-60 hover:from-secondary-80 hover:to-primary-80 mx-auto max-w-2xl bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text px-4 py-4 text-sm font-bold leading-relaxed text-transparent transition-all duration-1000 ease-in-out hover:from-blue-200 hover:to-purple-200 md:text-lg"
+      class="from-primary-60 to-secondary-60 hover:from-secondary-80 hover:to-primary-80 mx-auto max-w-2xl bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text px-4 py-4 text-sm leading-relaxed font-bold text-transparent transition-all duration-1000 ease-in-out hover:from-blue-200 hover:to-purple-200 md:text-lg"
     >
       {getTranslation($language).description}
     </p>

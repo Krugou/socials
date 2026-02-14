@@ -71,7 +71,7 @@
       {#if isLoading}
         <div class="flex justify-center py-8">
           <div
-            class="h-8 w-8 animate-spin rounded-full border-b-2 border-t-2"
+            class="h-8 w-8 animate-spin rounded-full border-t-2 border-b-2"
             class:border-primary={$isDarkMode}
             class:border-white={!$isDarkMode}
           ></div>
@@ -80,7 +80,7 @@
         <p class="rounded-lg bg-red-900/20 p-4 text-red-400">{error}</p>
       {:else}
         <ul class="space-y-4">
-          {#each repositories as repo}
+          {#each repositories as repo (repo.name)}
             <li
               class="hover:bg-white-20 rounded-lg p-4 transition-colors duration-300"
               class:bg-card-80={$isDarkMode}
@@ -93,7 +93,7 @@
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="font-bold transition-colors hover:text-primary"
+                  class="hover:text-primary font-bold transition-colors"
                   class:text-primary={$isDarkMode}
                   class:text-yellow-300={!$isDarkMode}
                 >
