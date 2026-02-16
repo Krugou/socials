@@ -1,6 +1,96 @@
 {
-  "generatedAt": "2026-02-14T18:07:53.888Z",
+  "generatedAt": "2026-02-16T00:25:34.811Z",
   "visitors": [
+    {
+      "visitorId": "000929a0-bc16-4af6-abba-5b86d8c129a9",
+      "timestamp": "2026-02-14T19:26:47.592Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 2,
+      "referrer": "direct",
+      "screenResolution": "1169x731",
+      "language": "fi-FI",
+      "platform": "Linux armv81",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 6,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771097207199,
+        "loadTime": 394,
+        "memoryUsage": 10000000
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "000929a0-bc16-4af6-abba-5b86d8c129a9",
+      "timestamp": "2026-02-14T18:29:27.237Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "1169x731",
+      "language": "fi-FI",
+      "platform": "Linux armv81",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 6,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771093766463,
+        "loadTime": 775,
+        "memoryUsage": 10000000
+      },
+      "isUnique": false
+    },
+    {
+      "visitorId": "9e5ea7c8-483b-4a79-b31b-61ad82fcb4b6",
+      "timestamp": "2026-02-14T18:18:43.324Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 3,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771093121290,
+        "loadTime": 2034,
+        "memoryUsage": 52826916
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "9e5ea7c8-483b-4a79-b31b-61ad82fcb4b6",
       "timestamp": "2026-02-14T17:18:48.670Z",
@@ -29,7 +119,7 @@
         "loadTime": 565,
         "memoryUsage": 21339445
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "dee070e8-0736-4205-b677-75883a2a7f84",
@@ -3545,53 +3635,39 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.208321625929926,
-      "lon": 24.6659570199057,
+      "lat": 60.208454,
+      "lon": 24.6661007,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-02-14T17:18:48.854Z",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "timestamp": "2026-02-14T19:26:47.900Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
       "referrer": "direct",
-      "screenResolution": "2560x1440",
-      "platform": "Win32",
-      "count": 27,
-      "debug_cluster_size": 27
-    },
-    {
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
-      "referrer": "https://www.linkedin.com/",
-      "timestamp": "2025-06-15T06:43:17.838Z",
-      "navPage": "weather",
-      "event": "accepted_gps",
-      "platform": "Win32",
-      "lon": 24.6660601,
-      "language": "en",
-      "screenResolution": "2195x1235",
-      "lat": 60.2085097,
-      "count": 4,
-      "debug_cluster_size": 4
+      "screenResolution": "1169x731",
+      "platform": "Linux armv81",
+      "count": 34,
+      "debug_cluster_size": 34
     }
   ],
   "stats": {
     "platform": {
-      "Win32": 37,
+      "Linux armv81": 5,
+      "Win32": 38,
       "Windows": 35,
       "Linux armv8l": 16,
       "Linux x86_64": 8,
       "MacIntel": 2,
       "iPhone": 10,
-      "Linux armv81": 3,
       "Linux aarch64": 7
     },
     "language": {
-      "fi-FI": 35,
+      "fi-FI": 38,
       "en-US": 75,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 98
+    "uniqueVisitors": 99
   }
 }
