@@ -1,6 +1,186 @@
 {
-  "generatedAt": "2026-02-16T00:25:34.811Z",
+  "generatedAt": "2026-02-23T00:25:28.373Z",
   "visitors": [
+    {
+      "visitorId": "10bf6943-51c5-4c7e-ada2-592182c2ed12",
+      "timestamp": "2026-02-21T10:39:14.724Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771670352782,
+        "loadTime": 1943,
+        "memoryUsage": 3196264
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "6914e236-9362-4120-8e71-e7d16a163fa4",
+      "timestamp": "2026-02-21T10:39:13.676Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771670352593,
+        "loadTime": 1084,
+        "memoryUsage": 3209092
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "9b8d7e71-a072-4e01-9b44-8e6db3907181",
+      "timestamp": "2026-02-21T10:39:13.642Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.7444.175 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771670352644,
+        "loadTime": 999,
+        "memoryUsage": 3211251
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "ff4cde71-2440-44ba-9441-dcff20a52778",
+      "timestamp": "2026-02-21T10:39:13.286Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771670352648,
+        "loadTime": 639,
+        "memoryUsage": 3196638
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "38a83437-6685-4fbc-9ae8-96ae602d908e",
+      "timestamp": "2026-02-21T10:39:13.232Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771670352562,
+        "loadTime": 671,
+        "memoryUsage": 3211160
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "000929a0-bc16-4af6-abba-5b86d8c129a9",
+      "timestamp": "2026-02-16T14:10:28.435Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 3,
+      "referrer": "https://t.co/",
+      "screenResolution": "1169x731",
+      "language": "fi-FI",
+      "platform": "Linux armv81",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 6,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1771251027661,
+        "loadTime": 775,
+        "memoryUsage": 10000000
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "000929a0-bc16-4af6-abba-5b86d8c129a9",
       "timestamp": "2026-02-14T19:26:47.592Z",
@@ -29,7 +209,7 @@
         "loadTime": 394,
         "memoryUsage": 10000000
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "000929a0-bc16-4af6-abba-5b86d8c129a9",
@@ -3635,25 +3815,39 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.208454,
-      "lon": 24.6661007,
+      "lat": 60.2085435,
+      "lon": 24.6660638,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-02-14T19:26:47.900Z",
+      "timestamp": "2026-02-16T14:10:28.660Z",
       "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-      "referrer": "direct",
+      "referrer": "https://t.co/",
       "screenResolution": "1169x731",
       "platform": "Linux armv81",
-      "count": 34,
-      "debug_cluster_size": 34
+      "count": 29,
+      "debug_cluster_size": 29
+    },
+    {
+      "lat": 60.208321625929926,
+      "lon": 24.6659570199057,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-02-14T17:18:48.854Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "platform": "Win32",
+      "count": 6,
+      "debug_cluster_size": 6
     }
   ],
   "stats": {
     "platform": {
-      "Linux armv81": 5,
+      "Windows": 40,
+      "Linux armv81": 6,
       "Win32": 38,
-      "Windows": 35,
       "Linux armv8l": 16,
       "Linux x86_64": 8,
       "MacIntel": 2,
@@ -3661,13 +3855,13 @@
       "Linux aarch64": 7
     },
     "language": {
-      "fi-FI": 38,
-      "en-US": 75,
+      "en-US": 80,
+      "fi-FI": 39,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 99
+    "uniqueVisitors": 104
   }
 }

@@ -1,16 +1,16 @@
 # Weekly Data Report
-Generated at: 2026-02-16T00:25:32.541Z
+Generated at: 2026-02-23T00:25:26.415Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 99**
+**Total Unique Visitors (in this sample): 104**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Linux armv81" : 5
+    "Windows" : 40
+    "Linux armv81" : 6
     "Win32" : 38
-    "Windows" : 35
     "Linux armv8l" : 16
     "Linux x86_64" : 8
     "MacIntel" : 2
@@ -21,8 +21,8 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "fi-FI" : 38
-    "en-US" : 75
+    "en-US" : 80
+    "fi-FI" : 39
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,7 +31,13 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
-| 2026-02-14T19:26:47.592Z | 000929a0-bc16-4af6-abba-5b86d8c129a9 | Linux armv81 | fi-FI | 1169x731 | ✅ |
+| 2026-02-21T10:39:14.724Z | 10bf6943-51c5-4c7e-ada2-592182c2ed12 | Windows | en-US | 2000x2000 | ✅ |
+| 2026-02-21T10:39:13.676Z | 6914e236-9362-4120-8e71-e7d16a163fa4 | Windows | en-US | 2000x2000 | ✅ |
+| 2026-02-21T10:39:13.642Z | 9b8d7e71-a072-4e01-9b44-8e6db3907181 | Windows | en-US | 2000x2000 | ✅ |
+| 2026-02-21T10:39:13.286Z | ff4cde71-2440-44ba-9441-dcff20a52778 | Windows | en-US | 2000x2000 | ✅ |
+| 2026-02-21T10:39:13.232Z | 38a83437-6685-4fbc-9ae8-96ae602d908e | Windows | en-US | 2000x2000 | ✅ |
+| 2026-02-16T14:10:28.435Z | 000929a0-bc16-4af6-abba-5b86d8c129a9 | Linux armv81 | fi-FI | 1169x731 | ✅ |
+| 2026-02-14T19:26:47.592Z | 000929a0-bc16-4af6-abba-5b86d8c129a9 | Linux armv81 | fi-FI | 1169x731 | — |
 | 2026-02-14T18:29:27.237Z | 000929a0-bc16-4af6-abba-5b86d8c129a9 | Linux armv81 | fi-FI | 1169x731 | — |
 | 2026-02-14T18:18:43.324Z | 9e5ea7c8-483b-4a79-b31b-61ad82fcb4b6 | Win32 | fi-FI | 2560x1440 | ✅ |
 | 2026-02-14T17:18:48.670Z | 9e5ea7c8-483b-4a79-b31b-61ad82fcb4b6 | Win32 | fi-FI | 2560x1440 | — |
@@ -159,4 +165,5 @@ No navigation events found.
 ## Saved GPS Locations (Clustered)
 | Timestamp | Lat | Lon | Event | Count |
 | --- | --- | --- | --- | --- |
-| 2026-02-14T19:26:47.900Z | 60.208454 | 24.6661007 | accepted_gps | 34 |
+| 2026-02-16T14:10:28.660Z | 60.2085435 | 24.6660638 | accepted_gps | 29 |
+| 2026-02-14T17:18:48.854Z | 60.208321625929926 | 24.6659570199057 | accepted_gps | 6 |
