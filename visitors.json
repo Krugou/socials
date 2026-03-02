@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-02-23T00:25:28.373Z",
+  "generatedAt": "2026-03-02T00:24:17.909Z",
   "visitors": [
+    {
+      "visitorId": "dee070e8-0736-4205-b677-75883a2a7f84",
+      "timestamp": "2026-02-28T06:43:00.538Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 7,
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2195x1235",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1772260979842,
+        "loadTime": 697,
+        "memoryUsage": 64370498
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "10bf6943-51c5-4c7e-ada2-592182c2ed12",
       "timestamp": "2026-02-21T10:39:14.724Z",
@@ -329,7 +359,7 @@
         "loadTime": 271,
         "memoryUsage": 25610121
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "dee070e8-0736-4205-b677-75883a2a7f84",
@@ -3815,39 +3845,25 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.2085435,
-      "lon": 24.6660638,
+      "lat": 60.208447849197924,
+      "lon": 24.665934489815125,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-02-16T14:10:28.660Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-      "referrer": "https://t.co/",
-      "screenResolution": "1169x731",
-      "platform": "Linux armv81",
-      "count": 29,
-      "debug_cluster_size": 29
-    },
-    {
-      "lat": 60.208321625929926,
-      "lon": 24.6659570199057,
-      "navPage": "weather",
-      "language": "en",
-      "event": "accepted_gps",
-      "timestamp": "2026-02-14T17:18:48.854Z",
+      "timestamp": "2026-02-28T06:43:02.162Z",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
-      "referrer": "direct",
-      "screenResolution": "2560x1440",
+      "referrer": "http://localhost:3000/",
+      "screenResolution": "2195x1235",
       "platform": "Win32",
-      "count": 6,
-      "debug_cluster_size": 6
+      "count": 36,
+      "debug_cluster_size": 36
     }
   ],
   "stats": {
     "platform": {
+      "Win32": 39,
       "Windows": 40,
       "Linux armv81": 6,
-      "Win32": 38,
       "Linux armv8l": 16,
       "Linux x86_64": 8,
       "MacIntel": 2,
@@ -3855,8 +3871,8 @@
       "Linux aarch64": 7
     },
     "language": {
+      "fi-FI": 40,
       "en-US": 80,
-      "fi-FI": 39,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
