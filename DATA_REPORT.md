@@ -1,17 +1,17 @@
 # Weekly Data Report
-Generated at: 2026-03-02T00:24:16.916Z
+Generated at: 2026-03-09T00:24:44.232Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 104**
+**Total Unique Visitors (in this sample): 107**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Win32" : 39
+    "Linux armv8l" : 17
+    "Win32" : 41
     "Windows" : 40
     "Linux armv81" : 6
-    "Linux armv8l" : 16
     "Linux x86_64" : 8
     "MacIntel" : 2
     "iPhone" : 10
@@ -21,8 +21,8 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "fi-FI" : 40
-    "en-US" : 80
+    "en-US" : 82
+    "fi-FI" : 41
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,6 +31,9 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-03-08T02:57:59.347Z | b28fc168-50b5-4a4f-b2f3-7ac93361878c | Linux armv8l | en-US | 412x915 | ✅ |
+| 2026-03-03T10:32:10.973Z | b74c6ea0-7a51-437e-9fa1-57cfc3721912 | Win32 | en-US | 2560x1440 | ✅ |
+| 2026-03-02T09:19:16.910Z | c1808dc1-ce5c-4128-89c8-53bdafff7562 | Win32 | fi-FI | 1536x864 | ✅ |
 | 2026-02-28T06:43:00.538Z | dee070e8-0736-4205-b677-75883a2a7f84 | Win32 | fi-FI | 2195x1235 | ✅ |
 | 2026-02-21T10:39:14.724Z | 10bf6943-51c5-4c7e-ada2-592182c2ed12 | Windows | en-US | 2000x2000 | ✅ |
 | 2026-02-21T10:39:13.676Z | 6914e236-9362-4120-8e71-e7d16a163fa4 | Windows | en-US | 2000x2000 | ✅ |
@@ -166,4 +169,4 @@ No navigation events found.
 ## Saved GPS Locations (Clustered)
 | Timestamp | Lat | Lon | Event | Count |
 | --- | --- | --- | --- | --- |
-| 2026-02-28T06:43:02.162Z | 60.208447849197924 | 24.665934489815125 | accepted_gps | 36 |
+| 2026-03-03T10:32:15.856Z | 60.20839363365252 | 24.66594371881312 | accepted_gps | 37 |

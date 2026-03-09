@@ -1,6 +1,96 @@
 {
-  "generatedAt": "2026-03-02T00:24:17.909Z",
+  "generatedAt": "2026-03-09T00:24:45.913Z",
   "visitors": [
+    {
+      "visitorId": "b28fc168-50b5-4a4f-b2f3-7ac93361878c",
+      "timestamp": "2026-03-08T02:57:59.347Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 9.3,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1772938677932,
+        "loadTime": 1417,
+        "memoryUsage": 3279752
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "b74c6ea0-7a51-437e-9fa1-57cfc3721912",
+      "timestamp": "2026-03-03T10:32:10.973Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 22,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1772533930045,
+        "loadTime": 930,
+        "memoryUsage": 28423803
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "c1808dc1-ce5c-4128-89c8-53bdafff7562",
+      "timestamp": "2026-03-02T09:19:16.910Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://github.com/",
+      "screenResolution": "1536x864",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": null,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1772443156012,
+        "loadTime": 899,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "dee070e8-0736-4205-b677-75883a2a7f84",
       "timestamp": "2026-02-28T06:43:00.538Z",
@@ -3845,39 +3935,39 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.208447849197924,
-      "lon": 24.665934489815125,
+      "lat": 60.20839363365252,
+      "lon": 24.66594371881312,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-02-28T06:43:02.162Z",
+      "timestamp": "2026-03-03T10:32:15.856Z",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
-      "referrer": "http://localhost:3000/",
-      "screenResolution": "2195x1235",
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
       "platform": "Win32",
-      "count": 36,
-      "debug_cluster_size": 36
+      "count": 37,
+      "debug_cluster_size": 37
     }
   ],
   "stats": {
     "platform": {
-      "Win32": 39,
+      "Linux armv8l": 17,
+      "Win32": 41,
       "Windows": 40,
       "Linux armv81": 6,
-      "Linux armv8l": 16,
       "Linux x86_64": 8,
       "MacIntel": 2,
       "iPhone": 10,
       "Linux aarch64": 7
     },
     "language": {
-      "fi-FI": 40,
-      "en-US": 80,
+      "en-US": 82,
+      "fi-FI": 41,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 104
+    "uniqueVisitors": 107
   }
 }
