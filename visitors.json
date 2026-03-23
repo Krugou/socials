@@ -1,6 +1,96 @@
 {
-  "generatedAt": "2026-03-16T00:28:20.043Z",
+  "generatedAt": "2026-03-23T00:28:15.121Z",
   "visitors": [
+    {
+      "visitorId": "b8eea130-11d5-4e63-a26e-16f75b2a835f",
+      "timestamp": "2026-03-22T13:40:36.857Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 16; CPH2653 Build/BP2A.250605.015; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/145.0.7632.159 Mobile Safari/537.36 Barcelona 421.0.0.50.67 Android (36/16; 480dpi; 1080x2376; OnePlus; CPH2653; OP5D55L1; qcom; fi_FI; 909555809)",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.threads.com/",
+      "screenResolution": "360x792",
+      "language": "fi-FI",
+      "platform": "Linux aarch64",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1774186834923,
+        "loadTime": 1935,
+        "memoryUsage": 10000000
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "ec66abec-3792-4035-9b9f-55c7bab8c47a",
+      "timestamp": "2026-03-20T15:46:22.086Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1774021580346,
+        "loadTime": 1742,
+        "memoryUsage": 3226666
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "8cd7ce4d-21a7-46d4-88f0-83ff2ee31f54",
+      "timestamp": "2026-03-20T15:46:15.978Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Mobile Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "http://m.facebook.com",
+      "screenResolution": "412x915",
+      "language": "en-US",
+      "platform": "Linux armv8l",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1774021573740,
+        "loadTime": 2241,
+        "memoryUsage": 3418083
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "b28fc168-50b5-4a4f-b2f3-7ac93361878c",
       "timestamp": "2026-03-08T02:57:59.347Z",
@@ -3951,23 +4041,23 @@
   ],
   "stats": {
     "platform": {
-      "Linux armv8l": 17,
+      "Linux aarch64": 8,
+      "Windows": 41,
+      "Linux armv8l": 18,
       "Win32": 41,
-      "Windows": 40,
       "Linux armv81": 6,
       "Linux x86_64": 8,
       "MacIntel": 2,
-      "iPhone": 10,
-      "Linux aarch64": 7
+      "iPhone": 10
     },
     "language": {
-      "en-US": 82,
-      "fi-FI": 41,
+      "fi-FI": 42,
+      "en-US": 84,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 107
+    "uniqueVisitors": 110
   }
 }
