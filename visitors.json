@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-03-23T00:28:15.121Z",
+  "generatedAt": "2026-03-30T00:29:45.810Z",
   "visitors": [
+    {
+      "visitorId": "b74c6ea0-7a51-437e-9fa1-57cfc3721912",
+      "timestamp": "2026-03-24T05:06:55.726Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 2,
+      "referrer": "https://t.co/",
+      "screenResolution": "2560x1440",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 22,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1774328814863,
+        "loadTime": 864,
+        "memoryUsage": 25776764
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "b8eea130-11d5-4e63-a26e-16f75b2a835f",
       "timestamp": "2026-03-22T13:40:36.857Z",
@@ -149,7 +179,7 @@
         "loadTime": 930,
         "memoryUsage": 28423803
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "c1808dc1-ce5c-4128-89c8-53bdafff7562",
@@ -4025,34 +4055,34 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.20839363365252,
-      "lon": 24.66594371881312,
+      "lat": 60.208435,
+      "lon": 24.66594,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-03-03T10:32:15.856Z",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
-      "referrer": "direct",
+      "timestamp": "2026-03-24T05:06:56.159Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "referrer": "https://t.co/",
       "screenResolution": "2560x1440",
       "platform": "Win32",
-      "count": 37,
-      "debug_cluster_size": 37
+      "count": 38,
+      "debug_cluster_size": 38
     }
   ],
   "stats": {
     "platform": {
+      "Win32": 42,
       "Linux aarch64": 8,
       "Windows": 41,
       "Linux armv8l": 18,
-      "Win32": 41,
       "Linux armv81": 6,
       "Linux x86_64": 8,
       "MacIntel": 2,
       "iPhone": 10
     },
     "language": {
+      "en-US": 85,
       "fi-FI": 42,
-      "en-US": 84,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
