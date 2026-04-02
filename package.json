@@ -69,6 +69,6 @@
   },
   "dependencies": {
     "firebase": "^12.10.0",
-    "lodash-es": "^4.17.23"
+    "lodash-es": "^4.18.1"
   }
 }
