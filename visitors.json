@@ -1,6 +1,66 @@
 {
-  "generatedAt": "2026-04-06T00:30:05.960Z",
+  "generatedAt": "2026-04-13T00:32:29.512Z",
   "visitors": [
+    {
+      "visitorId": "ba50d22e-80b2-44f6-9824-3b64c2a4c73c",
+      "timestamp": "2026-04-12T21:57:02.364Z",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/23D8133 Instagram 414.0.0.23.79 (iPhone16,1; iOS 26_3_1; en_US; en; scale=3.00; 1179x2556; IABMV/1; 868652560) Safari/604.1",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "393x852",
+      "language": "en-US",
+      "platform": "iPhone",
+      "deviceMemory": null,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1776031021337,
+        "loadTime": 1027,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "20558f0f-fadf-47d7-b285-7d7a0a6f577c",
+      "timestamp": "2026-04-11T17:36:24.947Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1775928983910,
+        "loadTime": 1038,
+        "memoryUsage": 15285819
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "1040b79e-2b6e-4481-bca2-0ff4f337c962",
       "timestamp": "2026-04-01T16:10:41.180Z",
@@ -4085,39 +4145,39 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.208435,
-      "lon": 24.66594,
+      "lat": 60.208459466486275,
+      "lon": 24.665911274493343,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-03-24T05:06:56.159Z",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
-      "referrer": "https://t.co/",
+      "timestamp": "2026-04-11T17:36:29.958Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "referrer": "direct",
       "screenResolution": "2560x1440",
       "platform": "Win32",
-      "count": 38,
-      "debug_cluster_size": 38
+      "count": 39,
+      "debug_cluster_size": 39
     }
   ],
   "stats": {
     "platform": {
+      "iPhone": 11,
+      "Win32": 43,
       "Linux armv8l": 19,
-      "Win32": 42,
       "Linux aarch64": 8,
       "Windows": 41,
       "Linux armv81": 6,
       "Linux x86_64": 8,
-      "MacIntel": 2,
-      "iPhone": 10
+      "MacIntel": 2
     },
     "language": {
-      "en-US": 86,
-      "fi-FI": 42,
+      "en-US": 87,
+      "fi-FI": 43,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 111
+    "uniqueVisitors": 113
   }
 }
