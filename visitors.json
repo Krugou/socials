@@ -1,6 +1,66 @@
 {
-  "generatedAt": "2026-04-13T00:32:29.512Z",
+  "generatedAt": "2026-04-20T00:32:58.977Z",
   "visitors": [
+    {
+      "visitorId": "a8d6d7f7-9806-4304-b3d3-f4d8b1ed2dab",
+      "timestamp": "2026-04-17T16:30:10.572Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 100
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1776443407897,
+        "loadTime": 2676,
+        "memoryUsage": 3231946
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "20558f0f-fadf-47d7-b285-7d7a0a6f577c",
+      "timestamp": "2026-04-14T05:02:49.574Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 2,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "2195x1235",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1776142968684,
+        "loadTime": 891,
+        "memoryUsage": 17326198
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "ba50d22e-80b2-44f6-9824-3b64c2a4c73c",
       "timestamp": "2026-04-12T21:57:02.364Z",
@@ -59,7 +119,7 @@
         "loadTime": 1038,
         "memoryUsage": 15285819
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "1040b79e-2b6e-4481-bca2-0ff4f337c962",
@@ -4145,39 +4205,39 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.208459466486275,
-      "lon": 24.665911274493343,
+      "lat": 60.20844203000485,
+      "lon": 24.666046000379367,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-04-11T17:36:29.958Z",
+      "timestamp": "2026-04-14T05:02:49.746Z",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
-      "referrer": "direct",
-      "screenResolution": "2560x1440",
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "2195x1235",
       "platform": "Win32",
-      "count": 39,
-      "debug_cluster_size": 39
+      "count": 40,
+      "debug_cluster_size": 40
     }
   ],
   "stats": {
     "platform": {
+      "Windows": 42,
+      "Win32": 44,
       "iPhone": 11,
-      "Win32": 43,
       "Linux armv8l": 19,
       "Linux aarch64": 8,
-      "Windows": 41,
       "Linux armv81": 6,
       "Linux x86_64": 8,
       "MacIntel": 2
     },
     "language": {
-      "en-US": 87,
-      "fi-FI": 43,
+      "en-US": 88,
+      "fi-FI": 44,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 113
+    "uniqueVisitors": 114
   }
 }

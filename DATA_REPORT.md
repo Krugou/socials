@@ -1,18 +1,18 @@
 # Weekly Data Report
-Generated at: 2026-04-13T00:32:27.603Z
+Generated at: 2026-04-20T00:32:57.094Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 113**
+**Total Unique Visitors (in this sample): 114**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
+    "Windows" : 42
+    "Win32" : 44
     "iPhone" : 11
-    "Win32" : 43
     "Linux armv8l" : 19
     "Linux aarch64" : 8
-    "Windows" : 41
     "Linux armv81" : 6
     "Linux x86_64" : 8
     "MacIntel" : 2
@@ -21,8 +21,8 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "en-US" : 87
-    "fi-FI" : 43
+    "en-US" : 88
+    "fi-FI" : 44
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,8 +31,10 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-04-17T16:30:10.572Z | a8d6d7f7-9806-4304-b3d3-f4d8b1ed2dab | Windows | en-US | 2000x2000 | ✅ |
+| 2026-04-14T05:02:49.574Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2195x1235 | ✅ |
 | 2026-04-12T21:57:02.364Z | ba50d22e-80b2-44f6-9824-3b64c2a4c73c | iPhone | en-US | 393x852 | ✅ |
-| 2026-04-11T17:36:24.947Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | ✅ |
+| 2026-04-11T17:36:24.947Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | — |
 | 2026-04-01T16:10:41.180Z | 1040b79e-2b6e-4481-bca2-0ff4f337c962 | Linux armv8l | en-US | 412x915 | ✅ |
 | 2026-03-24T05:06:55.726Z | b74c6ea0-7a51-437e-9fa1-57cfc3721912 | Win32 | en-US | 2560x1440 | ✅ |
 | 2026-03-22T13:40:36.857Z | b8eea130-11d5-4e63-a26e-16f75b2a835f | Linux aarch64 | fi-FI | 360x792 | ✅ |
@@ -176,4 +178,4 @@ No navigation events found.
 ## Saved GPS Locations (Clustered)
 | Timestamp | Lat | Lon | Event | Count |
 | --- | --- | --- | --- | --- |
-| 2026-04-11T17:36:29.958Z | 60.208459466486275 | 24.665911274493343 | accepted_gps | 39 |
+| 2026-04-14T05:02:49.746Z | 60.20844203000485 | 24.666046000379367 | accepted_gps | 40 |
