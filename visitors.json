@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-05-11T00:41:17.569Z",
+  "generatedAt": "2026-05-18T00:43:39.294Z",
   "visitors": [
+    {
+      "visitorId": "20558f0f-fadf-47d7-b285-7d7a0a6f577c",
+      "timestamp": "2026-05-16T10:28:19.916Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 4,
+      "referrer": "https://www.threads.com/",
+      "screenResolution": "2560x1440",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1778927299247,
+        "loadTime": 670,
+        "memoryUsage": 19834967
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "0b02f848-b4fe-4b60-857d-f72947ae29c3",
       "timestamp": "2026-05-09T17:40:21.757Z",
@@ -59,7 +89,7 @@
         "loadTime": 1734,
         "memoryUsage": 17696732
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "a8d6d7f7-9806-4304-b3d3-f4d8b1ed2dab",
@@ -4265,38 +4295,24 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.20837575026544,
-      "lon": 24.665891028343967,
+      "lat": 60.20840533533789,
+      "lon": 24.665879712244394,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-04-27T20:12:20.995Z",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
-      "referrer": "https://t.co/",
-      "screenResolution": "2195x1235",
+      "timestamp": "2026-05-16T10:28:20.156Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+      "referrer": "https://www.threads.com/",
+      "screenResolution": "2560x1440",
       "platform": "Win32",
-      "count": 39,
-      "debug_cluster_size": 39
-    },
-    {
-      "lat": 60.2085435,
-      "lon": 24.6660638,
-      "navPage": "weather",
-      "language": "en",
-      "event": "accepted_gps",
-      "timestamp": "2026-02-16T14:10:28.660Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-      "referrer": "https://t.co/",
-      "screenResolution": "1169x731",
-      "platform": "Linux armv81",
-      "count": 2,
-      "debug_cluster_size": 2
+      "count": 42,
+      "debug_cluster_size": 42
     }
   ],
   "stats": {
     "platform": {
+      "Win32": 46,
       "Windows": 43,
-      "Win32": 45,
       "iPhone": 11,
       "Linux armv8l": 19,
       "Linux aarch64": 8,
@@ -4305,8 +4321,8 @@
       "MacIntel": 2
     },
     "language": {
+      "fi-FI": 46,
       "en-US": 89,
-      "fi-FI": 45,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
