@@ -1,28 +1,28 @@
 # Weekly Data Report
-Generated at: 2026-05-18T00:43:37.357Z
+Generated at: 2026-05-25T00:45:43.296Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 115**
+**Total Unique Visitors (in this sample): 117**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Win32" : 46
-    "Windows" : 43
+    "Windows" : 44
+    "Win32" : 48
+    "Linux x86_64" : 9
     "iPhone" : 11
     "Linux armv8l" : 19
     "Linux aarch64" : 8
     "Linux armv81" : 6
-    "Linux x86_64" : 8
     "MacIntel" : 2
 ```
 
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "fi-FI" : 46
-    "en-US" : 89
+    "en-US" : 91
+    "fi-FI" : 48
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,7 +31,11 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
-| 2026-05-16T10:28:19.916Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | ✅ |
+| 2026-05-24T19:52:08.541Z | 3e971068-5426-47d7-b5d8-76eccad09109 | Windows | en-US | 2000x2000 | ✅ |
+| 2026-05-24T17:47:49.440Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | ✅ |
+| 2026-05-24T06:53:15.416Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | — |
+| 2026-05-21T11:29:52.064Z | 4d37aedb-540d-4eb8-a61b-f5718ee5a177 | Linux x86_64 | en-US | 1280x1200 | ✅ |
+| 2026-05-16T10:28:19.916Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | — |
 | 2026-05-09T17:40:21.757Z | 0b02f848-b4fe-4b60-857d-f72947ae29c3 | Windows | en-US | 2000x2000 | ✅ |
 | 2026-04-27T20:12:18.377Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2195x1235 | — |
 | 2026-04-17T16:30:10.572Z | a8d6d7f7-9806-4304-b3d3-f4d8b1ed2dab | Windows | en-US | 2000x2000 | ✅ |
@@ -181,4 +185,5 @@ No navigation events found.
 ## Saved GPS Locations (Clustered)
 | Timestamp | Lat | Lon | Event | Count |
 | --- | --- | --- | --- | --- |
-| 2026-05-16T10:28:20.156Z | 60.20840533533789 | 24.665879712244394 | accepted_gps | 42 |
+| 2026-05-24T17:47:51.856Z | 60.20835247839665 | 24.665918042539456 | accepted_gps | 41 |
+| 2026-02-16T14:10:28.660Z | 60.2085435 | 24.6660638 | accepted_gps | 2 |
