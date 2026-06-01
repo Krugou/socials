@@ -1,6 +1,126 @@
 {
-  "generatedAt": "2026-05-25T00:45:44.146Z",
+  "generatedAt": "2026-06-01T00:50:05.709Z",
   "visitors": [
+    {
+      "visitorId": "b74c6ea0-7a51-437e-9fa1-57cfc3721912",
+      "timestamp": "2026-05-29T07:22:45.158Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 3,
+      "referrer": "direct",
+      "screenResolution": "2560x1440",
+      "language": "en-US",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 22,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 150
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1780039364134,
+        "loadTime": 1024,
+        "memoryUsage": 25077315
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "fc42fd88-cfe6-4ebe-a78a-312dcdd22d05",
+      "timestamp": "2026-05-27T06:44:16.245Z",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:151.0) Gecko/20100101 Firefox/151.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://github.com/",
+      "screenResolution": "1920x1080",
+      "language": "en-US",
+      "platform": "Linux x86_64",
+      "deviceMemory": null,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1779864255602,
+        "loadTime": 648,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "89415fcc-8d97-449b-a16d-fe66c9f6d565",
+      "timestamp": "2026-05-26T05:53:19.134Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 16; CPH2581 Build/BP2A.250605.015; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/149.0.7827.28 Mobile Safari/537.36 Instagram 432.0.0.0.25 Android (36/16; 560dpi; 1440x3168; OnePlus; CPH2581; OP595DL1; qcom; fi_FI; 978419910; IABMV/1)",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "412x906",
+      "language": "fi-FI",
+      "platform": "Linux aarch64",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 9.1,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1779774798343,
+        "loadTime": 793,
+        "memoryUsage": 31200000
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "20558f0f-fadf-47d7-b285-7d7a0a6f577c",
+      "timestamp": "2026-05-25T21:06:06.633Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 7,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "2195x1235",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1779743165716,
+        "loadTime": 918,
+        "memoryUsage": 20092564
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "3e971068-5426-47d7-b5d8-76eccad09109",
       "timestamp": "2026-05-24T19:52:08.541Z",
@@ -59,7 +179,7 @@
         "loadTime": 841,
         "memoryUsage": 18555924
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "20558f0f-fadf-47d7-b285-7d7a0a6f577c",
@@ -389,7 +509,7 @@
         "loadTime": 864,
         "memoryUsage": 25776764
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "b8eea130-11d5-4e63-a26e-16f75b2a835f",
@@ -4415,18 +4535,32 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.20835247839665,
-      "lon": 24.665918042539456,
+      "lat": 60.208303958239355,
+      "lon": 24.665924848792127,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-05-24T17:47:51.856Z",
+      "timestamp": "2026-05-29T07:22:46.906Z",
       "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-      "referrer": "https://l.instagram.com/",
+      "referrer": "direct",
       "screenResolution": "2560x1440",
       "platform": "Win32",
-      "count": 41,
-      "debug_cluster_size": 41
+      "count": 35,
+      "debug_cluster_size": 35
+    },
+    {
+      "lat": 60.1579687,
+      "lon": 24.9132307,
+      "navPage": "weather",
+      "language": "en",
+      "event": "accepted_gps",
+      "timestamp": "2026-05-26T05:53:23.303Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 16; CPH2581 Build/BP2A.250605.015; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/149.0.7827.28 Mobile Safari/537.36 Instagram 432.0.0.0.25 Android (36/16; 560dpi; 1440x3168; OnePlus; CPH2581; OP595DL1; qcom; fi_FI; 978419910; IABMV/1)",
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "412x906",
+      "platform": "Linux aarch64",
+      "count": 1,
+      "debug_cluster_size": 1
     },
     {
       "lat": 60.2085435,
@@ -4439,29 +4573,29 @@
       "referrer": "https://t.co/",
       "screenResolution": "1169x731",
       "platform": "Linux armv81",
-      "count": 2,
-      "debug_cluster_size": 2
+      "count": 10,
+      "debug_cluster_size": 10
     }
   ],
   "stats": {
     "platform": {
+      "Win32": 50,
+      "Linux x86_64": 10,
+      "Linux aarch64": 9,
       "Windows": 44,
-      "Win32": 48,
-      "Linux x86_64": 9,
       "iPhone": 11,
       "Linux armv8l": 19,
-      "Linux aarch64": 8,
       "Linux armv81": 6,
       "MacIntel": 2
     },
     "language": {
-      "en-US": 91,
-      "fi-FI": 48,
+      "en-US": 93,
+      "fi-FI": 50,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 117
+    "uniqueVisitors": 119
   }
 }
