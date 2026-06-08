@@ -1,6 +1,66 @@
 {
-  "generatedAt": "2026-06-01T00:50:05.709Z",
+  "generatedAt": "2026-06-08T00:50:28.964Z",
   "visitors": [
+    {
+      "visitorId": "b7433474-6a11-4332-ab10-387177212df9",
+      "timestamp": "2026-06-03T12:37:47.467Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "1920x1080",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 20,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1780490266603,
+        "loadTime": 864,
+        "memoryUsage": 4934845
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "fc42fd88-cfe6-4ebe-a78a-312dcdd22d05",
+      "timestamp": "2026-06-02T09:21:10.201Z",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:151.0) Gecko/20100101 Firefox/151.0",
+      "returningVisitor": true,
+      "visitCount": 2,
+      "referrer": "https://github.com/",
+      "screenResolution": "1920x1080",
+      "language": "en-US",
+      "platform": "Linux x86_64",
+      "deviceMemory": null,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1780392069451,
+        "loadTime": 755,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "b74c6ea0-7a51-437e-9fa1-57cfc3721912",
       "timestamp": "2026-05-29T07:22:45.158Z",
@@ -59,7 +119,7 @@
         "loadTime": 648,
         "memoryUsage": null
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "89415fcc-8d97-449b-a16d-fe66c9f6d565",
@@ -4579,8 +4639,8 @@
   ],
   "stats": {
     "platform": {
-      "Win32": 50,
-      "Linux x86_64": 10,
+      "Win32": 51,
+      "Linux x86_64": 11,
       "Linux aarch64": 9,
       "Windows": 44,
       "iPhone": 11,
@@ -4589,13 +4649,13 @@
       "MacIntel": 2
     },
     "language": {
-      "en-US": 93,
-      "fi-FI": 50,
+      "fi-FI": 51,
+      "en-US": 94,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 119
+    "uniqueVisitors": 120
   }
 }

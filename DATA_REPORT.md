@@ -1,15 +1,15 @@
 # Weekly Data Report
-Generated at: 2026-06-01T00:50:03.017Z
+Generated at: 2026-06-08T00:50:28.037Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 119**
+**Total Unique Visitors (in this sample): 120**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Win32" : 50
-    "Linux x86_64" : 10
+    "Win32" : 51
+    "Linux x86_64" : 11
     "Linux aarch64" : 9
     "Windows" : 44
     "iPhone" : 11
@@ -21,8 +21,8 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "en-US" : 93
-    "fi-FI" : 50
+    "fi-FI" : 51
+    "en-US" : 94
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,8 +31,10 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-06-03T12:37:47.467Z | b7433474-6a11-4332-ab10-387177212df9 | Win32 | fi-FI | 1920x1080 | ✅ |
+| 2026-06-02T09:21:10.201Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | ✅ |
 | 2026-05-29T07:22:45.158Z | b74c6ea0-7a51-437e-9fa1-57cfc3721912 | Win32 | en-US | 2560x1440 | ✅ |
-| 2026-05-27T06:44:16.245Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | ✅ |
+| 2026-05-27T06:44:16.245Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | — |
 | 2026-05-26T05:53:19.134Z | 89415fcc-8d97-449b-a16d-fe66c9f6d565 | Linux aarch64 | fi-FI | 412x906 | ✅ |
 | 2026-05-25T21:06:06.633Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2195x1235 | ✅ |
 | 2026-05-24T19:52:08.541Z | 3e971068-5426-47d7-b5d8-76eccad09109 | Windows | en-US | 2000x2000 | ✅ |
