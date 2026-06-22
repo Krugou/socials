@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-06-15T00:53:13.122Z",
+  "generatedAt": "2026-06-22T00:52:23.209Z",
   "visitors": [
+    {
+      "visitorId": "0a741263-38bf-4eb2-92f7-266d2eafa02c",
+      "timestamp": "2026-06-16T15:50:48.506Z",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "1920x1080",
+      "language": "en-US",
+      "platform": "MacIntel",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 4,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Asia/Shanghai",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1781625044151,
+        "loadTime": 4356,
+        "memoryUsage": 10000000
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "951469b5-6a8c-499c-9e6c-a4b13acc3cb2",
       "timestamp": "2026-06-11T15:59:40.217Z",
@@ -4669,23 +4699,23 @@
   ],
   "stats": {
     "platform": {
+      "MacIntel": 3,
       "Windows": 45,
       "Win32": 51,
       "Linux x86_64": 11,
       "Linux aarch64": 9,
       "iPhone": 11,
       "Linux armv8l": 19,
-      "Linux armv81": 6,
-      "MacIntel": 2
+      "Linux armv81": 6
     },
     "language": {
-      "en-US": 95,
+      "en-US": 96,
       "fi-FI": 51,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 121
+    "uniqueVisitors": 122
   }
 }
