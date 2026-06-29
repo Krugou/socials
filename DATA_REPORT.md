@@ -1,15 +1,15 @@
 # Weekly Data Report
-Generated at: 2026-06-22T00:52:22.225Z
+Generated at: 2026-06-29T00:48:36.380Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 122**
+**Total Unique Visitors (in this sample): 124**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "MacIntel" : 3
-    "Windows" : 45
+    "Windows" : 46
+    "MacIntel" : 4
     "Win32" : 51
     "Linux x86_64" : 11
     "Linux aarch64" : 9
@@ -21,7 +21,7 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "en-US" : 96
+    "en-US" : 98
     "fi-FI" : 51
     "en-FI" : 3
     "fi" : 2
@@ -31,6 +31,8 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-06-28T18:31:23.955Z | 5f440104-91c7-427a-a795-09d58cd4b7df | Windows | en-US | 2000x2000 | ✅ |
+| 2026-06-25T14:37:14.324Z | c5e92ba5-6739-497f-9bca-9edba347c1e2 | MacIntel | en-US | 1800x1169 | ✅ |
 | 2026-06-16T15:50:48.506Z | 0a741263-38bf-4eb2-92f7-266d2eafa02c | MacIntel | en-US | 1920x1080 | ✅ |
 | 2026-06-11T15:59:40.217Z | 951469b5-6a8c-499c-9e6c-a4b13acc3cb2 | Windows | en-US | 2000x2000 | ✅ |
 | 2026-06-03T12:37:47.467Z | b7433474-6a11-4332-ab10-387177212df9 | Win32 | fi-FI | 1920x1080 | ✅ |

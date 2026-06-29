@@ -1,6 +1,66 @@
 {
-  "generatedAt": "2026-06-22T00:52:23.209Z",
+  "generatedAt": "2026-06-29T00:48:38.621Z",
   "visitors": [
+    {
+      "visitorId": "5f440104-91c7-427a-a795-09d58cd4b7df",
+      "timestamp": "2026-06-28T18:31:23.955Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "screenResolution": "2000x2000",
+      "language": "en-US",
+      "platform": "Windows",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 2,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "America/Los_Angeles",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1782671482195,
+        "loadTime": 1762,
+        "memoryUsage": 3246683
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "c5e92ba5-6739-497f-9bca-9edba347c1e2",
+      "timestamp": "2026-06-25T14:37:14.324Z",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:152.0) Gecko/20100101 Firefox/152.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://github.com/",
+      "screenResolution": "1800x1169",
+      "language": "en-US",
+      "platform": "MacIntel",
+      "deviceMemory": null,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1782398233731,
+        "loadTime": 600,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "0a741263-38bf-4eb2-92f7-266d2eafa02c",
       "timestamp": "2026-06-16T15:50:48.506Z",
@@ -4699,8 +4759,8 @@
   ],
   "stats": {
     "platform": {
-      "MacIntel": 3,
-      "Windows": 45,
+      "Windows": 46,
+      "MacIntel": 4,
       "Win32": 51,
       "Linux x86_64": 11,
       "Linux aarch64": 9,
@@ -4709,13 +4769,13 @@
       "Linux armv81": 6
     },
     "language": {
-      "en-US": 96,
+      "en-US": 98,
       "fi-FI": 51,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 122
+    "uniqueVisitors": 124
   }
 }
