@@ -1,18 +1,18 @@
 # Weekly Data Report
-Generated at: 2026-07-06T00:39:14.317Z
+Generated at: 2026-07-13T02:29:46.004Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 124**
+**Total Unique Visitors (in this sample): 125**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
+    "Win32" : 52
+    "Linux aarch64" : 10
     "Windows" : 46
     "MacIntel" : 4
-    "Win32" : 51
     "Linux x86_64" : 11
-    "Linux aarch64" : 9
     "iPhone" : 11
     "Linux armv8l" : 19
     "Linux armv81" : 6
@@ -21,8 +21,8 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
+    "fi-FI" : 53
     "en-US" : 98
-    "fi-FI" : 51
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,6 +31,8 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-07-12T13:26:38.066Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 1920x1080 | ✅ |
+| 2026-07-07T15:31:47.715Z | ca5083f3-9d53-4ad4-94bb-7db338a05d6f | Linux aarch64 | fi-FI | 1169x731 | ✅ |
 | 2026-06-28T18:31:23.955Z | 5f440104-91c7-427a-a795-09d58cd4b7df | Windows | en-US | 2000x2000 | ✅ |
 | 2026-06-25T14:37:14.324Z | c5e92ba5-6739-497f-9bca-9edba347c1e2 | MacIntel | en-US | 1800x1169 | ✅ |
 | 2026-06-16T15:50:48.506Z | 0a741263-38bf-4eb2-92f7-266d2eafa02c | MacIntel | en-US | 1920x1080 | ✅ |
@@ -40,7 +42,7 @@ pie title Languages
 | 2026-05-29T07:22:45.158Z | b74c6ea0-7a51-437e-9fa1-57cfc3721912 | Win32 | en-US | 2560x1440 | ✅ |
 | 2026-05-27T06:44:16.245Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | — |
 | 2026-05-26T05:53:19.134Z | 89415fcc-8d97-449b-a16d-fe66c9f6d565 | Linux aarch64 | fi-FI | 412x906 | ✅ |
-| 2026-05-25T21:06:06.633Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2195x1235 | ✅ |
+| 2026-05-25T21:06:06.633Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2195x1235 | — |
 | 2026-05-24T19:52:08.541Z | 3e971068-5426-47d7-b5d8-76eccad09109 | Windows | en-US | 2000x2000 | ✅ |
 | 2026-05-24T17:47:49.440Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | — |
 | 2026-05-24T06:53:15.416Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | — |
@@ -195,6 +197,5 @@ No navigation events found.
 ## Saved GPS Locations (Clustered)
 | Timestamp | Lat | Lon | Event | Count |
 | --- | --- | --- | --- | --- |
-| 2026-05-29T07:22:46.906Z | 60.208303958239355 | 24.665924848792127 | accepted_gps | 35 |
+| 2026-07-12T13:26:38.294Z | 60.208393242659376 | 24.665941848438447 | accepted_gps | 47 |
 | 2026-05-26T05:53:23.303Z | 60.1579687 | 24.9132307 | accepted_gps | 1 |
-| 2026-02-16T14:10:28.660Z | 60.2085435 | 24.6660638 | accepted_gps | 10 |

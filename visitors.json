@@ -1,6 +1,66 @@
 {
-  "generatedAt": "2026-07-06T00:39:15.625Z",
+  "generatedAt": "2026-07-13T02:29:47.316Z",
   "visitors": [
+    {
+      "visitorId": "20558f0f-fadf-47d7-b285-7d7a0a6f577c",
+      "timestamp": "2026-07-12T13:26:38.066Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "returningVisitor": true,
+      "visitCount": 8,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "1920x1080",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": 50
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1783862797195,
+        "loadTime": 872,
+        "memoryUsage": 18311202
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "ca5083f3-9d53-4ad4-94bb-7db338a05d6f",
+      "timestamp": "2026-07-07T15:31:47.715Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 16; TB710FU Build/BP2A.250605.031.A3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/149.0.7827.159 Safari/537.36 Instagram 437.0.0.14.78 Android (36/16; 438dpi; 3200x2000; LENOVO/Lenovo; TB710FU; TB710FU; qcom; fi_FI; 1009663038; IABMV/1)",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "1169x731",
+      "language": "fi-FI",
+      "platform": "Linux aarch64",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 6,
+      "connection": {
+        "type": "wifi",
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1783438306767,
+        "loadTime": 948,
+        "memoryUsage": 10000000
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "5f440104-91c7-427a-a795-09d58cd4b7df",
       "timestamp": "2026-06-28T18:31:23.955Z",
@@ -299,7 +359,7 @@
         "loadTime": 918,
         "memoryUsage": 20092564
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "3e971068-5426-47d7-b5d8-76eccad09109",
@@ -4715,18 +4775,18 @@
   "navigation": [],
   "gps": [
     {
-      "lat": 60.208303958239355,
-      "lon": 24.665924848792127,
+      "lat": 60.208393242659376,
+      "lon": 24.665941848438447,
       "navPage": "weather",
       "language": "en",
       "event": "accepted_gps",
-      "timestamp": "2026-05-29T07:22:46.906Z",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
-      "referrer": "direct",
-      "screenResolution": "2560x1440",
+      "timestamp": "2026-07-12T13:26:38.294Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "1920x1080",
       "platform": "Win32",
-      "count": 35,
-      "debug_cluster_size": 35
+      "count": 47,
+      "debug_cluster_size": 47
     },
     {
       "lat": 60.1579687,
@@ -4741,41 +4801,27 @@
       "platform": "Linux aarch64",
       "count": 1,
       "debug_cluster_size": 1
-    },
-    {
-      "lat": 60.2085435,
-      "lon": 24.6660638,
-      "navPage": "weather",
-      "language": "en",
-      "event": "accepted_gps",
-      "timestamp": "2026-02-16T14:10:28.660Z",
-      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
-      "referrer": "https://t.co/",
-      "screenResolution": "1169x731",
-      "platform": "Linux armv81",
-      "count": 10,
-      "debug_cluster_size": 10
     }
   ],
   "stats": {
     "platform": {
+      "Win32": 52,
+      "Linux aarch64": 10,
       "Windows": 46,
       "MacIntel": 4,
-      "Win32": 51,
       "Linux x86_64": 11,
-      "Linux aarch64": 9,
       "iPhone": 11,
       "Linux armv8l": 19,
       "Linux armv81": 6
     },
     "language": {
+      "fi-FI": 53,
       "en-US": 98,
-      "fi-FI": 51,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 124
+    "uniqueVisitors": 125
   }
 }
