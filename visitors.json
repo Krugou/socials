@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-07-20T02:40:54.074Z",
+  "generatedAt": "2026-07-27T02:37:33.885Z",
   "visitors": [
+    {
+      "visitorId": "1e9e658f-9ca3-4719-a820-ceb60cc4ec21",
+      "performance": {
+        "navigationStart": 1785039472771,
+        "loadTime": 1763,
+        "memoryUsage": 3411798
+      },
+      "connection": {
+        "type": null,
+        "rtt": null,
+        "effectiveType": "4g",
+        "downlink": 10
+      },
+      "referrer": "https://www.facebook.com/",
+      "deviceMemory": 32,
+      "timeZone": "America/Los_Angeles",
+      "screenResolution": "2000x2000",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; MX-A10R Build/S00812; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/150.0.7871.124 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/570.0.0.34.87;]",
+      "language": "en-US",
+      "hardwareConcurrency": 4,
+      "timestamp": "2026-07-26T04:17:54.532Z",
+      "preferences": {
+        "reducedMotion": false,
+        "colorScheme": "light"
+      },
+      "platform": "Linux armv8l",
+      "isUnique": true
+    },
     {
       "preferences": {
         "colorScheme": "light",
@@ -4865,23 +4895,23 @@
   ],
   "stats": {
     "platform": {
+      "Linux armv8l": 20,
       "Linux aarch64": 11,
       "Windows": 47,
       "Win32": 52,
       "MacIntel": 4,
       "Linux x86_64": 11,
       "iPhone": 11,
-      "Linux armv8l": 19,
       "Linux armv81": 6
     },
     "language": {
+      "en-US": 100,
       "fi-FI": 54,
-      "en-US": 99,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 127
+    "uniqueVisitors": 128
   }
 }
