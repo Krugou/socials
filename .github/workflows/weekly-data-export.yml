@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd admin
-          npm install
+          npm ci
 
       - name: Run data export script
         env:
