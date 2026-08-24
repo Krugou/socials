@@ -1,6 +1,126 @@
 {
-  "generatedAt": "2026-08-17T01:03:34.559Z",
+  "generatedAt": "2026-08-24T01:04:34.134Z",
   "visitors": [
+    {
+      "visitorId": "d0f6764d-a544-4f20-95eb-7a60af51a0c0",
+      "timestamp": "2026-08-21T07:56:09.402Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:154.0) Gecko/20100101 Firefox/154.0",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "1920x1080",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": null,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1787298968893,
+        "loadTime": 514,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "2a3b2d28-c94f-4826-b7ae-5fa2f835920e",
+      "timestamp": "2026-08-21T07:55:41.570Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "direct",
+      "screenResolution": "1920x1080",
+      "language": "fi-FI",
+      "platform": "Win32",
+      "deviceMemory": 32,
+      "hardwareConcurrency": 12,
+      "connection": {
+        "type": null,
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1787298941375,
+        "loadTime": 196,
+        "memoryUsage": 3299618
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "fc42fd88-cfe6-4ebe-a78a-312dcdd22d05",
+      "timestamp": "2026-08-21T07:55:18.490Z",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0",
+      "returningVisitor": true,
+      "visitCount": 4,
+      "referrer": "https://github.com/",
+      "screenResolution": "1920x1080",
+      "language": "en-US",
+      "platform": "Linux x86_64",
+      "deviceMemory": null,
+      "hardwareConcurrency": 16,
+      "connection": {
+        "type": null,
+        "effectiveType": null,
+        "downlink": null,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "dark",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1787298917887,
+        "loadTime": null,
+        "memoryUsage": null
+      },
+      "isUnique": true
+    },
+    {
+      "visitorId": "b3862aff-c1d0-4386-8909-2b73c6cf7c86",
+      "timestamp": "2026-08-17T08:19:21.477Z",
+      "userAgent": "Mozilla/5.0 (Linux; Android 16; CPH2581 Build/BP2A.250605.015; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/151.0.7922.97 Mobile Safari/537.36 Instagram 441.0.0.43.81 Android (36/16; 540dpi; 1080x2376; OnePlus; CPH2581; OP595DL1; qcom; fi_FI; 1031695508; IABMV/1)",
+      "returningVisitor": false,
+      "visitCount": 1,
+      "referrer": "https://l.instagram.com/",
+      "screenResolution": "320x704",
+      "language": "fi-FI",
+      "platform": "Linux aarch64",
+      "deviceMemory": 8,
+      "hardwareConcurrency": 8,
+      "connection": {
+        "type": "cellular",
+        "effectiveType": "4g",
+        "downlink": 10,
+        "rtt": null
+      },
+      "timeZone": "Europe/Helsinki",
+      "preferences": {
+        "colorScheme": "light",
+        "reducedMotion": false
+      },
+      "performance": {
+        "navigationStart": 1786954760496,
+        "loadTime": 982,
+        "memoryUsage": 10000000
+      },
+      "isUnique": true
+    },
     {
       "visitorId": "18b3a250-a7ad-4f3a-b151-67b402ca72cb",
       "timestamp": "2026-08-16T04:12:52.195Z",
@@ -149,7 +269,7 @@
         "loadTime": null,
         "memoryUsage": null
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "b74c6ea0-7a51-437e-9fa1-57cfc3721912",
@@ -5105,23 +5225,23 @@
   ],
   "stats": {
     "platform": {
-      "Linux aarch64": 13,
-      "Win32": 55,
+      "Win32": 57,
+      "Linux x86_64": 13,
+      "Linux aarch64": 14,
       "Windows": 48,
-      "Linux x86_64": 12,
       "Linux armv8l": 20,
       "MacIntel": 4,
       "iPhone": 11,
       "Linux armv81": 6
     },
     "language": {
-      "fi-FI": 56,
-      "en-US": 105,
+      "fi-FI": 59,
+      "en-US": 106,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 132
+    "uniqueVisitors": 135
   }
 }

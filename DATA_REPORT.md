@@ -1,17 +1,17 @@
 # Weekly Data Report
-Generated at: 2026-08-17T01:03:33.513Z
+Generated at: 2026-08-24T01:04:32.599Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 132**
+**Total Unique Visitors (in this sample): 135**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Linux aarch64" : 13
-    "Win32" : 55
+    "Win32" : 57
+    "Linux x86_64" : 13
+    "Linux aarch64" : 14
     "Windows" : 48
-    "Linux x86_64" : 12
     "Linux armv8l" : 20
     "MacIntel" : 4
     "iPhone" : 11
@@ -21,8 +21,8 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "fi-FI" : 56
-    "en-US" : 105
+    "fi-FI" : 59
+    "en-US" : 106
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,11 +31,15 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-08-21T07:56:09.402Z | d0f6764d-a544-4f20-95eb-7a60af51a0c0 | Win32 | fi-FI | 1920x1080 | ✅ |
+| 2026-08-21T07:55:41.570Z | 2a3b2d28-c94f-4826-b7ae-5fa2f835920e | Win32 | fi-FI | 1920x1080 | ✅ |
+| 2026-08-21T07:55:18.490Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | ✅ |
+| 2026-08-17T08:19:21.477Z | b3862aff-c1d0-4386-8909-2b73c6cf7c86 | Linux aarch64 | fi-FI | 320x704 | ✅ |
 | 2026-08-16T04:12:52.195Z | 18b3a250-a7ad-4f3a-b151-67b402ca72cb | Linux aarch64 | fi-FI | 360x784 | ✅ |
 | 2026-08-14T07:40:30.224Z | b74c6ea0-7a51-437e-9fa1-57cfc3721912 | Win32 | en-US | 2560x1440 | ✅ |
 | 2026-08-12T18:43:51.718Z | c5cc078c-ad9a-47d4-8f1f-687a3cd3b1fd | Windows | en-US | 2000x2000 | ✅ |
 | 2026-08-12T17:37:06.878Z | bacd9693-7212-44a4-a4bb-01c0077b46e7 | Linux aarch64 | fi-FI | 384x832 | ✅ |
-| 2026-08-12T17:05:17.777Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | ✅ |
+| 2026-08-12T17:05:17.777Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | — |
 | 2026-08-12T07:00:27.788Z | b74c6ea0-7a51-437e-9fa1-57cfc3721912 | Win32 | en-US | 2560x1440 | — |
 | 2026-07-31T05:38:36.002Z | 686a8d32-480a-4929-b44d-269a335d764a | Win32 | en-US | 800x600 | ✅ |
 | 2026-07-26T04:17:54.532Z | 1e9e658f-9ca3-4719-a820-ceb60cc4ec21 | Linux armv8l | en-US | 2000x2000 | ✅ |
