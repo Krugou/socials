@@ -1,28 +1,28 @@
 # Weekly Data Report
-Generated at: 2026-08-24T01:04:32.599Z
+Generated at: 2026-08-31T03:27:08.606Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 135**
+**Total Unique Visitors (in this sample): 137**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Win32" : 57
+    "Win32" : 58
+    "iPhone" : 12
+    "Linux armv8l" : 21
     "Linux x86_64" : 13
     "Linux aarch64" : 14
     "Windows" : 48
-    "Linux armv8l" : 20
     "MacIntel" : 4
-    "iPhone" : 11
     "Linux armv81" : 6
 ```
 
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "fi-FI" : 59
-    "en-US" : 106
+    "fi-FI" : 61
+    "en-US" : 107
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,6 +31,9 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-08-30T14:49:30.356Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 2560x1440 | ✅ |
+| 2026-08-27T20:04:55.623Z | 3c2993dc-0e55-402d-8472-efff47d5e500 | iPhone | fi-FI | 375x812 | ✅ |
+| 2026-08-26T16:37:51.072Z | 387b0adc-ca25-495c-8300-e4bb7c89aef6 | Linux armv8l | en-US | 2000x2000 | ✅ |
 | 2026-08-21T07:56:09.402Z | d0f6764d-a544-4f20-95eb-7a60af51a0c0 | Win32 | fi-FI | 1920x1080 | ✅ |
 | 2026-08-21T07:55:41.570Z | 2a3b2d28-c94f-4826-b7ae-5fa2f835920e | Win32 | fi-FI | 1920x1080 | ✅ |
 | 2026-08-21T07:55:18.490Z | fc42fd88-cfe6-4ebe-a78a-312dcdd22d05 | Linux x86_64 | en-US | 1920x1080 | ✅ |
@@ -45,7 +48,7 @@ pie title Languages
 | 2026-07-26T04:17:54.532Z | 1e9e658f-9ca3-4719-a820-ceb60cc4ec21 | Linux armv8l | en-US | 2000x2000 | ✅ |
 | 2026-07-17T22:27:44.280Z | 4b23d50d-c283-49a9-ace6-60551cc2552a | Linux aarch64 | fi-FI | 412x906 | ✅ |
 | 2026-07-13T20:09:30.702Z | 675ddd29-234d-44e8-a223-83a97f9d5f62 | Windows | en-US | 2000x2000 | ✅ |
-| 2026-07-12T13:26:38.066Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 1920x1080 | ✅ |
+| 2026-07-12T13:26:38.066Z | 20558f0f-fadf-47d7-b285-7d7a0a6f577c | Win32 | fi-FI | 1920x1080 | — |
 | 2026-07-07T15:31:47.715Z | ca5083f3-9d53-4ad4-94bb-7db338a05d6f | Linux aarch64 | fi-FI | 1169x731 | ✅ |
 | 2026-06-28T18:31:23.955Z | 5f440104-91c7-427a-a795-09d58cd4b7df | Windows | en-US | 2000x2000 | ✅ |
 | 2026-06-25T14:37:14.324Z | c5e92ba5-6739-497f-9bca-9edba347c1e2 | MacIntel | en-US | 1800x1169 | ✅ |
@@ -211,5 +214,5 @@ No navigation events found.
 ## Saved GPS Locations (Clustered)
 | Timestamp | Lat | Lon | Event | Count |
 | --- | --- | --- | --- | --- |
-| 2026-08-14T07:40:34.596Z | 60.20844249469823 | 24.665919133143205 | accepted_gps | 48 |
+| 2026-08-30T14:49:30.607Z | 60.20840922412904 | 24.66596309026472 | accepted_gps | 49 |
 | 2026-05-26T05:53:23.303Z | 60.1579687 | 24.9132307 | accepted_gps | 1 |
