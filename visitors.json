@@ -1,6 +1,66 @@
 {
-  "generatedAt": "2026-08-31T03:27:09.475Z",
+  "generatedAt": "2026-09-07T02:46:02.402Z",
   "visitors": [
+    {
+      "language": "en-US",
+      "visitCount": 1,
+      "referrer": "https://www.facebook.com/",
+      "platform": "Windows",
+      "preferences": {
+        "reducedMotion": false,
+        "colorScheme": "light"
+      },
+      "timeZone": "America/Los_Angeles",
+      "connection": {
+        "rtt": null,
+        "effectiveType": "4g",
+        "type": null,
+        "downlink": 1.5
+      },
+      "performance": {
+        "navigationStart": 1788671344043,
+        "loadTime": 1819,
+        "memoryUsage": 3782122
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:58.0) Gecko/20100101 Firefox/59.0",
+      "visitorId": "218e0dd8-6d6b-47ba-9234-e86de312b626",
+      "screenResolution": "2000x2000",
+      "returningVisitor": false,
+      "hardwareConcurrency": 2,
+      "deviceMemory": 32,
+      "timestamp": "2026-09-06T05:09:05.861Z",
+      "isUnique": true
+    },
+    {
+      "preferences": {
+        "reducedMotion": false,
+        "colorScheme": "dark"
+      },
+      "deviceMemory": 32,
+      "hardwareConcurrency": 22,
+      "visitorId": "b74c6ea0-7a51-437e-9fa1-57cfc3721912",
+      "referrer": "https://l.instagram.com/",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "timeZone": "Europe/Helsinki",
+      "connection": {
+        "downlink": 10,
+        "rtt": 50,
+        "type": null,
+        "effectiveType": "4g"
+      },
+      "platform": "Win32",
+      "language": "en-US",
+      "returningVisitor": true,
+      "performance": {
+        "navigationStart": 1788496322851,
+        "memoryUsage": 11010001,
+        "loadTime": null
+      },
+      "visitCount": 6,
+      "timestamp": "2026-09-04T04:32:04.115Z",
+      "screenResolution": "2560x1440",
+      "isUnique": true
+    },
     {
       "connection": {
         "type": null,
@@ -269,7 +329,7 @@
         "loadTime": null,
         "memoryUsage": 11199391
       },
-      "isUnique": true
+      "isUnique": false
     },
     {
       "visitorId": "c5cc078c-ad9a-47d4-8f1f-687a3cd3b1fd",
@@ -5286,17 +5346,17 @@
   "gps": [
     {
       "language": "en",
+      "lon": 24.665876442981546,
       "platform": "Win32",
-      "screenResolution": "2560x1440",
-      "lat": 60.20840922412904,
-      "event": "accepted_gps",
-      "navPage": "weather",
-      "lon": 24.66596309026472,
       "referrer": "https://l.instagram.com/",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
-      "timestamp": "2026-08-30T14:49:30.607Z",
-      "count": 49,
-      "debug_cluster_size": 49
+      "lat": 60.20840257776125,
+      "event": "accepted_gps",
+      "timestamp": "2026-09-04T04:32:05.026Z",
+      "screenResolution": "2560x1440",
+      "navPage": "weather",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "count": 50,
+      "debug_cluster_size": 50
     },
     {
       "lat": 60.1579687,
@@ -5315,23 +5375,23 @@
   ],
   "stats": {
     "platform": {
-      "Win32": 58,
+      "Windows": 49,
+      "Win32": 59,
       "iPhone": 12,
       "Linux armv8l": 21,
       "Linux x86_64": 13,
       "Linux aarch64": 14,
-      "Windows": 48,
       "MacIntel": 4,
       "Linux armv81": 6
     },
     "language": {
+      "en-US": 109,
       "fi-FI": 61,
-      "en-US": 107,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 137
+    "uniqueVisitors": 138
   }
 }
