@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-09-07T02:46:02.402Z",
+  "generatedAt": "2026-09-14T03:14:46.007Z",
   "visitors": [
+    {
+      "timestamp": "2026-09-09T18:20:20.907Z",
+      "timeZone": "Europe/Helsinki",
+      "visitCount": 1,
+      "visitorId": "3b79d861-0084-4e01-bdb8-6dff1637d3ae",
+      "language": "fi-FI",
+      "screenResolution": "385x854",
+      "preferences": {
+        "reducedMotion": false,
+        "colorScheme": "light"
+      },
+      "returningVisitor": false,
+      "connection": {
+        "downlink": 10,
+        "type": "cellular",
+        "effectiveType": "4g",
+        "rtt": null
+      },
+      "platform": "Linux aarch64",
+      "referrer": "https://l.instagram.com/",
+      "userAgent": "Mozilla/5.0 (Linux; Android 12; SM-A426B Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/151.0.7922.199 Mobile Safari/537.36 Instagram 439.0.0.37.89 Android (31/12; 300dpi; 720x1600; samsung; SM-A426B; a42xq; qcom; fi_FI; 1021815758; IABMV/1)",
+      "performance": {
+        "memoryUsage": 10000000,
+        "loadTime": 1217,
+        "navigationStart": 1788978019697
+      },
+      "hardwareConcurrency": 8,
+      "deviceMemory": 4,
+      "isUnique": true
+    },
     {
       "language": "en-US",
       "visitCount": 1,
@@ -5375,23 +5405,23 @@
   ],
   "stats": {
     "platform": {
+      "Linux aarch64": 15,
       "Windows": 49,
       "Win32": 59,
       "iPhone": 12,
       "Linux armv8l": 21,
       "Linux x86_64": 13,
-      "Linux aarch64": 14,
       "MacIntel": 4,
       "Linux armv81": 6
     },
     "language": {
+      "fi-FI": 62,
       "en-US": 109,
-      "fi-FI": 61,
       "en-FI": 3,
       "fi": 2,
       "en": 2,
       "ja-JP": 1
     },
-    "uniqueVisitors": 138
+    "uniqueVisitors": 139
   }
 }
