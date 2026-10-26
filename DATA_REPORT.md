@@ -1,15 +1,15 @@
 # Weekly Data Report
-Generated at: 2026-10-19T03:08:30.573Z
+Generated at: 2026-10-26T03:04:53.655Z
 
 ## Recent Visitors (visitorsV2)
-**Total Unique Visitors (in this sample): 141**
+**Total Unique Visitors (in this sample): 143**
 
 ### Visualizations
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Windows" : 51
-    "Linux aarch64" : 15
+    "Windows" : 52
+    "Linux aarch64" : 16
     "Win32" : 59
     "iPhone" : 12
     "Linux armv8l" : 21
@@ -21,8 +21,8 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "en-US" : 111
-    "fi-FI" : 62
+    "en-US" : 112
+    "fi-FI" : 63
     "en-FI" : 3
     "fi" : 2
     "en" : 2
@@ -31,6 +31,8 @@ pie title Languages
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
+| 2026-10-25T21:54:42.917Z | 3a77579c-221f-4600-b4a5-87568b15c917 | Windows | en-US | 2000x2000 | ✅ |
+| 2026-10-20T18:08:18.784Z | 6f7bdfc2-c51b-4c69-aa41-74bba14e4d0c | Linux aarch64 | fi-FI | 412x922 | ✅ |
 | 2026-10-08T04:56:07.595Z | 26d137ac-67ec-422f-9789-fb7271f44531 | Windows | en-US | 2000x2000 | ✅ |
 | 2026-09-22T18:16:51.180Z | 7e3ae901-d39c-4bd8-a481-cfa3116716b5 | Windows | en-US | 2000x2000 | ✅ |
 | 2026-09-09T18:20:20.907Z | 3b79d861-0084-4e01-bdb8-6dff1637d3ae | Linux aarch64 | fi-FI | 385x854 | ✅ |
