@@ -28,6 +28,21 @@
       icon: 'https://krugou.github.io/swim/icon-192x192.png',
     },
     {
+      title: 'Bensa',
+      url: 'https://krugou-bensa.web.app/fi',
+      icon: 'https://krugou-bensa.web.app/pwa-192x192.png',
+    },
+    {
+      title: 'Tuntipalkkalaskuri',
+      url: 'https://krugou.github.io/tuntipalkkalaskuri/',
+      icon: 'https://krugou.github.io/tuntipalkkalaskuri/apple-touch-icon-180x180.png',
+    },
+    {
+      title: 'Aquatic Harvesting',
+      url: 'https://krugou.github.io/aquaticharvesting/',
+      icon: 'https://krugou.github.io/aquaticharvesting/icons/icon-192.png',
+    },
+    {
       title: 'LinkedIn',
       url: 'https://www.linkedin.com/in/aleksi-nokelainen-3706b7259/',
       icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg',
