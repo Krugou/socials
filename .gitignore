@@ -27,3 +27,7 @@ vite.config.ts.timestamp-*
 /vue/dist
 /vue/node_modules
 admin/socialsadmintoken.json
+
+# Playwright
+/test-results
+/playwright-report

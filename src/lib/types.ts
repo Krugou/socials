@@ -1,59 +1,25 @@
-export interface Translation {
-  title?: string;
-  description?: string;
-}
+export type Language = 'en' | 'fi';
 
-export interface FooterTranslation {
-  madeWith?: string;
-  emailAriaLabel?: string;
-  builtOn?: string;
-}
-
-export interface Translations {
-  en: {
-    title?: string;
-    description?: string;
-    madeWith?: string;
-    emailAriaLabel?: string;
-    builtOn?: string;
-    buildDateError: string;
-  };
-  fi: {
-    title?: string;
-    description?: string;
-    madeWith?: string;
-    emailAriaLabel?: string;
-    builtOn?: string;
-    buildDateError: string;
-  };
-}
-
-export type Language = keyof Translations;
-
-export interface NavLinkTranslation {
-  text: string;
-  ariaLabel?: string;
-}
+export type NavLinkId = 'home' | 'repositories' | 'contact';
 
 export interface NavLink {
-  translations: Record<Language, NavLinkTranslation>;
+  id: NavLinkId;
   href: string;
   external?: boolean;
 }
 
-export interface MousePosition {
-  x: number;
-  y: number;
-}
-
-export interface SpringOptions {
-  stiffness: number;
-  damping: number;
-}
 export interface SocialLink {
   title: string;
   url: string;
+  /** Path of a self-hosted icon under static/icons */
   icon: string;
+}
+
+export interface ProjectLink extends SocialLink {
+  description: Record<Language, string>;
+  tags: string[];
+  /** Source repository */
+  repo: string;
 }
 
 export interface Particle {

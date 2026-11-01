@@ -1,130 +1,65 @@
-# Project Overview
+# Aleksi Nokelainen: socials
 
-This project is a Svelte library created using [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte). It provides a set of reusable components and utilities for building Svelte applications.
+Personal link page and portfolio entry point, live at **https://krugou.github.io/socials/**.
 
-## Installation Instructions
+It lists social profiles, a featured project (AuroraWatcher) and an accordion of personal project sites with a short description, tech tags and a source link for each. The site is available in English and Finnish.
 
-To install the project, follow these steps:
+## Stack
 
-1. Clone the repository:
+- SvelteKit 2 and Svelte 5 (runes), prerendered to static files with `adapter-static`
+- Tailwind CSS 4
+- Firebase: anonymous page-view logging to Firestore and Analytics
+- Playwright and axe for smoke and accessibility tests
+- Prettier and oxlint, enforced by a Husky pre-commit hook
 
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
-   ```
+## Getting started
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-## Usage Examples
-
-Here are some examples of how to use the components and utilities provided by this library:
-
-```svelte
-<script>
-  import {MyComponent} from 'your-library';
-</script>
-
-<MyComponent />
-```
-
-## Contribution Guidelines
-
-We welcome contributions from the community! To contribute, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Make your changes and commit them with a descriptive message.
-4. Push your changes to your forked repository.
-5. Create a pull request to the main repository.
-
-## Project Dependencies
-
-The project relies on the following dependencies:
-
-- Svelte: ^5.0.0
-- Firebase: ^11.0.2
-- Lodash-es: ^4.17.21
-
-## Troubleshooting and FAQs
-
-### Common Issues
-
-1. **Issue:** Development server not starting.
-   **Solution:** Ensure you have installed all dependencies by running `npm install`.
-
-2. **Issue:** Build process failing.
-   **Solution:** Check the error message for details and ensure your code follows the project's guidelines.
-
-### FAQs
-
-1. **How do I start the development server?**
-   Run `npm run dev` to start the development server.
-
-2. **How do I build the library?**
-   Run `npm run package` to build the library.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
-
-# create-svelte
-
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+Requires Node.js 22.
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+npm ci
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+The dev server runs at http://localhost:3000.
 
-## Building
+| Command                | What it does                                     |
+| ---------------------- | ------------------------------------------------ |
+| `npm run dev`          | Start the dev server                             |
+| `npm run build`        | Build the static site into `build/`              |
+| `npm run preview`      | Serve the production build locally               |
+| `npm run check`        | Type-check with svelte-check                     |
+| `npm run lint`         | Prettier check and oxlint                        |
+| `npm run format`       | Format everything with Prettier                  |
+| `npm run test:install` | Install the Playwright Chromium browser (once)   |
+| `npm test`             | Run the Playwright smoke and accessibility tests |
 
-To build your library:
+## Project layout
 
-```bash
-npm run package
-```
+- `src/lib/links.ts`: all link and project content (titles, URLs, descriptions, tags). Edit this to add or change a link.
+- `src/lib/i18n.ts`: every UI string in English and Finnish. `src/lib/stores.ts` holds the selected language.
+- `src/components/`: `Nav`, `Hero`, `Links`, `Footer` and the decorative particle layers (loaded lazily).
+- `src/routes/`: home page, `/repositories` (GitHub repo list, cached per session) and the error page.
+- `src/hooks.server.ts`: adds the canonical URL, `og:url` and Person structured data at build time.
+- `static/`: icons (self-hosted under `static/icons/`), Open Graph image, `robots.txt`, `sitemap.xml`, web manifest.
+- `tests/`: Playwright tests.
+- `admin/`: weekly data export script (see below).
+- `firestore.rules`: security rules for the Firestore collections the site writes to.
 
-To create a production version of your showcase app:
+## Adding a project
 
-```bash
-npm run build
-```
+1. Add an entry to `projects` in `src/lib/links.ts` with an English and Finnish description and a few tags.
+2. Save its icon in `static/icons/` and reference it with the `icon()` helper.
+3. Run `npm run lint && npm run check && npm test`.
 
-You can preview the production build with `npm run preview`.
+## Privacy
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+The site logs one anonymous record per browser session to Firestore: timestamp, page path, referrer origin and a two-letter language code. There is no visitor ID and no device or location data. Firebase Analytics also loads. The weather in the navigation uses a fixed location (Espoo), so no geolocation permission is requested.
 
-## Publishing
+Deploy updated rules with `firebase deploy --only firestore:rules` after changing `firestore.rules`.
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+## Deployment
 
-To publish your library to [npm](https://www.npmjs.com):
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. `pr-check.yml` runs lint, type-check, build and the Playwright tests on pull requests and pushes to `main`.
 
-```bash
-npm publish
-```
+`weekly-data-export.yml` runs every Monday and publishes the generated visitor report to the `data-reports` branch (not `main`), so it does not trigger a deploy.

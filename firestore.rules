@@ -6,16 +6,16 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
-    // Only allow writes to visitors collection
+    // Anonymous page views: create only, fixed fields and bounded sizes
     match /visitorsV2/{visitorId} {
-      allow write: if true;
-      allow read: if false;
+      allow create: if request.resource.data.keys().hasOnly(['timestamp', 'page', 'referrer', 'language'])
+        && request.resource.data.timestamp is timestamp
+        && request.resource.data.page is string && request.resource.data.page.size() <= 100
+        && request.resource.data.referrer is string && request.resource.data.referrer.size() <= 200
+        && request.resource.data.language is string && request.resource.data.language.size() <= 10;
+      allow read, update, delete: if false;
     }
 
-    // Allow writes to savedgps collection
-    match /savedgps/{docId} {
-      allow write: if true;
-      allow read: if false;
-    }
+    // navigation_events and savedgps are not written by the site, so the default rule keeps them locked
   }
 }

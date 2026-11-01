@@ -117,6 +117,7 @@ const createParticleStore = () => {
    * Starts animation loop
    */
   const startAnimation = (container: HTMLElement): void => {
+    stopAnimation();
     const animate = () => {
       updateParticles(container);
       frameId = requestAnimationFrame(animate);

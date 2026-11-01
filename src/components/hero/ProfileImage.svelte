@@ -1,22 +1,25 @@
 <script lang="ts">
   import {fly} from 'svelte/transition';
+  import {t} from '../../lib/i18n.js';
+  import {motionDuration} from '../../lib/device.js';
   import {isDarkMode} from '../../stores/theme.js';
 
-  export let visible = false;
+  let {visible = false}: {visible?: boolean} = $props();
 </script>
 
 {#if visible}
   <div
-    in:fly={{y: 50, duration: 1000}}
-    class="relative mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full ring-4 transition-transform hover:scale-105"
+    in:fly={{y: 50, duration: motionDuration(1000)}}
+    class="relative mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full ring-4 transition-transform motion-safe:hover:scale-105"
     class:ring-purple-500-50={$isDarkMode}
     class:ring-purple-500-30={!$isDarkMode}
-    class:bg-background-80={$isDarkMode}
     class:bg-white-10={!$isDarkMode}
   >
     <img
       src="https://avatars.githubusercontent.com/u/59641229?v=4"
-      alt="Profile"
+      alt={$t.profileAlt}
+      width="128"
+      height="128"
       class="h-full w-full object-cover"
     />
   </div>

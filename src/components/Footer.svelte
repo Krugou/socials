@@ -1,23 +1,9 @@
 <script lang="ts">
   import {language} from '../lib/stores.js';
-  import type {Translations} from '../lib/types.js';
+  import {t} from '../lib/i18n.js';
   import {onMount} from 'svelte';
   import {isDarkMode} from '../stores/theme.js';
 
-  const translations: Pick<Translations, 'en' | 'fi'> = {
-    en: {
-      madeWith: 'Made with',
-      emailAriaLabel: 'Send email to Aleksi Nokelainen',
-      builtOn: 'Built on',
-      buildDateError: 'Build date unavailable',
-    },
-    fi: {
-      madeWith: 'Tehty käyttäen',
-      emailAriaLabel: 'Lähetä sähköpostia Aleksi Nokelaiselle',
-      builtOn: 'Rakennettu',
-      buildDateError: 'Rakennuspäivämäärä ei saatavilla',
-    },
-  };
   const dateFormatOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'short',
@@ -40,13 +26,16 @@
     }
   };
 
-  let formattedDate: string | null = null;
-  let hasError = false;
+  let buildDate = $state<Date | null>(null);
+  let hasError = $state(false);
+
+  const formattedDate = $derived(
+    buildDate ? buildDate.toLocaleDateString($language, dateFormatOptions) : null,
+  );
 
   onMount(() => {
     try {
-      const date = getBuildDate();
-      formattedDate = date.toLocaleDateString($language, dateFormatOptions);
+      buildDate = getBuildDate();
     } catch (error) {
       console.error('Error formatting build date:', error);
       hasError = true;
@@ -56,7 +45,6 @@
 
 <footer
   class="mt-auto w-full border-t px-6 py-4"
-  class:bg-background-80={$isDarkMode}
   class:bg-white-10={!$isDarkMode}
   class:border-border={$isDarkMode}
   class:border-white-10={!$isDarkMode}
@@ -69,8 +57,7 @@
       class:text-white-60={!$isDarkMode}
       class:hover:text-foreground={$isDarkMode}
       class:hover:text-white-90={!$isDarkMode}
-      aria-label={translations[$language].emailAriaLabel}
-      title={translations[$language].emailAriaLabel}
+      title={$t.footer.emailAriaLabel}
     >
       aleksi.nokelainen@gmail.com
     </a>
@@ -81,12 +68,12 @@
       class:hover:text-foreground={$isDarkMode}
       class:hover:text-white-90={!$isDarkMode}
     >
-      <span class="px-2 text-sm">{translations[$language].madeWith}</span>
+      <span class="px-2 text-sm">{$t.footer.madeWith}</span>
       <svg
         class="animate-spin-slow h-5 w-5"
         viewBox="0 0 98.1 118"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="Svelte logo"
+        aria-hidden="true"
       >
         <path
           fill="currentColor"
@@ -102,12 +89,12 @@
       class:hover:text-foreground={$isDarkMode}
       class:hover:text-white-90={!$isDarkMode}
     >
-      {translations[$language].builtOn}
+      {$t.footer.builtOn}
       {#if formattedDate && !hasError}
         {formattedDate}
       {:else}
         <span class="text-red-400" role="alert">
-          {translations[$language].buildDateError}
+          {$t.footer.buildDateError}
         </span>
       {/if}
     </div>

@@ -35,10 +35,19 @@ jobs:
           cd admin
           npm run export
 
-      - name: Commit and push report
+      - name: Publish report to the data-reports branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # Reports live on their own branch so weekly updates do not clutter main or trigger a deploy
+          git fetch origin data-reports || true
+          if git rev-parse --verify --quiet origin/data-reports; then
+            git worktree add -B data-reports ../data-reports origin/data-reports
+          else
+            git worktree add --orphan -b data-reports ../data-reports
+          fi
+          cp DATA_REPORT.md visitors.json visitors.html ../data-reports/
+          cd ../data-reports
           git add DATA_REPORT.md visitors.json visitors.html
-          git commit -m "docs: weekly data report update [skip ci]" || echo "No changes to commit"
-          git push
+          git commit -m "docs: weekly data report update" || echo "No changes to commit"
+          git push origin data-reports

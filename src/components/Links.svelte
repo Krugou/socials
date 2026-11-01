@@ -1,179 +1,163 @@
 <script lang="ts">
   import {fly, slide} from 'svelte/transition';
   import {onMount} from 'svelte';
-  import ParticleOverlay from './ParticleOverlay.svelte';
-  import type {SocialLink} from '../lib/types.js';
+  import type {Component} from 'svelte';
+  import type {ProjectLink, SocialLink} from '../lib/types.js';
+  import {featuredProject, otherLinks, primaryLinks, projects} from '../lib/links.js';
+  import {getParticleBudget, motionDuration, whenIdle} from '../lib/device.js';
+  import {language} from '../lib/stores.js';
+  import {t} from '../lib/i18n.js';
   import {isDarkMode} from '../stores/theme.js';
 
-  /** Primary social links, shown before the projects */
-  const primaryLinks: SocialLink[] = [
-    {
-      title: 'GitHub',
-      url: 'https://github.com/krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg',
-    },
-    {
-      title: 'Instagram',
-      url: 'https://www.instagram.com/krugou/',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg',
-    },
-    {
-      title: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/aleksi-nokelainen-3706b7259/',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg',
-    },
-  ];
-
-  /** Project highlighted above the accordion */
-  const featuredProject: SocialLink = {
-    title: 'AuroraWatcher',
-    url: 'https://krugou.github.io/aurorawatcher/',
-    icon: 'https://krugou.github.io/aurorawatcher/pwa-192x192.png',
-  };
-
-  /** Personal project websites listed in the accordion */
-  const projects: SocialLink[] = [
-    {
-      title: 'Swim',
-      url: 'https://krugou.github.io/swim/fi/',
-      icon: 'https://krugou.github.io/swim/icon-192x192.png',
-    },
-    {
-      title: 'Bensa',
-      url: 'https://krugou-bensa.web.app/fi',
-      icon: 'https://krugou-bensa.web.app/pwa-192x192.png',
-    },
-    {
-      title: 'Tuntipalkkalaskuri',
-      url: 'https://krugou.github.io/tuntipalkkalaskuri/',
-      icon: 'https://krugou.github.io/tuntipalkkalaskuri/apple-touch-icon-180x180.png',
-    },
-    {
-      title: 'Aquatic Harvesting',
-      url: 'https://krugou.github.io/aquaticharvesting/',
-      icon: 'https://krugou.github.io/aquaticharvesting/icons/icon-192.png',
-    },
-    {
-      title: 'Tieliikenne Video Wall',
-      url: 'https://krugou.github.io/tieliikennevideowall/?cities=vantaa%2Cespoo%2Chelsinki',
-      icon: 'https://krugou.github.io/tieliikennevideowall/pwa-192.svg',
-    },
-  ];
-
-  /** Remaining social links, shown after the projects */
-  const otherLinks: SocialLink[] = [
-    {
-      title: 'Threads',
-      url: 'https://threads.net/krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.16.0/icons/threads.svg',
-    },
-    {
-      title: 'Twitter',
-      url: 'https://x.com/krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg',
-    },
-    {
-      title: 'Bluesky',
-      url: 'https://bsky.app/profile/krugou.bsky.social',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@13.16.0/icons/bluesky.svg',
-    },
-    {
-      title: 'YouTube',
-      url: 'https://www.youtube.com/@Krugou',
-      icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg',
-    },
-  ];
-
-  let projectsOpen = false;
-
-  let container: HTMLElement;
-  let visible = false;
-  let scrollY = 0;
+  let container = $state<HTMLElement | undefined>();
+  let visible = $state(false);
+  let projectsOpen = $state(false);
+  let Overlay = $state<Component<{container: HTMLElement}> | null>(null);
 
   onMount(() => {
     visible = true;
+    // The particle layer is decorative, so load it after first paint and only when affordable
+    if (getParticleBudget(3) > 0) {
+      whenIdle(() => {
+        import('./ParticleOverlay.svelte').then((module) => {
+          Overlay = module.default;
+        });
+      });
+    }
   });
 </script>
 
-{#snippet linkRow(link: SocialLink, index: number, featured = false, colorIcon = false)}
+{#snippet socialRow(link: SocialLink, index: number)}
   <a
     href={link.url}
     target="_blank"
     rel="noopener noreferrer"
-    in:fly={{y: 20, duration: 1000, delay: index * 100}}
+    in:fly={{y: 20, duration: motionDuration(1000), delay: motionDuration(index * 100)}}
     class="group relative block overflow-hidden rounded-lg border p-2 text-center backdrop-blur-sm transition-all duration-300 md:p-4"
-    class:py-4={featured}
-    class:md:py-6={featured}
-    class:ring-2={featured}
-    class:ring-purple-400={featured}
-    class:shadow-lg={featured}
-    class:bg-card-80={$isDarkMode}
-    class:bg-white-10={!$isDarkMode}
     class:text-foreground={$isDarkMode}
     class:text-white={!$isDarkMode}
     class:border-border={$isDarkMode}
     class:border-white-10={!$isDarkMode}
   >
     <div
-      class="relative z-10 flex items-center justify-center space-x-2 transition-transform duration-300 group-hover:scale-105"
+      class="relative z-10 flex items-center justify-center space-x-2 transition-transform duration-300 motion-safe:group-hover:scale-105"
     >
       <img
         src={link.icon}
-        alt={link.title}
-        class="transition-transform duration-300 group-hover:rotate-12 {featured
-          ? 'h-10 w-10'
-          : 'h-6 w-6'}"
-        class:invert={!featured && !colorIcon}
+        alt=""
+        width="24"
+        height="24"
+        class="h-6 w-6 invert transition-transform duration-300 motion-safe:group-hover:rotate-12"
         loading="lazy"
       />
-      <span class={featured ? 'text-base font-semibold md:text-lg' : 'text-sm md:text-base'}>
-        {link.title}
-      </span>
+      <span class="text-sm md:text-base">{link.title}</span>
     </div>
     <div
-      class="absolute inset-0 -z-10 transition-opacity duration-300 group-hover:opacity-100"
-      class:bg-gradient-to-r={$isDarkMode}
+      class="absolute inset-0 -z-10 bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       class:from-primary-10={$isDarkMode}
       class:to-secondary-10={$isDarkMode}
-      class:bg-gradient-to-r-alt={!$isDarkMode}
       class:from-purple-500-10={!$isDarkMode}
       class:to-blue-500-10={!$isDarkMode}
-      class:opacity-0={true}
     ></div>
   </a>
 {/snippet}
 
+{#snippet projectCard(project: ProjectLink, index: number, featured: boolean)}
+  <div
+    in:fly={{y: 20, duration: motionDuration(1000), delay: motionDuration(index * 100)}}
+    class="group relative overflow-hidden rounded-lg border text-left backdrop-blur-sm transition-all duration-300"
+    class:ring-2={featured}
+    class:ring-purple-400={featured}
+    class:shadow-lg={featured}
+    class:text-foreground={$isDarkMode}
+    class:text-white={!$isDarkMode}
+    class:border-border={$isDarkMode}
+    class:border-white-10={!$isDarkMode}
+  >
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-3 p-3 md:p-4"
+    >
+      <img
+        src={project.icon}
+        alt=""
+        width={featured ? 48 : 40}
+        height={featured ? 48 : 40}
+        class="shrink-0 rounded-md motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:rotate-6 {featured
+          ? 'h-12 w-12'
+          : 'h-10 w-10'}"
+        loading="lazy"
+      />
+      <span class="min-w-0 flex-1">
+        <span
+          class="block font-semibold {featured ? 'text-base md:text-lg' : 'text-sm md:text-base'}"
+        >
+          {project.title}
+        </span>
+        <span
+          class="block text-xs md:text-sm"
+          class:text-muted={$isDarkMode}
+          class:text-white={!$isDarkMode}
+        >
+          {project.description[$language]}
+        </span>
+      </span>
+    </a>
+    <div class="flex flex-wrap items-center gap-1 px-3 pb-3 md:px-4">
+      {#each project.tags as tag (tag)}
+        <span
+          class="rounded-full border px-2 py-0.5 text-xs"
+          class:border-border={$isDarkMode}
+          class:border-white-10={!$isDarkMode}
+        >
+          {tag}
+        </span>
+      {/each}
+      <a
+        href={project.repo}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="{$t.links.sourceCode}: {project.title}"
+        class="ml-auto rounded px-1 text-xs underline underline-offset-2"
+      >
+        {$t.links.source}
+      </a>
+    </div>
+  </div>
+{/snippet}
+
 <div
   bind:this={container}
-  class="perspective relative space-y-4 rounded-2xl p-4 shadow-xl"
-  class:bg-background-80={$isDarkMode}
+  class="relative space-y-4 rounded-2xl p-4 shadow-xl"
   class:bg-white-10={!$isDarkMode}
   role="region"
-  style="transform: translateY({scrollY * 0.1}px)"
+  aria-label="Links"
 >
   {#if visible}
-    <ParticleOverlay {container} />
+    {#if Overlay && container}
+      <Overlay {container} />
+    {/if}
     {#each primaryLinks as link, i (link.title)}
-      {@render linkRow(link, i)}
+      {@render socialRow(link, i)}
     {/each}
 
     <div class="space-y-4">
-      {@render linkRow(featuredProject, primaryLinks.length, true)}
+      {@render projectCard(featuredProject, primaryLinks.length, true)}
 
       <button
         type="button"
         aria-expanded={projectsOpen}
         aria-controls="projects-panel"
-        on:click={() => (projectsOpen = !projectsOpen)}
+        onclick={() => (projectsOpen = !projectsOpen)}
         class="flex w-full items-center justify-between rounded-lg border p-2 text-sm backdrop-blur-sm transition-all duration-300 md:p-4 md:text-base"
-        class:bg-card-80={$isDarkMode}
-        class:bg-white-10={!$isDarkMode}
         class:text-foreground={$isDarkMode}
         class:text-white={!$isDarkMode}
         class:border-border={$isDarkMode}
         class:border-white-10={!$isDarkMode}
       >
-        <span>More personal projects ({projects.length})</span>
+        <span>{$t.links.moreProjects(projects.length)}</span>
         <svg
           class="h-4 w-4 transition-transform duration-300"
           class:rotate-180={projectsOpen}
@@ -190,16 +174,20 @@
       </button>
 
       {#if projectsOpen}
-        <div id="projects-panel" class="space-y-4" transition:slide={{duration: 300}}>
-          {#each projects as link, i (link.title)}
-            {@render linkRow(link, i, false, true)}
+        <div
+          id="projects-panel"
+          class="space-y-4"
+          transition:slide={{duration: motionDuration(300)}}
+        >
+          {#each projects as project, i (project.title)}
+            {@render projectCard(project, i, false)}
           {/each}
         </div>
       {/if}
     </div>
 
     {#each otherLinks as link, i (link.title)}
-      {@render linkRow(link, primaryLinks.length + 1 + i)}
+      {@render socialRow(link, primaryLinks.length + 1 + i)}
     {/each}
   {:else}
     <div
@@ -216,13 +204,8 @@
 </div>
 
 <style lang="postcss">
-  .perspective {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-  }
-
-  /* Apply hover effect on devices that support hover */
-  @media (hover: hover) {
+  /* Apply hover effect on devices that support hover and allow motion */
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     a {
       transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }

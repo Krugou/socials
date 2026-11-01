@@ -20,10 +20,15 @@ export interface WeatherData {
  * Fetches current weather for given coordinates using the Norwegian Meteorological Institute API (MET Norway)
  * @param lat Latitude
  * @param lon Longitude
+ * @param location Label to show for the coordinates
  * @returns WeatherData object
  * @throws WeatherError on failure
  */
-export const fetchNorwayWeather = async (lat: number, lon: number): Promise<WeatherData> => {
+export const fetchNorwayWeather = async (
+  lat: number,
+  lon: number,
+  location = `${lat.toFixed(2)}, ${lon.toFixed(2)}`,
+): Promise<WeatherData> => {
   if (typeof lat !== 'number' || typeof lon !== 'number' || isNaN(lat) || isNaN(lon)) {
     throw new WeatherError('Invalid coordinates for weather fetch');
   }
@@ -31,7 +36,7 @@ export const fetchNorwayWeather = async (lat: number, lon: number): Promise<Weat
     const url = `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lon}`;
     const response = await fetch(url, {
       headers: {
-        'User-Agent': 'socials-app/1.0 aleksi.nokelainen@gmail.com',
+        'User-Agent': 'socials-portfolio/1.0 https://github.com/Krugou/socials',
         'Accept': 'application/json',
       },
     });
@@ -53,7 +58,7 @@ export const fetchNorwayWeather = async (lat: number, lon: number): Promise<Weat
     return {
       temperature: details.air_temperature,
       description: summary?.symbol_code?.replace(/_/g, ' ') || 'Unknown',
-      location: `${lat.toFixed(2)}, ${lon.toFixed(2)}`,
+      location,
       icon: summary?.symbol_code || '',
     };
   } catch (error) {

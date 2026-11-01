@@ -3,23 +3,10 @@
  * Navigation event log type for Firestore
  */
 export interface NavigationEventLog {
-  visitorId: string;
   timestamp: Date;
   navHref: string;
   navText: string;
   language: string;
-  userAgent: string;
-  referrer: string;
-  screenResolution: string;
-  platform: string;
-  deviceMemory: number | null;
-  hardwareConcurrency: number;
-  connection: {
-    type: string | null;
-    effectiveType: string | null;
-    downlink: number | null;
-    rtt: number | null;
-  };
 }
 
 /**

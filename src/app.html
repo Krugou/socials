@@ -3,57 +3,56 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+
+    <!-- Content Security Policy (GitHub Pages cannot send headers, so it is set here) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com https://api.met.no https://*.googleapis.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
 
     <!-- Primary Meta Tags -->
     <title>Aleksi Nokelainen | Full Stack Developer</title>
     <meta name="title" content="Aleksi Nokelainen | Full Stack Developer" />
     <meta
       name="description"
-      content="Professional portfolio of Aleksi Nokelainen - Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js, and Svelte."
+      content="Portfolio of Aleksi Nokelainen, Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js and Svelte. Personal projects, GitHub and social links."
     />
     <meta name="author" content="Aleksi Nokelainen" />
-    <meta
-      name="keywords"
-      content="Full Stack Developer, Web Development, JavaScript, TypeScript, React, Node.js, Svelte, Software Engineer"
-    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#6b46c1" />
+    <meta name="color-scheme" content="dark" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Canonical URL, og:url and structured data are added at build time in hooks.server.ts -->
+    <!--seo-->
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://krugou.github.io/socials/" />
+    <meta property="og:site_name" content="Aleksi Nokelainen" />
     <meta property="og:title" content="Aleksi Nokelainen | Full Stack Developer" />
     <meta
       property="og:description"
-      content="Socials of Aleksi Nokelainen - Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js, and Svelte."
+      content="Portfolio of Aleksi Nokelainen, Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js and Svelte. Personal projects, GitHub and social links."
     />
-    <!-- <meta property="og:image" content="%sveltekit.assets%/og-image.png" /> -->
+    <meta property="og:image" content="https://krugou.github.io/socials/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Aleksi Nokelainen, Full Stack Developer" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://krugou.github.io/socials/" />
-    <meta property="twitter:title" content="Aleksi Nokelainen | Full Stack Developer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aleksi Nokelainen | Full Stack Developer" />
     <meta
-      property="twitter:description"
-      content="Socials of Aleksi Nokelainen - Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js, and Svelte."
+      name="twitter:description"
+      content="Portfolio of Aleksi Nokelainen, Full Stack Developer specializing in JavaScript, TypeScript, React, Node.js and Svelte. Personal projects, GitHub and social links."
     />
-    <!-- <meta property="twitter:image" content="%sveltekit.assets%/og-image.png" /> -->
+    <meta name="twitter:image" content="https://krugou.github.io/socials/og-image.png" />
 
-    <!-- Favicon
-	<link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/favicon-16x16.png" />
-	<link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
-	<meta name="theme-color" content="#6B46C1" /> -->
-
-    <!-- Preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Additional Meta -->
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="generator" content="SvelteKit" />
+    <!-- Icons and manifest -->
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png" />
+    <link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
 
     %sveltekit.head%
   </head>

@@ -1,6 +1,7 @@
 <script lang="ts">
-  import {onMount, onDestroy} from 'svelte';
+  import {onMount} from 'svelte';
   import type {ParticleConfig} from '../../lib/types/particles.js';
+  import {getParticleBudget} from '../../lib/device.js';
 
   interface OrbitParticle {
     id: string;
@@ -69,7 +70,6 @@
 
   /**
    * Colors representing Finnish nature and flag
-   * Using CSS custom properties for better performance
    */
   const PLANET_COLORS = Object.freeze([
     '#FFFFFF',
@@ -88,59 +88,36 @@
     return Math.random() * (max - min) + min;
   };
 
-  /**
-   * Validates particle properties
-   */
-  const validateParticle = (particle: OrbitParticle): boolean => {
-    return (
-      particle.size >= PARTICLE_CONFIG.minSize &&
-      particle.size <= PARTICLE_CONFIG.maxSize &&
-      particle.speed >= PARTICLE_CONFIG.minSpeed &&
-      particle.speed <= PARTICLE_CONFIG.maxSpeed &&
-      particle.orbit >= PARTICLE_CONFIG.minOrbit &&
-      particle.orbit <= PARTICLE_CONFIG.maxOrbit
-    );
-  };
-
-  let particles: OrbitParticle[] = [];
-  let cleanup: (() => void) | undefined;
+  let particles = $state<OrbitParticle[]>([]);
+  let paused = $state(false);
 
   onMount(() => {
-    const PARTICLE_COUNT = getYearsSinceBirth();
+    // Fewer particles on low-power devices, none with reduced motion
+    const particleCount = getParticleBudget(getYearsSinceBirth());
 
-    particles = Array.from({length: PARTICLE_COUNT}, (_, i) => {
-      const particle: OrbitParticle = {
-        id: i.toString(),
-        size: randomRange(PARTICLE_CONFIG.minSize, PARTICLE_CONFIG.maxSize),
-        speed: randomRange(PARTICLE_CONFIG.minSpeed, PARTICLE_CONFIG.maxSpeed),
-        orbit: randomRange(PARTICLE_CONFIG.minOrbit, PARTICLE_CONFIG.maxOrbit),
-        offset: randomRange(0, 360),
-        color: PLANET_COLORS[i % PLANET_COLORS.length],
-      };
+    particles = Array.from({length: particleCount}, (_, i) => ({
+      id: i.toString(),
+      size: randomRange(PARTICLE_CONFIG.minSize, PARTICLE_CONFIG.maxSize),
+      speed: randomRange(PARTICLE_CONFIG.minSpeed, PARTICLE_CONFIG.maxSpeed),
+      orbit: randomRange(PARTICLE_CONFIG.minOrbit, PARTICLE_CONFIG.maxOrbit),
+      offset: randomRange(0, 360),
+      color: PLANET_COLORS[i % PLANET_COLORS.length],
+    }));
 
-      if (!validateParticle(particle)) {
-        console.warn(`Invalid particle generated: ${JSON.stringify(particle)}`);
-      }
-
-      return particle;
-    });
-
-    // Optimize animations
-    document.body.style.setProperty('--particle-count', PARTICLE_COUNT.toString());
-
-    cleanup = () => {
-      document.body.style.removeProperty('--particle-count');
+    // Pause the CSS animations while the tab is in the background
+    const onVisibilityChange = () => {
+      paused = document.hidden;
     };
-  });
-
-  onDestroy(() => {
-    cleanup?.();
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', onVisibilityChange);
   });
 </script>
 
 <div
   class="pointer-events-none absolute inset-0 z-0 overflow-visible"
+  class:paused
   style="transform: translateY(-50px) rotateX(75deg)"
+  aria-hidden="true"
 >
   {#each particles as particle (particle.id)}
     <div
@@ -155,9 +132,7 @@
         left: calc(50% - var(--size) / 2);
         top: calc(50% - var(--size) / 2);
         background: radial-gradient(circle at 30% 30%, {particle.color}, #002F6C);
-        will-change: transform;
       "
-      aria-hidden="true"
     ></div>
   {/each}
 </div>
@@ -169,6 +144,11 @@
     transform-style: preserve-3d;
     opacity: 0.9;
     contain: layout style paint;
+    will-change: transform;
+  }
+
+  .paused .particle {
+    animation-play-state: paused;
   }
 
   @keyframes orbit {
@@ -178,13 +158,6 @@
     to {
       transform: rotate(calc(360deg + var(--offset))) translateX(var(--orbit))
         rotate(calc((360deg + var(--offset)) * -1));
-    }
-  }
-
-  /* Add will-change hint for better performance */
-  @media (prefers-reduced-motion: no-preference) {
-    .particle {
-      will-change: transform;
     }
   }
 

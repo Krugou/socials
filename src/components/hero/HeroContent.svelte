@@ -1,29 +1,7 @@
 <script lang="ts">
-  // import {fly, fade} from 'svelte/transition'; // Removed unused imports
-  import {language} from '../../lib/stores.js';
-  import type {Translations} from '../../lib/types.js';
+  import {t} from '../../lib/i18n.js';
 
-  export let visible = false;
-  export let scrollY = 0;
-
-  const translations: Translations = {
-    en: {
-      title: 'Aleksi Nokelainen',
-      description:
-        'Full Stack Developer passionate about creating intuitive software solutions. Proficient in JavaScript, TypeScript, React, Node.js, Svelte, and Python.',
-      buildDateError: 'Error calculating build date',
-    },
-    fi: {
-      title: 'Aleksi Nokelainen',
-      description:
-        'Full Stack -kehittäjä, joka on intohimoinen luomaan intuitiivisia ohjelmistoratkaisuja. Vahva osaaminen JavaScript, TypeScript, React, Node.js, Svelte ja Python -teknologioissa.',
-      buildDateError: 'Virhe rakennuspäivämäärän laskemisessa',
-    },
-  };
-
-  function getTranslation(lang: string): (typeof translations)['en'] {
-    return translations[lang as keyof typeof translations] ?? translations.en;
-  }
+  let {visible = false, scrollY = 0}: {visible?: boolean; scrollY?: number} = $props();
 </script>
 
 <div class="relative z-10 mt-20" style="transform: translateY({scrollY * 0.1}px)">
@@ -31,12 +9,12 @@
     <h1
       class="from-primary-80 to-secondary-80 bg-gradient-to-r from-purple-200 to-blue-400 bg-clip-text text-4xl font-bold text-transparent"
     >
-      {getTranslation($language).title}
+      {$t.hero.title}
     </h1>
     <p
       class="from-primary-60 to-secondary-60 hover:from-secondary-80 hover:to-primary-80 mx-auto max-w-2xl bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text px-4 py-4 text-sm leading-relaxed font-bold text-transparent transition-all duration-1000 ease-in-out hover:from-blue-200 hover:to-purple-200 md:text-lg"
     >
-      {getTranslation($language).description}
+      {$t.hero.description}
     </p>
   {:else}
     <div class="bg-white-10 mx-auto mb-4 h-8 w-64 animate-pulse rounded"></div>

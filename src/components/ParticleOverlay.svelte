@@ -1,33 +1,32 @@
 <script lang="ts">
-  import {onMount, onDestroy} from 'svelte';
+  import {onMount} from 'svelte';
   import {particleStore} from '../lib/stores/particleStore.js';
-  import type {Particle} from '../lib/types/particles.js';
 
-  export let container: HTMLElement;
-  let rafId: number;
-  let particles: Particle[] = [];
-
-  particleStore.subscribe((value) => {
-    particles = value;
-  });
-
-  const animate = () => {
-    particleStore.updateParticles(container);
-    rafId = requestAnimationFrame(animate);
-  };
+  let {container}: {container: HTMLElement} = $props();
 
   onMount(() => {
     particleStore.initializeParticles(container);
-    rafId = requestAnimationFrame(animate);
-  });
+    particleStore.startAnimation(container);
 
-  onDestroy(() => {
-    if (rafId) cancelAnimationFrame(rafId);
+    // Do not animate while the tab is in the background
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        particleStore.stopAnimation();
+      } else {
+        particleStore.startAnimation(container);
+      }
+    };
+    document.addEventListener('visibilitychange', onVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      particleStore.stopAnimation();
+    };
   });
 </script>
 
-<div class="pointer-events-none absolute inset-0 overflow-hidden">
-  {#each particles as particle (particle.id)}
+<div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+  {#each $particleStore as particle (particle.id)}
     <div
       class="particle absolute h-24 w-24"
       style="

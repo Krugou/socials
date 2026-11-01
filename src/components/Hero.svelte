@@ -1,49 +1,44 @@
 <script lang="ts">
-  import {onMount, onDestroy} from 'svelte';
-  import ParticleSystem from './hero/ParticleSystem.svelte';
+  import {onMount} from 'svelte';
+  import type {Component} from 'svelte';
   import ProfileImage from './hero/ProfileImage.svelte';
   import HeroContent from './hero/HeroContent.svelte';
+  import {getParticleBudget, prefersReducedMotion, whenIdle} from '../lib/device.js';
   import {isDarkMode} from '../stores/theme.js';
 
-  let visible = false;
-  let container: HTMLElement;
-  let scrollY: number;
-  let cleanup: () => void;
+  let visible = $state(false);
+  let scrollY = $state(0);
+  let ParticleSystem = $state<Component | null>(null);
+
+  // Parallax is skipped when the visitor prefers reduced motion
+  const parallaxY = $derived(prefersReducedMotion() ? 0 : scrollY);
 
   onMount(() => {
     visible = true;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
+    // The orbiting particles are decorative: load them after first paint and only when affordable
+    if (getParticleBudget(1) > 0) {
+      whenIdle(() => {
+        import('./hero/ParticleSystem.svelte').then((module) => {
+          ParticleSystem = module.default;
         });
-      },
-      {threshold: 0.1},
-    );
-
-    observer.observe(container);
-    cleanup = () => observer.disconnect();
+      });
+    }
   });
-
-  onDestroy(() => cleanup?.());
 </script>
 
 <svelte:window bind:scrollY />
 
 <div
-  bind:this={container}
-  class="perspective relative m-8 text-center"
-  class:bg-background-80={$isDarkMode}
+  class="perspective relative m-8 rounded-2xl text-center shadow-xl"
   class:bg-white-10={!$isDarkMode}
-  class:rounded-2xl={true}
-  class:shadow-xl={true}
   role="region"
+  aria-label="Introduction"
 >
-  <ParticleSystem />
+  {#if ParticleSystem}
+    <ParticleSystem />
+  {/if}
   <ProfileImage {visible} />
-  <HeroContent {visible} {scrollY} />
+  <HeroContent {visible} scrollY={parallaxY} />
 </div>
 
 <style lang="postcss">
