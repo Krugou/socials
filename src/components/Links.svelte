@@ -129,9 +129,6 @@
       <span class={featured ? 'text-base font-semibold md:text-lg' : 'text-sm md:text-base'}>
         {link.title}
       </span>
-      {#if featured}
-        <span class="rounded-full bg-purple-500 px-2 py-0.5 text-xs text-white">Featured</span>
-      {/if}
     </div>
     <div
       class="absolute inset-0 -z-10 transition-opacity duration-300 group-hover:opacity-100"
