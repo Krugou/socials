@@ -173,7 +173,7 @@
         class:border-border={$isDarkMode}
         class:border-white-10={!$isDarkMode}
       >
-        <span>More projects ({projects.length})</span>
+        <span>More personal projects ({projects.length})</span>
         <svg
           class="h-4 w-4 transition-transform duration-300"
           class:rotate-180={projectsOpen}
