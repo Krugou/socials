@@ -43,6 +43,11 @@
       icon: 'https://krugou.github.io/aquaticharvesting/icons/icon-192.png',
     },
     {
+      title: 'Tieliikenne Video Wall',
+      url: 'https://krugou.github.io/tieliikennevideowall/?cities=vantaa%2Cespoo%2Chelsinki',
+      icon: 'https://krugou.github.io/tieliikennevideowall/pwa-192.svg',
+    },
+    {
       title: 'LinkedIn',
       url: 'https://www.linkedin.com/in/aleksi-nokelainen-3706b7259/',
       icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg',
