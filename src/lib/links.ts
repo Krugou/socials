@@ -86,6 +86,17 @@ export const projects: ProjectLink[] = [
     },
     tags: ['React', 'Vite', 'Tailwind'],
   },
+  {
+    title: 'Saunatime',
+    url: 'https://krugou.github.io/saunatime/',
+    icon: icon('saunatime.svg'),
+    repo: 'https://github.com/Krugou/saunatime',
+    description: {
+      en: 'Average cost of a sauna session in Finland, calculated from spot electricity prices.',
+      fi: 'Saunomisen keskimääräinen hinta Suomessa pörssisähkön hinnoista laskettuna.',
+    },
+    tags: ['TypeScript', 'Sauna'],
+  },
 ];
 
 /** Remaining social links, shown after the projects */
