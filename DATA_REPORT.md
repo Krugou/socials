@@ -1,5 +1,5 @@
 # Weekly Data Report
-Generated at: 2026-11-02T04:15:46.619Z
+Generated at: 2026-11-09T04:31:49.582Z
 
 ## Recent Visitors (visitorsV2)
 **Total Unique Visitors (in this sample): 145**
@@ -8,7 +8,7 @@ Generated at: 2026-11-02T04:15:46.619Z
 #### Platform Distribution
 ```mermaid
 pie title Platforms
-    "Unknown" : 4
+    "Unknown" : 10
     "Win32" : 61
     "Windows" : 52
     "Linux aarch64" : 16
@@ -22,17 +22,23 @@ pie title Platforms
 #### Language Distribution
 ```mermaid
 pie title Languages
-    "fi" : 7
+    "fi" : 10
+    "en" : 5
     "fi-FI" : 64
     "en-US" : 112
     "en-FI" : 3
-    "en" : 2
     "ja-JP" : 1
 ```
 
 | Timestamp | Visitor ID | Platform | Language | Screen | Unique? |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-01T21:08:24.242Z | undefined | Unknown | fi | undefined | ✅ |
+| 2026-11-08T23:32:36.537Z | undefined | Unknown | fi | undefined | ✅ |
+| 2026-11-06T09:51:15.421Z | undefined | Unknown | en | undefined | — |
+| 2026-11-06T07:29:50.392Z | undefined | Unknown | en | undefined | — |
+| 2026-11-05T15:30:49.126Z | undefined | Unknown | fi | undefined | — |
+| 2026-11-05T08:04:39.588Z | undefined | Unknown | en | undefined | — |
+| 2026-11-03T12:23:26.116Z | undefined | Unknown | fi | undefined | — |
+| 2026-11-01T21:08:24.242Z | undefined | Unknown | fi | undefined | — |
 | 2026-11-01T18:04:22.165Z | undefined | Unknown | fi | undefined | — |
 | 2026-11-01T10:18:14.752Z | undefined | Unknown | fi | undefined | — |
 | 2026-11-01T10:06:24.185Z | undefined | Unknown | fi | undefined | — |

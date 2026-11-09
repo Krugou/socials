@@ -1,12 +1,54 @@
 {
-  "generatedAt": "2026-11-02T04:15:48.399Z",
+  "generatedAt": "2026-11-09T04:31:51.432Z",
   "visitors": [
+    {
+      "timestamp": "2026-11-08T23:32:36.537Z",
+      "page": "/socials/",
+      "referrer": "https://l.threads.com",
+      "language": "fi",
+      "isUnique": true
+    },
+    {
+      "timestamp": "2026-11-06T09:51:15.421Z",
+      "page": "/socials/",
+      "referrer": "direct",
+      "language": "en",
+      "isUnique": false
+    },
+    {
+      "timestamp": "2026-11-06T07:29:50.392Z",
+      "page": "/socials/",
+      "referrer": "direct",
+      "language": "en",
+      "isUnique": false
+    },
+    {
+      "timestamp": "2026-11-05T15:30:49.126Z",
+      "page": "/socials/",
+      "referrer": "direct",
+      "language": "fi",
+      "isUnique": false
+    },
+    {
+      "timestamp": "2026-11-05T08:04:39.588Z",
+      "page": "/socials/",
+      "referrer": "direct",
+      "language": "en",
+      "isUnique": false
+    },
+    {
+      "timestamp": "2026-11-03T12:23:26.116Z",
+      "page": "/socials/",
+      "referrer": "https://l.threads.com",
+      "language": "fi",
+      "isUnique": false
+    },
     {
       "timestamp": "2026-11-01T21:08:24.242Z",
       "page": "/socials/",
       "referrer": "direct",
       "language": "fi",
-      "isUnique": true
+      "isUnique": false
     },
     {
       "timestamp": "2026-11-01T18:04:22.165Z",
@@ -5613,7 +5655,7 @@
   ],
   "stats": {
     "platform": {
-      "Unknown": 4,
+      "Unknown": 10,
       "Win32": 61,
       "Windows": 52,
       "Linux aarch64": 16,
@@ -5624,11 +5666,11 @@
       "Linux armv81": 6
     },
     "language": {
-      "fi": 7,
+      "fi": 10,
+      "en": 5,
       "fi-FI": 64,
       "en-US": 112,
       "en-FI": 3,
-      "en": 2,
       "ja-JP": 1
     },
     "uniqueVisitors": 145
