@@ -1,18 +1,25 @@
 // src/lib/links.ts
 // Content for the link list. Edit this file to add or change links, no UI code needed.
-import {base} from '$app/paths';
+import {asset} from '$app/paths';
+import type {AssetPath} from '$app/types';
 import type {ProjectLink, SocialLink} from './types.js';
 
-const icon = (file: string): string => `${base}/icons/${file}`;
+type IconAsset = Extract<AssetPath, `icons/${string}`>;
+
+const icon = (path: IconAsset): string => asset(path);
 
 /** Social links shown before the projects */
 export const primaryLinks: SocialLink[] = [
-  {title: 'GitHub', url: 'https://github.com/krugou', icon: icon('github.svg')},
-  {title: 'Instagram', url: 'https://www.instagram.com/krugou/', icon: icon('instagram.svg')},
+  {title: 'GitHub', url: 'https://github.com/krugou', icon: icon('icons/github.svg')},
+  {
+    title: 'Instagram',
+    url: 'https://www.instagram.com/krugou/',
+    icon: icon('icons/instagram.svg'),
+  },
   {
     title: 'LinkedIn',
     url: 'https://www.linkedin.com/in/aleksi-nokelainen-3706b7259/',
-    icon: icon('linkedin.svg'),
+    icon: icon('icons/linkedin.svg'),
   },
 ];
 
@@ -20,7 +27,7 @@ export const primaryLinks: SocialLink[] = [
 export const featuredProject: ProjectLink = {
   title: 'AuroraWatcher',
   url: 'https://krugou.github.io/aurorawatcher/',
-  icon: icon('aurorawatcher.png'),
+  icon: icon('icons/aurorawatcher.png'),
   repo: 'https://github.com/Krugou/aurorawatcher',
   description: {
     en: 'Aurora forecasts, magnetic data and live observatory cameras for Finland, with a Discord bot.',
@@ -34,7 +41,7 @@ export const projects: ProjectLink[] = [
   {
     title: 'Swim',
     url: 'https://krugou.github.io/swim/fi/',
-    icon: icon('swim.png'),
+    icon: icon('icons/swim.png'),
     repo: 'https://github.com/Krugou/swim',
     description: {
       en: 'Live reservation schedules for Espoo swimming halls, so you can see when a pool is free.',
@@ -45,7 +52,7 @@ export const projects: ProjectLink[] = [
   {
     title: 'Bensa',
     url: 'https://krugou-bensa.web.app/fi',
-    icon: icon('bensa.png'),
+    icon: icon('icons/bensa.png'),
     repo: 'https://github.com/Krugou/bensa',
     description: {
       en: 'Real-time fuel prices for the Helsinki region with a station map and price history.',
@@ -56,7 +63,7 @@ export const projects: ProjectLink[] = [
   {
     title: 'Tuntipalkkalaskuri',
     url: 'https://krugou.github.io/tuntipalkkalaskuri/',
-    icon: icon('tuntipalkkalaskuri.png'),
+    icon: icon('icons/tuntipalkkalaskuri.png'),
     repo: 'https://github.com/Krugou/tuntipalkkalaskuri',
     description: {
       en: 'Hourly wage calculator with Finnish net-pay estimates. Installable and works offline.',
@@ -67,7 +74,7 @@ export const projects: ProjectLink[] = [
   {
     title: 'Aquatic Harvesting',
     url: 'https://krugou.github.io/aquaticharvesting/',
-    icon: icon('aquaticharvesting.png'),
+    icon: icon('icons/aquaticharvesting.png'),
     repo: 'https://github.com/Krugou/aquaticharvesting',
     description: {
       en: 'Browser game about clearing overgrown lakes with a harvesting boat and upgrading your fleet.',
@@ -78,7 +85,7 @@ export const projects: ProjectLink[] = [
   {
     title: 'Tieliikenne Video Wall',
     url: 'https://krugou.github.io/tieliikennevideowall/?cities=vantaa%2Cespoo%2Chelsinki',
-    icon: icon('tieliikennevideowall.svg'),
+    icon: icon('icons/tieliikennevideowall.svg'),
     repo: 'https://github.com/Krugou/tieliikennevideowall',
     description: {
       en: 'Full-screen wall of Finnish traffic cameras from Digitraffic, by city.',
@@ -89,7 +96,7 @@ export const projects: ProjectLink[] = [
   {
     title: 'Saunatime',
     url: 'https://krugou.github.io/saunatime/',
-    icon: icon('saunatime.svg'),
+    icon: icon('icons/saunatime.svg'),
     repo: 'https://github.com/Krugou/saunatime',
     description: {
       en: 'Average cost of a sauna session in Finland, calculated from spot electricity prices.',
@@ -101,14 +108,14 @@ export const projects: ProjectLink[] = [
 
 /** Remaining social links, shown after the projects */
 export const otherLinks: SocialLink[] = [
-  {title: 'Threads', url: 'https://threads.net/krugou', icon: icon('threads.svg')},
-  {title: 'Twitter', url: 'https://x.com/krugou', icon: icon('twitter.svg')},
+  {title: 'Threads', url: 'https://threads.net/krugou', icon: icon('icons/threads.svg')},
+  {title: 'Twitter', url: 'https://x.com/krugou', icon: icon('icons/twitter.svg')},
   {
     title: 'Bluesky',
     url: 'https://bsky.app/profile/krugou.bsky.social',
-    icon: icon('bluesky.svg'),
+    icon: icon('icons/bluesky.svg'),
   },
-  {title: 'YouTube', url: 'https://www.youtube.com/@Krugou', icon: icon('youtube.svg')},
+  {title: 'YouTube', url: 'https://www.youtube.com/@Krugou', icon: icon('icons/youtube.svg')},
 ];
 
 /** Profile URLs for structured data (schema.org sameAs) */

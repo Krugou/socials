@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {base} from '$app/paths';
+  import {resolve} from '$app/paths';
   import {language} from '../lib/stores.js';
   import {t} from '../lib/i18n.js';
   import {NAV_LINKS} from '../lib/constants.js';
@@ -17,7 +17,15 @@
     if (!href?.trim()) {
       throw new Error('URL href cannot be empty');
     }
-    return external ? href : `${base}${href}`;
+    if (external) {
+      return href;
+    }
+
+    if (href === '/' || href === '/repositories') {
+      return resolve(href);
+    }
+
+    throw new Error(`Unsupported internal navigation path: ${href}`);
   }
 
   /**

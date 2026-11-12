@@ -1,4 +1,4 @@
-import type {Handle} from '@sveltejs/kit';
+import type {Handle} from '@sveltejs/kit/hooks';
 import {sameAs} from './lib/links.js';
 
 const SITE_ORIGIN = 'https://krugou.github.io';

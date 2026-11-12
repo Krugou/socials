@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {base} from '$app/paths';
+  import {resolve} from '$app/paths';
   import {page} from '$app/state';
   import {t} from '../lib/i18n.js';
   import {isDarkMode} from '../stores/theme.js';
@@ -28,7 +28,7 @@
       {page.status === 404 ? $t.error.notFound : page.error?.message || $t.error.notFound}
     </p>
     <a
-      href="{base}/"
+      href={resolve('/')}
       class="inline-block rounded-lg px-6 py-3 text-lg font-semibold transition-all duration-300 motion-safe:hover:scale-105"
       class:bg-primary={$isDarkMode}
       class:bg-yellow-300={!$isDarkMode}
