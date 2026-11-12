@@ -8,7 +8,7 @@
     "export": "tsx export-data.ts"
   },
   "dependencies": {
-    "firebase-admin": "^14.2.0",
+    "firebase-admin": "^14.5.1",
     "dotenv": "^17.4.2",
     "tsx": "^4.23.12"
   },
