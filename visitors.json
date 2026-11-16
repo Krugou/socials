@@ -1,12 +1,26 @@
 {
-  "generatedAt": "2026-11-09T04:31:51.432Z",
+  "generatedAt": "2026-11-16T04:38:24.535Z",
   "visitors": [
+    {
+      "timestamp": "2026-11-15T09:50:26.121Z",
+      "page": "/socials/",
+      "referrer": "https://l.threads.com",
+      "language": "vi",
+      "isUnique": true
+    },
+    {
+      "timestamp": "2026-11-11T18:15:01.806Z",
+      "page": "/socials/",
+      "referrer": "https://www.facebook.com",
+      "language": "en",
+      "isUnique": false
+    },
     {
       "timestamp": "2026-11-08T23:32:36.537Z",
       "page": "/socials/",
       "referrer": "https://l.threads.com",
       "language": "fi",
-      "isUnique": true
+      "isUnique": false
     },
     {
       "timestamp": "2026-11-06T09:51:15.421Z",
@@ -5655,7 +5669,7 @@
   ],
   "stats": {
     "platform": {
-      "Unknown": 10,
+      "Unknown": 12,
       "Win32": 61,
       "Windows": 52,
       "Linux aarch64": 16,
@@ -5666,8 +5680,9 @@
       "Linux armv81": 6
     },
     "language": {
+      "vi": 1,
+      "en": 6,
       "fi": 10,
-      "en": 5,
       "fi-FI": 64,
       "en-US": 112,
       "en-FI": 3,
