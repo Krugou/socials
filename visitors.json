@@ -1,12 +1,47 @@
 {
-  "generatedAt": "2026-11-16T04:38:24.535Z",
+  "generatedAt": "2026-11-23T05:38:38.350Z",
   "visitors": [
+    {
+      "timestamp": "2026-11-22T20:59:18.376Z",
+      "page": "/socials/",
+      "referrer": "https://l.instagram.com",
+      "language": "fi",
+      "isUnique": true
+    },
+    {
+      "timestamp": "2026-11-22T19:24:32.592Z",
+      "page": "/socials/",
+      "referrer": "https://l.instagram.com",
+      "language": "fi",
+      "isUnique": false
+    },
+    {
+      "timestamp": "2026-11-17T17:34:12.829Z",
+      "page": "/socials/",
+      "referrer": "https://l.instagram.com",
+      "language": "fi",
+      "isUnique": false
+    },
+    {
+      "timestamp": "2026-11-16T05:59:25.525Z",
+      "page": "/socials/",
+      "referrer": "https://l.instagram.com",
+      "language": "en",
+      "isUnique": false
+    },
+    {
+      "timestamp": "2026-11-16T05:26:50.109Z",
+      "page": "/socials/",
+      "referrer": "direct",
+      "language": "en",
+      "isUnique": false
+    },
     {
       "timestamp": "2026-11-15T09:50:26.121Z",
       "page": "/socials/",
       "referrer": "https://l.threads.com",
       "language": "vi",
-      "isUnique": true
+      "isUnique": false
     },
     {
       "timestamp": "2026-11-11T18:15:01.806Z",
@@ -5669,7 +5704,7 @@
   ],
   "stats": {
     "platform": {
-      "Unknown": 12,
+      "Unknown": 17,
       "Win32": 61,
       "Windows": 52,
       "Linux aarch64": 16,
@@ -5680,9 +5715,9 @@
       "Linux armv81": 6
     },
     "language": {
+      "fi": 13,
+      "en": 8,
       "vi": 1,
-      "en": 6,
-      "fi": 10,
       "fi-FI": 64,
       "en-US": 112,
       "en-FI": 3,
