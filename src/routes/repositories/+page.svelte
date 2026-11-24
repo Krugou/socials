@@ -138,8 +138,10 @@
                   class="text-sm"
                   class:text-muted={$isDarkMode}
                   class:text-white-60={!$isDarkMode}
-                  >{$t.repos.updated} {formatDate(repo.updated_at)}</span
                 >
+                  {$t.repos.updated}
+                  {formatDate(repo.updated_at)}
+                </span>
               </div>
               {#if repo.description}
                 <p class="mt-2" class:text-muted={$isDarkMode} class:text-white={!$isDarkMode}>
